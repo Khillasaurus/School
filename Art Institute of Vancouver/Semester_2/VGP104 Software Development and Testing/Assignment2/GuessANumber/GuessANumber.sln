@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GuessANumber", "GuessANumber\GuessANumber.vcproj", "{FB8875C8-E4AF-4E22-98EB-F5E8D0E680A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB8875C8-E4AF-4E22-98EB-F5E8D0E680A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB8875C8-E4AF-4E22-98EB-F5E8D0E680A8}.Debug|Win32.Build.0 = Debug|Win32
+		{FB8875C8-E4AF-4E22-98EB-F5E8D0E680A8}.Release|Win32.ActiveCfg = Release|Win32
+		{FB8875C8-E4AF-4E22-98EB-F5E8D0E680A8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
