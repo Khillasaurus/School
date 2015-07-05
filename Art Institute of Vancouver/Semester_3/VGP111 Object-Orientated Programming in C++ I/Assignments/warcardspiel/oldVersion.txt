@@ -1,0 +1,264 @@
+//-----------------------------
+// File:		warcardspiel.cpp
+// Created:		2012/2/10
+// Copyright:	Daniel Schenker
+//-----------------------------
+
+#include "stdafx.h"
+#include "card.h"
+#include "player.h"
+#include <algorithm>
+
+//globals
+const int kDeckSize = 52;
+
+//function prototypes
+bool WantsToPlay();
+cCard* CreateCards();
+bool Initialize(vector<cCard>*, vector<cCard>*, vector<cCard>*, cCard*);
+void ShuffleCards(vector<cCard>*);
+void DealCards(vector<cCard>*, vector<cCard>*);
+bool GameOver(vector<cCard>*, vector<cCard>*);
+void PlayRound();
+void CalculateWinner();
+bool FreeMemory();
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	cPlayer deck;
+	std::vector<cCard> player1;
+	std::vector<cCard> player2;
+	
+	bool runGame = true;
+
+	while(runGame)
+	{
+		if(WantsToPlay())
+		{
+			cCard* cardsListPtr = CreateCards();
+			if(Initialize(&deck, &player1, &player2, cardsListPtr))
+			{
+				while(!GameOver(&player1, &player2))
+				{
+					PlayRound();
+				}
+				CalculateWinner();
+
+				if(!FreeMemory())
+				{
+					cout << "ERROR: Memory could not be freed." << endl;
+					break;
+				}
+			}
+			else
+			{
+				cout << "ERROR: Could not initialize game." << endl;
+				break;
+			}
+		}
+		else
+		{
+			runGame = false;
+			cout << "See you next time!" << endl;
+		}
+	}
+
+	return 0;
+}
+
+
+
+
+bool WantsToPlay()
+{
+	int wantsToPlay = -1;
+
+	while(wantsToPlay < 0 || wantsToPlay > 1)
+	{
+		cout << "Do you want to play a card game of War?" << endl;
+		cout << "Enter 1 for yes or 0 for no." << endl;
+		cin >> wantsToPlay;
+		if(wantsToPlay < 0 || wantsToPlay > 1)
+		{
+			cout << "You have entered an incorrect value." << endl;
+		}
+	}
+	if(wantsToPlay == 1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+
+
+
+
+void InitDeck(std::vector<cCard*> &theDeck)
+{
+	theDeck.
+}
+
+
+
+vector<cCard*> theDeck;
+
+bool InitDeck( vector<cCard*> &theDeck )
+{
+	theDeck.reserve( kDeckSize );
+	for()
+	{
+		(*deck).push_back( new cCard( suit, val ) );
+	}
+	return true;
+}
+
+
+
+
+
+
+
+cCard* CreateCards()
+{
+	cCard* cardsListPtr = new cCard[kDeckSize];
+	for(int i = 0; i < kDeckSize; ++i)
+	{
+		cardsListPtr[i].mSuit = (kDeckSize-i-1) / 13;
+		cardsListPtr[i].mValue = (kDeckSize-i-1) % 13;
+	}
+	
+	return cardsListPtr;
+}
+
+
+
+
+bool Initialize(vector<cCard>* deck, vector<cCard>* player1, vector<cCard>* player2, cCard* cardsListPtr)
+{
+	(*deck).reserve(kDeckSize);
+
+	for(int i = 0; i < kDeckSize; ++i)
+	{
+		(*deck).push_back(cardsListPtr[i]);
+	}
+
+	ShuffleCards(*&deck);
+
+	DealCards(*&deck, *&player1);
+	DealCards(*&deck, *&player2);
+	
+	if((*deck).size() == 0)
+	{
+		if((*player1).size() == kDeckSize/2)
+		{
+			if((*player2).size() == kDeckSize/2)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+
+
+
+void ShuffleCards(vector<cCard>* cards)
+{
+	random_shuffle((*cards).begin(), (*cards).end());
+}
+
+
+
+
+void DealCards(vector<cCard>* deck, vector<cCard>* hand)
+{
+	for(int i = 0; i < kDeckSize/2; ++i)
+	{
+		(*hand).push_back((*deck)[(*deck).size()-1]);
+		(*deck).pop_back();
+	}
+}
+
+
+
+
+bool GameOver(vector<cCard>* player1, vector<cCard>* player2)
+{
+	if((*player1).size() == 0 || (*player2).size() == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+
+
+void PlayRound()
+{
+}
+
+
+
+
+void CalculateWinner()
+{
+
+}
+
+
+
+
+bool FreeMemory()
+{
+	return true;//temporary
+}
+
+
+
+
+	/*cout << "deck" << endl;
+	for(int i = 0; i < (int)(*deck).size(); ++i)
+	{
+		cout << i << " Face = " << ((*deck)[i].mSuit) << endl;
+		cout << i << " Value = " << ((*deck)[i].mValue) << endl;
+	}
+	cout << "player1" << endl;
+	for(int i = 0; i < (int)(*player1).size(); ++i)
+	{
+		cout << i << " Face = " << ((*player1)[i].mSuit) << endl;
+		cout << i << " value = " << ((*player1)[i].mValue) << endl;
+	}
+	cout << "player2" << endl;
+	for(int i = 0; i < (int)(*player2).size(); ++i)
+	{
+		cout << i << " Face = " << ((*player2)[i].mSuit) << endl;
+		cout << i << " value = " << ((*player2)[i].mValue) << endl;
+	}*/
+
+
+
+
+	//std::vector<int>::iterator vecIt;
+
+	//cout << "index of for loop" << endl;
+	//for(int i = 0; i < (int)deck.size(); ++i)
+	//{
+	//	cout << "value = " << (deck[i]/*index of is nano seconds faster than iterators so the time saved is almost useless*/) << endl;
+	//}
+
+	//cout << "iterator for loop, as well as shuffled" << endl;
+	//for(vecIt = deck.begin(); vecIt !=deck.end(); ++vecIt)
+	//{
+	//	cout << "value = " << (*vecIt)/*iterator i was talking about in above inline comment*/ << endl;
+	//}

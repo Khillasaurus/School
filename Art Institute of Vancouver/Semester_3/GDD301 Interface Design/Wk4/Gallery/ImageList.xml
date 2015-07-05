@@ -1,0 +1,10 @@
+<imageList>
+	<theImage>
+		<imageTitle>Any Colour You Like</imageTitle>
+		<fileLoc>MyImage.png</fileLoc>
+	</theImage>
+	<theImage>
+		<imageTitle>Whole Lotta Love</imageTitle>
+		<fileLoc>SecondImage.jpg</fileLoc>
+	</theImage>
+</imageList>

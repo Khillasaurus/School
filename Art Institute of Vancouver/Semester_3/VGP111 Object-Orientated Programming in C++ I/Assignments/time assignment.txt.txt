@@ -1,0 +1,20 @@
+	//~~ time
+	//DONE: set time by UTC OR local
+	// reset() (sets all components to zero)
+	//set time by component.. everything is zero except for what we set
+	//	y/m/d h:m:s.ms
+	//set time from another time
+	//	copy constructor
+	//	assignment operator
+	//compare times (earlier/equal/greater)
+	//	operators <  <=  >  >= != == 
+	//  -1,0,+1   Compare(const cTime &rhs)
+	//print time (inserter to cout)
+	// add time (aka defines an end time)
+	// substract time  (aka defines an elapsed time)
+	//  
+
+// actual assigment...
+// unit test all features of cTime class
+
+ai@clicktoy.com

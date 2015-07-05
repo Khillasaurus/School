@@ -1,0 +1,29 @@
+week 6 assignment - due week 7
+
+YOUR PICK ...
+
+A: blackjack
+{optional means you don't have to do it. do it to make the task harder and more fully featured}
+
+
+Implement 1 to 6 player capable blackjackcard game
+single deck
+{optional - multiple decks}
+give starting money
+dealer holds on 16
+support splits
+{optional - insurance}
+
+
+B: 2 player Chess game (no AI)
+
+board
+players
+pieces
+entering moves
+save moves to standard chess formatted text file
+	eg:  1: b5 a7
+setting: enforce rules y/n
+enforce valid move (ie tell player cannot make move or puts king into check)
+draw simple ascii art chess board on screen
+{optional : ai that can beat Kasperov AND/OR deepblue)

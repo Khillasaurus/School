@@ -1,0 +1,16 @@
+	// assignment  game of WAR
+
+	// create a deck of card objects (eg  class cCard )
+	// deck of 52 objects
+	// create two player objects
+	// players draw a card (or have it dealt to them)
+	// implemented WAR rules .. tie..draw 3..etc
+	// declare winner of each hand
+	// declare winner of game
+	// all cards, players etc objects... are allocated from heap 
+	//		(aka  cCard *pCard = new cCard()  )
+
+
+
+Ken Kavanagh
+ai@clicktoy.com
