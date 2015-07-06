@@ -1,0 +1,7 @@
+Count: 6
+grass_2.png
+flower_2.png
+tree0_2.png
+tree1_2.png
+tree2_2.png
+tree3_2.png
