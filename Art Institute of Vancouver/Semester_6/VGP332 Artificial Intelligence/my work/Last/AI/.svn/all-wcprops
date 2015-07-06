@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/danielschenker_vgp230/!svn/ver/27/AI
+END
+Agent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/danielschenker_vgp230/!svn/ver/21/AI/Agent.cpp
+END
+AI.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/danielschenker_vgp230/!svn/ver/21/AI/AI.h
+END
+SteeringBehavior.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SteeringBehavior.cpp
+END
+WanderBehavior.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/21/AI/WanderBehavior.cpp
+END
+Graph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/danielschenker_vgp230/!svn/ver/21/AI/Graph.cpp
+END
+Agent.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/danielschenker_vgp230/!svn/ver/21/AI/Agent.h
+END
+StateMachine.inl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/21/AI/StateMachine.inl
+END
+SteeringBehavior.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SteeringBehavior.h
+END
+WanderBehavior.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/21/AI/WanderBehavior.h
+END
+Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/danielschenker_vgp230/!svn/ver/27/AI/Graph.h
+END
+SeekBehavior.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SeekBehavior.cpp
+END
+ArriveBehavior.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/21/AI/ArriveBehavior.cpp
+END
+StateMachine.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/danielschenker_vgp230/!svn/ver/21/AI/StateMachine.h
+END
+AI.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/danielschenker_vgp230/!svn/ver/21/AI/AI.vcproj
+END
+SeekBehavior.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SeekBehavior.h
+END
+ArriveBehavior.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/21/AI/ArriveBehavior.h
+END
+PerceptionModule.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/danielschenker_vgp230/!svn/ver/21/AI/PerceptionModule.cpp
+END
+PerceptionModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/21/AI/PerceptionModule.h
+END
+State.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/danielschenker_vgp230/!svn/ver/21/AI/State.h
+END
+Node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/danielschenker_vgp230/!svn/ver/21/AI/Node.cpp
+END
+SteeringModule.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SteeringModule.cpp
+END
+Node.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/danielschenker_vgp230/!svn/ver/21/AI/Node.h
+END
+SteeringModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/21/AI/SteeringModule.h
+END

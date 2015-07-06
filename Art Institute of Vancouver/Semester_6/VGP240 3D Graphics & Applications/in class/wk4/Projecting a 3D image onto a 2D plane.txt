@@ -1,0 +1,26 @@
+Local Space > World Space > Camera Space > Normalized Device Coordinates (NDC) Space > Screen Space
+===================================================================================================
+The point of rotation is at 0, 0, 0, which is often the center, or the bottom center of objects.
+
+---------------------------------------------------------------------------------------------------
+To go from LS > WS, apply a Matrix to all vertices that make each verticy go from local > world coordinates
+- Local to World Matrix
+
+---------------------------------------------------------------------------------------------------
+To go from WS > CS, multiply by world space vertices
+Take the inverse of the camera matrix and apply it to the world coordinates
+- Camera Matrix
+Ex:
+camera is at 100, 0, 10 in WS
+object is at 100, 0, 20 in WS
+the object is at 0, 0, 10 in CS
+
+---------------------------------------------------------------------------------------------------
+To go from CS > NDCS, Projection matrix, aspect ratio
+- Projection Matrix
+Aspect Ratio
+FOV
+
+---------------------------------------------------------------------------------------------------
+To go from NDPS > SS
+- Scale/Flip Matrix to 2D coordinates

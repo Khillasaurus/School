@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/ptychan_sge/!svn/ver/18/Resource
+END
+CResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ptychan_sge/!svn/ver/15/Resource/CResource.h
+END
+CResourceManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ptychan_sge/!svn/ver/17/Resource/CResourceManager.cpp
+END
+CResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ptychan_sge/!svn/ver/15/Resource/CResource.cpp
+END
+CResourceManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ptychan_sge/!svn/ver/18/Resource/CResourceManager.h
+END
+Resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ptychan_sge/!svn/ver/15/Resource/Resource.h
+END

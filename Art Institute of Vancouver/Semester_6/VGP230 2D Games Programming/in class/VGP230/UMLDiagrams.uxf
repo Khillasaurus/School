@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+// fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+fontfamily=Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>5</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>520</y>
+      <w>255</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Player : public PhysicalObject
+--
+//public:
+ //Constructor(s)
+Player();
+ 
+ //Destructor
+virtual ~Player();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+float GetKamikazeVelocity() const;
+float GetKamikazeAcceleration() const;
+int GetEnergy() const;
+ 
+ //Setters
+void SetKamikazeVelocity(float kamikazeVelocity);
+void SetKamikazeAcceleration(float kamikazeAcceleration);
+void SetEnergy(int energy);
+void SetEnergyRelative(int energy);
+--
+float mkKamikazeVelocity;
+float mkKamikazeAcceleration;
+int mEnergy;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1065</x>
+      <y>530</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Asteroid : public PhysicalObject
+--
+//public:
+ //Constructor(s)
+Asteroid();
+ 
+ //Destructor
+virtual ~Asteroid();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+int GetDamage() const;
+int GetExplosiveRadius() const;
+ 
+ //Setters
+void SetDamage(int damage);
+void SetExplosiveRadius(float explosiveRadius);
+--
+ //Member Variables
+int mDamage;
+float mExplosiveRadius;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>0</y>
+      <w>215</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>PhysicalObject
+--
+//public:
+ //Constructor(s)
+PhysicalObject();
+ 
+ //Destructor
+virtual ~PhysicalObject();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+Vector2 GetPosition() const;
+Vector2 GetOrientation() const;
+cPlaneTriangle* GetCollisionVolume() const;
+Vector2 GetVelocity() const;
+float GetMaximumVelocity() const;
+Vector2 GetAcceleration() const;
+float GetMaximumAcceleration() const;
+float GetMass() const;
+int GetHealth() const;
+int GetState() const;
+CTexture* GetTexture() const;
+ 
+ //Setters
+void SetPosition(Vector2 position);
+void SetOrientation(Vector2 orientation);
+void SetVelocity(Vector2 velocity);
+void SetMaximumVelocity(float maximumVelocity);
+void SetAcceleration(Vector2 acceleration);
+void SetMaximumAcceleration(float maximumAcceleration);
+void SetMass(float mass);
+void SetHealth(int health);
+void SetState(int state);
+--
+//private:
+Vector2 mPosition;
+Vector2 mOrientation;
+vector &lt;cPlaneTriangle*&gt; mpCollisionVolume;
+Vector2 mVelocity;
+float mkMaximumVelocity;
+Vector2 mAcceleration;
+float mMaximumAcceleration;
+float mMass;
+int mHealth;
+int mState;
+CTexture mpTexture;
+--
+/*
+mPosition: Position is a world coordinate vector to the center of mass
+mOrientation: Orientation is used instead of angle so that 3D affects
+can be applied such as corner banking
+mpCollisionVolume: The collision volume is defined by a STL::vector
+of CPlaneTriangle (3 points pointing to the vertices of a triangle in
+order to form a plane), in which each point of the plane’s coordinates
+are local to the center of mass of the object, thus combining to form
+a convex collision volume.
+*/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>110</x>
+      <y>445</y>
+      <w>524</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;75;15;40;170;40;270;40;515;40;515;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>610</x>
+      <y>445</y>
+      <w>289</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280;85;280;40;15;40;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>290</x>
+      <y>520</y>
+      <w>145</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Enemy : public PhysicalObject
+--
+//public:
+ //Constructor(s)
+Enemy();
+ 
+ //Destructor
+virtual ~Enemy();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+virtual void Attack();
+ 
+ //Getters
+ 
+ //Setters
+--
+ //Member Variables
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>445</y>
+      <w>284</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;75;15;40;275;40;275;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>780</x>
+      <y>530</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Projectile : public PhysicalObject
+--
+//public:
+ //Constructor(s)
+Projectile();
+ 
+ //Destructor
+virtual ~Projectile();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+int GetDamage() const;
+int GetExplosiveRadius() const;
+ 
+ //Setters
+void SetDamage(int damage);
+void SetExplosiveRadius(float explosiveRadius);
+--
+ //Member Variables
+int mDamage;
+float mExplosiveRadius;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>610</x>
+      <y>445</y>
+      <w>574</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>565;85;565;40;265;40;15;40;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>290</x>
+      <y>720</y>
+      <w>145</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Boss : public Enemy
+--
+//public:
+ //Constructor(s)
+Enemy();
+ 
+ //Destructor
+virtual ~Enemy();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+virtual void Attack();
+ 
+ //Getters
+ 
+ //Setters
+--
+ //Member Variables
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>675</y>
+      <w>24</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;45;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1325</x>
+      <y>0</y>
+      <w>145</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Timer
+--
+//public:
+ //Constructor(s)
+Timer();
+ 
+ //Destructor
+virtual ~Timer();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+float GetStartTime() const;
+float GetCurrentTime() const;
+ 
+ //Setters
+--
+ //Member Variables
+float mStartTime;
+float mCurrentTime;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1700</x>
+      <y>0</y>
+      <w>145</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Manager
+--
+//public:
+ //Constructor(s)
+Manager();
+ 
+ //Destructor
+virtual ~Manager();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+ 
+ //Setters
+--
+ //Member Variables
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1855</x>
+      <y>425</y>
+      <w>145</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>SpawnManager : public Manager
+--
+//public:
+ //Constructor(s)
+Manager();
+ 
+ //Destructor
+virtual ~Manager();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+void Spawn();
+ 
+ //Getters
+int GetCurrentEnemies() const;
+int GetMaxEnemies() const;
+ 
+ //Setters
+void SetCurrentEnemies(int enemies);
+void SetCurrentEnemiesRelative(int enemies);
+void SetMaxEnemies(int enemies);
+--
+ //Member Variables
+int mCurentEnemies;
+const int mMaxEnemies;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1525</x>
+      <y>220</y>
+      <w>155</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>GameStateManager : public Manager
+--
+//public:
+ //Constructor(s)
+Manager();
+ 
+ //Destructor
+virtual ~Manager();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+ 
+ //Setters
+--
+ //Member Variables
+Timer Clock;
+--
+ //Notes
+Controls Switching between levels, menus, etc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1850</x>
+      <y>220</y>
+      <w>155</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ObjectManager : public Manager
+--
+//public:
+ //Constructor(s)
+Manager();
+ 
+ //Destructor
+virtual ~Manager();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+ 
+ //Setters
+--
+ //Member Variables
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1760</x>
+      <y>155</y>
+      <w>184</w>
+      <h>74</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>175;65;175;40;15;40;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1585</x>
+      <y>155</y>
+      <w>199</w>
+      <h>74</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;65;15;40;190;40;190;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1915</x>
+      <y>385</y>
+      <w>24</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;40;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1325</x>
+      <y>265</y>
+      <w>145</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Alarm : public Timer
+--
+//public:
+ //Constructor(s)
+Alarm();
+ 
+ //Destructor
+virtual ~Alarm();
+ 
+ //Copy constructor
+ 
+ //Overloaded Operators
+ 
+ //General
+ 
+ //Getters
+float GetAlarmTime() const;
+ 
+ //Setters
+void SetAlarmTime(float mAlarmTime);
+void SetAlarmTimeRelative(float mAlarmTime);
+--
+ //Member Variables
+float mAlarmTime;
+--
+ //Notes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1380</x>
+      <y>215</y>
+      <w>24</w>
+      <h>59</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>15;50;15;35;15;15</additional_attributes>
+  </element>
+</diagram>

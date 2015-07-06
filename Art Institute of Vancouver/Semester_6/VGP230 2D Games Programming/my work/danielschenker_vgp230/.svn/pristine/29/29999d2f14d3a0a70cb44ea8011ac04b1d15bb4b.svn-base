@@ -1,0 +1,13 @@
+-- Engine Params --
+AppName = "VGP230 - Hello SGE!"
+WinWidth = 1024
+WinHeight = 768
+Fullscreen = false
+SplashScreen = false
+FPS = true
+Debug = false
+
+-- File Paths --
+TexturePath = "../Data/Textures/"
+EmitterPath = "../Data/Emitters/"
+SoundPath = "../Data/Sounds/"

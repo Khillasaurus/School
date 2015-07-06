@@ -1,0 +1,20 @@
+This is an artificial intelligence pathing demo that has 3 modes.
+
+Standard:   Press F1 to activate. (Demo starts in this mode by default).
+    Use the arrow keys to move the camera around the map.
+    The camera can't leave the boundaries of the map in this mode.
+
+Pathing:    Press F2 to activate.
+	    Use the mouse to move the camera by pushing the cursor
+	      against the sides of the screen.
+	    Left Click to place Start Node.
+	    Right Click to place End Node.
+	    Scroll Wheel to cycle between pathing types.
+
+Map Editor: Press F3 to activate.
+	    Use the mouse to move the camera by pushing the cursor
+	      against the sides of the screen.
+	    Use the scroll wheel to select a tile type to place.
+	    Tile Type 1:   Default walkable space.
+	    Tile Type 2:   Walkable space with a non-cost.
+	    Tile Types 3+: Impassible space.

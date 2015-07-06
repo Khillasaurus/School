@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/danielschenker_vgp230/!svn/ver/4/HelloSGE
+END
+WinMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/danielschenker_vgp230/!svn/ver/4/HelloSGE/WinMain.cpp
+END
+HelloSGE.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/danielschenker_vgp230/!svn/ver/4/HelloSGE/HelloSGE.vcproj
+END
+sge.ini
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/danielschenker_vgp230/!svn/ver/4/HelloSGE/sge.ini
+END

@@ -1,0 +1,16 @@
+for all vertices
+{
+	//X
+	scale then shift
+	x = (x * (W * 0.5)) + (W * 0.5);
+	OR
+	shift then scale
+	x =  (W * 0.5) + (x * (W * 0.5));
+
+	//Y
+	scale then shift
+	y = (y * (h * 0.5)) - (h * 0.5);
+	OR
+	shift then scale
+	y = -(h * 0.5) + (y * (h * 0.5));
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/danielschenker_vgp230/!svn/ver/14/HelloShooter
+END
+Enemy.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/danielschenker_vgp230/!svn/ver/13/HelloShooter/Enemy.h
+END
+WinMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/danielschenker_vgp230/!svn/ver/14/HelloShooter/WinMain.cpp
+END
+Bullet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/danielschenker_vgp230/!svn/ver/11/HelloShooter/Bullet.cpp
+END
+Fighter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/danielschenker_vgp230/!svn/ver/13/HelloShooter/Fighter.cpp
+END
+HelloShooter.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/danielschenker_vgp230/!svn/ver/13/HelloShooter/HelloShooter.vcproj
+END
+sge.ini
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/danielschenker_vgp230/!svn/ver/11/HelloShooter/sge.ini
+END
+Bullet.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/danielschenker_vgp230/!svn/ver/13/HelloShooter/Bullet.h
+END
+Enemy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/danielschenker_vgp230/!svn/ver/13/HelloShooter/Enemy.cpp
+END
+Fighter.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/danielschenker_vgp230/!svn/ver/14/HelloShooter/Fighter.h
+END
