@@ -1,0 +1,3 @@
+CSprite.cpp - line 142 - #if 0 - Why is this "commented" out?
+
+SCE_Math.cpp - line 147, 148 - Is 1 divide followed by 2 multiply operations faster than 2 divide operations?

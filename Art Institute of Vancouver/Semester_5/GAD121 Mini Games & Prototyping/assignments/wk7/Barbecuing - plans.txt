@@ -1,0 +1,50 @@
+Assignment 7 - Barbecuing - Daniel Schenker
+===========================================
+
+General Plans: Due 4:30am
+{//Started at 4:17am
+	You've gone camping, and you've been designated chef.
+	You have to bring food back to your friends in the tents.
+	The problem is, however, that the campfire and ingredients are kept away from the tents to prevent wildlife from coming too close to the sleeping area (tents).
+	Your goal is to bring back food as quickly as possible to your friends,
+	with points awarded based on how perfectly cooked the food is (based on time),
+	as well as how long your friends have to wait for food.
+	You can carry 1 to 4 dishes, but the more dishes you carry, the greater the range of the food smell will travel, thus attracting more dangerous wildlife,
+	but if you do not carry enough dishes, your friends will become upset as they are very hungry.
+	Also you must keep in mind, that you do not want to burn food, or else it will be wasted, and that dish will need to be restarted.
+	You can only cook 4 dishes at a time.
+	Every time you start a new dish, points are deducted, but usually the points gained from succesfully cooking and delivering a dish are far greater.
+	The level ends (called surviving the night) when all of your friends are fed, or if you get killed by a wild animal.
+}//Completed at 4:28am
+
+Planning and creating of main game components: Due 6:30am
+{//Started at 4:30am
+	Asset Importing
+	Main Menu
+	Walls
+}//Completed at 6:12am
+
+Finish Game: Due 7:30am
+{//Started at 6:21am
+	Player movement
+	Enemies
+	Tents
+	Campfire
+}//Completed at 7:29am
+
+Story
+=======
+You've gone camping, and you've been designated chef.
+You have to bring food back to your friends in
+the tents, but the campfire is far away from the
+tents to keepwildlife away while everyone is sleeping!
+Quickly bring food back to your friends,
+but don't undercook or burn anything!
+The more food you carry, the faster you'll feed your
+friends, but you'll attract more dangerous animals!
+You survive the night once you've fed everyone.
+
+Controls:
+=======
+Movement - WASD or arrow keys
+Cooking	 - Left mouse button

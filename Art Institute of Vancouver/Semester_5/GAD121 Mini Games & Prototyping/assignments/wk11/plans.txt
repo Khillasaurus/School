@@ -1,0 +1,21 @@
+Tuesday Morning wk2 assignment Plans:
+
+scr_flyover
+What this does: This script when called causes a plane to fly accross the screen, but is purely for asthetics
+How this could Be used: when mousing over the start button (button in hover state), send a plane flying from the mid right to mid left of the screen
+How it works: Picks a random start x and start y position just outside the edge of the room and rotates the plane image to match that direction and flies the plane to a random end x and end y position just outside the room
+
+scr_enemySpawner
+What this does: controls the x spawn location of planes (as y is always just barely outside the top of the room)
+How this could be used: To randomly generate plane starting positions, or specify exactly using a timer
+How this works: Picture one of those camera's that slide on a rail. just put this rail horizontally just outside of the top of the room, and then treat this "camera" as a carrier and it launches interceptors (i.e. planes) down the screen
+
+scr_flyTo
+What this does: Determines where the enemy planes should fly to once they've been spawned
+How this could be used: To randomize enemy plane travel direction
+How this works: (Unfinished sentence due to me not working out all the kinks yet) After an enemy plane is launched it then picks a random node that has a y location greater (closer to the bottom of the room) than the plane's y location and 
+
+scr_playerShoot
+What this does: Switches shooting from a vertical northbound bullet controlled by pressing a button, to a mouse controlled aimer
+How this could be used: To change the shooting mechanic
+How this works: (Remember proj from math) if the angle between the normal (vertical line straight up) and the mouse is less than 45 degrees, shoot in that direction, else shoot at one of the 2 extremes (45 degrees left of normal or 45 degrees right of normal) accordingly

@@ -1,0 +1,128 @@
+
+C++ II
+Goals:  
+be a hard class
+advanced c++ tricks & tips n stuff
+memory allocation
+template stuff
+stl stuff
+good software design practices + design patterns
+
+AND
+
+what do you want to know???
+
+
+
+grading:
+based on assignments ONLY
+- quality of code
+- clairity of code
+- functionality of code / completeness
+
+do not do tests. i pretend we are working at an imaginary company.
+
+
+
+
+
+
+assignment options:
+
+a number of smallish assignments (individually based)
+
+
+individual assignments
+group project(s)  
+	1 big one (aka some kind of game)			
+	more than one a-tad-bit-smaller game-esk thing
+individual project(s)
+	1 big one						
+	more than one
+do nothing..sit and stare == F
+
+
+
+
+joseph, craig, daniel, evan, mid : 1 indie game
+jordan, tony, olive, eric : 1 indie/grp game
+matt : 1 grp game
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+this is a C++ programming class...
+a> find a renderer (2d)
+a.1> artwork MUST be programmer art. no finding a friend to make it look sexy
+		DONT WASTE TIME ON THE ARTWORK
+b> play mechanic be no more complicated than rock paper scissors
+c> ask Ken!
+d> single player is just fine.
+e> persistance is nice. not neccessary. 
+	eg: 3 save slots, autosave.
+f> clean, organized, logical, legible code
+g> frontend: simple user interface, 
+	main menu, 
+	maybe some options on an options screen,
+	a play button
+	(in game) a pause ; maybe
+		  a quit (which returns to main menu)
+h> sound: beep
+	playwav
+	fmod
+
+
+
+
+assigment 1a:
+enumerate available game engines
+cost
+support
+applicability to the task at hand
+
+1b:
+game design document (aka creative BRIEF)
+what is your game, how does it play, what does the player do, what is the goal
+
+1c:
+technical design documention
+how are you going to build that which was designed?
+address all the features of the design with the intended technical solution you plan on using
+
+
+
+
+assignment 2:
+write a memory manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

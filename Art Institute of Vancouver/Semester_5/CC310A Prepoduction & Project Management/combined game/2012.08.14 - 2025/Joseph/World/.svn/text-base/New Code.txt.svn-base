@@ -1,0 +1,22 @@
+    //state_UnitCreationQueue
+
+
+
+mUnitQueue[mUnitQueueNumber] = floor(random_range(1,4));
+    
+    if(mUnitQueue[mUnitQueueNumber] == mUnitMelee && mMaxMeleeUnit >= 0)
+    {
+        mMaxMeleeUnit -= 1;
+        mUnitQueueNumber += 1;
+    }
+    else if(mUnitQueue[mUnitQueueNumber] == mUnitRanged && mMaxRangedUnit >= 0)
+    {
+        mMaxRangedUnit -= 1;
+        mUnitQueueNumber += 1;
+    }
+    else if(mUnitQueue[mUnitQueueNumber] == mUnitTank && mMaxTankUnit >= 0)
+    {
+        mMaxTankUnit -= 1;
+        mUnitQueueNumber += 1;
+    }
+

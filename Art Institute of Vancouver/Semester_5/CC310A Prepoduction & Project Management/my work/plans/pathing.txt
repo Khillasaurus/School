@@ -1,0 +1,234 @@
+		PATHING
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+PURPOSE OF THIS ALGORITHM PIPELINE
+==================================
+I initially created this algorithm so that designers will not have as much tedious work to do when creating levels.
+While writing down the plans for this algorithm, I realized that the uses for this are much greater.
+Not only does it make the design process simpler and faster, but it also allows for creative uses of this pipeline such as:
+	- Randomized level generation (this algorithm is about 70% of the necessary work required for that to be possible)
+	- User level generation (as now the user simply has to place down start, end and path objects and my algorithm will check to see whether their path is legitimate
+But what if the game designer wanted full control over the pathing process?
+	- I kept this in mind when designing this tool. As a result this tool only need to be run once at the beginning of specified levels.
+	- This allows game designer to set the tool's autorun at the beginning of each level to off, in which the game designer can then use their own pathing
+	  instead (such as the game designer placing nodes themselves)
+
+
+WHAT DESIGNERS SHOULD KNOW
+==========================
+
+- It takes 3 different objects to form a path:
+	1) A starting node of type obj_nodeStart
+	2) The path itself is created simply by placing down path objects (objects that inherit from obj_path_parent)
+	3) A finish node of type obj_nodeEnd
+
+- At the start of every level, the pathing algorithm is run, which outputs a database.
+	- This database contains a list of linked lists called "path" of type obj_node which start with obj_nodeStart and end with obj_nodeEnd
+	- Each linked list refers to a single path in the level
+
+- All that the level designers need to know is the above, as well as what kind of paths are safe
+
+
+NODE OBJECTS
+============
+A c++ style node:
+
+	enum eNodeType
+	{
+		kTurn;		//0
+		kThrough;	//1
+		kJoin;		//2
+		kDeadEnd;	//3
+	};
+
+	class cNode
+	{
+		eNodeType type;
+		int x;
+		int y;
+		int nextX;
+		int nextY;
+	};
+
+//Note that obj_startNode is identical to a normal node, but is named differently so that the enemies know where to spawn
+//Note that nextX and nextY equal x and y respectively if the node in question is obj_endNode
+
+
+PRE-ALGORITHM
+=============
+A boolean value is set for each level (through the game manager maybe) which determines whether the level uses my algorithm for pathing or not.
+This boolean value must be persistant outside of my algorithm, so that once the level actually starts, the objects that will traverse the paths will know
+whether they should use my database to get their pathing information or not.
+
+A loop through the entire room is required to record all starting nodes so that my algorithm has proper values to check against.
+Note: There is no need to keep track of ending nodes as my algorithm works even if there are more , equal, or less ending nodes than start nodes.
+
+
+ALGORITHM
+=========
+
+High Level
+----------
+
+- The path is determined by placing nodes anytime a non-straight occurs. (Where a straight is simply a tile with only a tile infront and behind it)
+- When a non-straight occurs, the type of node must be determined.
+- Remember however, that we must check every straight to see if it is a node of type kThough, as this information is necessary for backtracking
+
+	//Are we on a straight?
+	if(yes)
+	{
+		//Are we at a node of type through?
+		if(yes)
+		{
+			cNode.type = kThrough
+		}
+	}
+	//We're not on a straight, this means we are on a node
+	else
+	{
+		//What kind of node are we on?
+		//The order of checking the type of node is:
+			//Should this node be a turn?
+			cNode.type = kTurn;
+
+			//Should this node be a join?
+			cNode.type = kJoin;
+
+			//Should this node be a deadEnd?
+			cNode.type = kDeadEnd;
+			if(cNode.type == kDeadEnd)
+			{
+				//Are we at obj_nodeEnd?
+				if(fairie.x == obj_nodeEnd.x && fairie.y == obj_nodeEnd.y)
+				{
+				}
+				else
+				{
+					//Traverse backwards in the linked list "path" to the last through node, and treat it like a join node
+					//Until the through node is reached, record every node down as future nodes in the linked list "path"
+					//Once the last through is reached, record it as a recalculated join node
+				}
+			}
+	}
+
+
+Mid Level
+----------
+
+- The key to this algorithm is that a "fairie" is something that runs ahead of the current defined path
+  to find the way forward towards the next node, and reports back (but stays where it is one node ahead) to the "worker" what data to write down
+- The fairie and worker are really just pointers to specific coordinates on the grid
+- This is performed until the fairie reaches obj_nodeEnd
+
+- The algorithm itself:
+
+1) The fairie tells worker the type of node they are standing on and it's coordinates
+2) Start write node data: The worker writes it (type of node and coordinates) down to a new element in the linked list "path"
+3) The fairie then flies ahead to the next node and yells (yells means that the fairie doesn't move) back the coordinates of it.
+4) End write node data: The worker then finishes writing down the data (coordinates of next node) in the linked list "path" node.
+5) The worker then moves to the next node (the node the fairie is at)
+Repeat until the worker reaches obj_endNode
+
+Low Level
+----------
+
+//Note: Creating a script that does all direction control (i.e. if facing east, turn right means ___ ) will make this a lot easier,
+//      so that I don't have to write this out for each direction (4 times)
+
+enum eDirection
+{
+	kEast = 0;
+	kNorth = 90;
+	kWest = 180;
+	kSouth = 270;
+};
+
+How The Fairie Finds The Next Node
+----------------------------------
+
+//1) Move the fairie forward one tile
+//the following two lines are examples
+++fairie.x;
+++fairie.y;
+
+//2) Check if the tile ahead of the fairie has a path object
+
+//Check which way the fairie is facing
+if(fairie.direction == kEast)
+{
+	if(at (fairie.x + 1) a path object exists)
+	{
+		//3) Determine if we are standing on a node
+		//Check if we are at a node of type kThrough.
+		//If either our right or left side has a path object
+			//Note: If the path object is only on one side, this is technically a node of type kJoin on a backtrack,
+			//      but for the backtracking algorithm to work we must treat it as a node of type kThrough as recording
+			//      the node as it's own node of type "kBacktrackJoin" (made up node type) is equal in efficiency, but much worse in memory usage
+		if(at (fairie.y + 1) || (fairie.y - 1) a path object exists)
+		{
+			//4) Determine what type of node we are standing on
+			//We already know! We are on a node of type kThrough
+			//Perform step 3 of Mid Level Algorithm Description
+		}
+		//We are simply standing on a path object. Repeat FairieFindNextNode Algorithm
+	}
+	//3) Determine if we are standing on a node
+	//We already know we are since we're not on a straight or through!
+	//A path object does not exist. This means that we are at a node that is not of type kThrough
+	//4) Determine what we are standing on
+	else
+	{
+		//Check if we are at a node of type kTurn
+		//If there is path object on one side of us, but not both sides
+			//Check for right turn
+			if(at ((fairie.y + 1) && !(fairie.y - 1)) a path object exists)
+			{
+				//We are on a node of type kTurn
+				//5) Rotate the fairie if necessary because we are at a node object that is not of type kThrough
+				fairie.direction = kSouth;
+				//Perform step 3 of Mid Level Algorithm Description
+			}
+			//Check for left turn
+			if(at ((fairie.y + 1) && !(fairie.y - 1)) a path object exists)
+			{
+				//We are on a node of type kTurn
+				//5) Rotate the fairie if necessary because we are at a node object that is not of type kThrough
+				fairie.direction = kNorth;
+				//Perform step 3 of Mid Level Algorithm Description
+			}
+		//Check if we are at a node of type kJoin
+		//If there is a path object on both sides of us
+		else if(at (fairie.y + 1) && (fairie.y - 1) a path object exists)
+		{
+			//We are one a node of type kJoin
+			//5) Rotate the fairie if necessary because we are at a node object that is not of type kThrough
+				//Determine which way to turn so that we are following the flow of the other path
+				//Method A)
+					//Turn right and follow that path until the next node.
+					//Once at that node, check and see if it exists in the database.
+					//If so, check the next element in the linked list path.
+					//If the next element is the kJoin node, then we are going the wrong way
+					//else we are going the correct way
+				//Method B if A failed)
+					//Method A could fail if the database is not complete enough
+					//To overcome this we must repeat the entire pathing algorithm treating the kJoin node as
+					// an obj_nodeStart until we find either another obj_nodeStart or obj_nodeEnd
+					determineDirection = true;//This is used so that the pathing algorithm will know that if it finds
+								  // obj_nodeEnd, that it is not an error, but rather a direction confirmation,
+								  // or if it finds obj_nodeStart, that the pathing algorithm is not done,
+								  // rather it is only telling us that this is the wrong direction
+				//!!!NOT DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			//Perform step 3 of Mid Level Algorithm Description
+		}
+		//All other options ruled out except that we on a node of type kDeadEnd
+		else
+		{
+			//We are at a node of type kDeadEnd
+			//5) Rotate the fairie if necessary because we are at a node object that is not of type kThrough
+			//!!!NOT DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			//Perform backtracking algorithm
+			//!!!NOT DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			//Perform step 3 of Mid Level Algorithm Description
+		}
+	}
+}	

@@ -1,0 +1,39 @@
+08/21/2012 ===
+
+*Summary*
+
+Added three buttons (one for each tower) that will show up on the left-side of the screen.
+Click whichever to be able to place the corresponding tower.
+
+*End Summary*
+
+<Sprites>
+- Added everything in and including the "UI" group.
+
+<Backgrounds>
+No changes.
+
+<Scripts>
+GameManagement > Game State > state_Defend_SpawnTower:
+- Removed input retrieval to initiate tower placement.
+- Altered lines 32, 38, 44.
+
+GameManagement > Minor Effects > scr_drawtower:
+- Line 2:
+	- Changed "if (alarm[1] <= 1)"
+	to "if ((alarm[1] <= 1) && (obj_GameManager.mTowerSelected == true))"
+
+GameManagement > scr_GameManager:
+- Altered lines 44 - ~48 to:
+	"
+	mTowerSelected = false;
+	mTowerType = "";
+	"
+
+<Objects>
+- Manager > obj_managerInterface:
+	- Added lines 47 - 51 (UI rectangle)
+- Added everything in and including the "UI" group.
+
+<Rooms>
+- Moved "rm_prototypeDefense1" as first room (in the list).

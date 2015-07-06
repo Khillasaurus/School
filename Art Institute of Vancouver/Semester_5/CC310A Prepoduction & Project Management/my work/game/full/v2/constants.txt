@@ -1,0 +1,5 @@
+kTileSideLength=32
+kEast=0
+kNorth=90
+kWest=180
+kSouth=270

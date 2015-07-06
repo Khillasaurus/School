@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{34282BBF-80BD-40A9-8B00-4B6955B5D24A}</ProjectGuid>
+    <RootNamespace>SGE</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files\Microsoft DirectX SDK %28March 2009%29\Include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28March 2009%29\Include;</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\Microsoft DirectX SDK %28March 2009%29\Lib\x86;C:\Program Files\Microsoft DirectX SDK %28March 2009%29\Lib\x64;</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Program Files\Microsoft DirectX SDK %28March 2009%29\Include;</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\Microsoft DirectX SDK %28March 2009%29\Lib\x86;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./;./External/Include/FMOD;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>./;./External/Include/FMOD;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio\Audio.h" />
+    <ClInclude Include="Audio\CFMOD.h" />
+    <ClInclude Include="Audio\CSound.h" />
+    <ClInclude Include="Core\CApplication.h" />
+    <ClInclude Include="Core\CLog.h" />
+    <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Core\CTimer.h" />
+    <ClInclude Include="Graphics\CDXGraphics.h" />
+    <ClInclude Include="Graphics\CFont.h" />
+    <ClInclude Include="Graphics\CSprite.h" />
+    <ClInclude Include="Graphics\CSpriteRenderer.h" />
+    <ClInclude Include="Graphics\CTexture.h" />
+    <ClInclude Include="Graphics\CWireFrame.h" />
+    <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Input\CDXInput.h" />
+    <ClInclude Include="Input\Input.h" />
+    <ClInclude Include="Input\InputTypes.h" />
+    <ClInclude Include="Misc\CIniFile.h" />
+    <ClInclude Include="Misc\CSplashScreen.h" />
+    <ClInclude Include="Misc\Misc.h" />
+    <ClInclude Include="Resource\CResource.h" />
+    <ClInclude Include="Resource\CResourceManager.h" />
+    <ClInclude Include="Resource\Resource.h" />
+    <ClInclude Include="Utility\Debug.h" />
+    <ClInclude Include="Utility\Key.h" />
+    <ClInclude Include="Utility\Random.h" />
+    <ClInclude Include="Utility\Utility.h" />
+    <ClInclude Include="SGE.h" />
+    <ClInclude Include="SGE_Audio.h" />
+    <ClInclude Include="SGE_Graphics.h" />
+    <ClInclude Include="SGE_Input.h" />
+    <ClInclude Include="SGE_Math.h" />
+    <ClInclude Include="SGE_UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Audio\CFMOD.cpp" />
+    <ClCompile Include="Audio\CSound.cpp" />
+    <ClCompile Include="Core\CApplication.cpp" />
+    <ClCompile Include="Core\CLog.cpp" />
+    <ClCompile Include="Core\CTimer.cpp" />
+    <ClCompile Include="Graphics\CDXGraphics.cpp" />
+    <ClCompile Include="Graphics\CFont.cpp" />
+    <ClCompile Include="Graphics\CSprite.cpp" />
+    <ClCompile Include="Graphics\CSpriteRenderer.cpp" />
+    <ClCompile Include="Graphics\CTexture.cpp" />
+    <ClCompile Include="Graphics\CWireFrame.cpp" />
+    <ClCompile Include="Input\CDXInput.cpp" />
+    <ClCompile Include="Misc\CIniFile.cpp" />
+    <ClCompile Include="Misc\CSplashScreen.cpp" />
+    <ClCompile Include="Resource\CResource.cpp" />
+    <ClCompile Include="Resource\CResourceManager.cpp" />
+    <ClCompile Include="Utility\Debug.cpp" />
+    <ClCompile Include="SGE.cpp" />
+    <ClCompile Include="SGE_Audio.cpp" />
+    <ClCompile Include="SGE_Graphics.cpp" />
+    <ClCompile Include="SGE_Math.cpp" />
+    <ClCompile Include="SGE_UI.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,11 @@
+[Map Objects]
+- Changed Event from "Left Button" to "Left Button Release"
+- Change counters in [obj_cityProgress] to cityCounters in [obj_MapControl]
+
+2012/8/13
+- Added scr_global
+- Added obj_global
+
+[state_Defend_SpawnTower.scr]
+- Changed "mPlayerCurrency" to "obj_global.mPlayerCurrency"
+

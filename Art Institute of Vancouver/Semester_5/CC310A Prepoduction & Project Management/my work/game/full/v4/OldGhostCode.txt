@@ -1,0 +1,394 @@
+    /*
+    for(i = 0; i < nodeCount; i += 1)
+    {
+        show_debug_message("waypoint[#].x");
+        show_debug_message("waypoint[#].y");
+        show_debug_message(waypoint[i].x);
+        show_debug_message(waypoint[i].y);
+    }
+    */
+
+/*    
+if(waypoint[0] != noone)
+{
+show_debug_message("waypoint[0].x");
+show_debug_message("waypoint[0].y");
+show_debug_message(waypoint[0].x);
+show_debug_message(waypoint[0].y);
+}
+if(waypoint[1] != noone)
+{
+show_debug_message("waypoint[1].x");
+show_debug_message("waypoint[1].y");
+show_debug_message(waypoint[1].x);
+show_debug_message(waypoint[1].y);
+}
+if(waypoint[2] != noone)
+{
+show_debug_message("waypoint[2].x");
+show_debug_message("waypoint[2].y");
+show_debug_message(waypoint[2].x);
+show_debug_message(waypoint[2].y);
+}
+if(waypoint[3] != noone)
+{
+show_debug_message("waypoint[3].x");
+show_debug_message("waypoint[3].y");
+show_debug_message(waypoint[3].x);
+show_debug_message(waypoint[3].y);
+}
+if(waypoint[4] != noone)
+{
+show_debug_message("waypoint[4].x");
+show_debug_message("waypoint[4].y");
+show_debug_message(waypoint[4].x);
+show_debug_message(waypoint[4].y);
+}
+if(waypoint[5] != noone)
+{
+show_debug_message("waypoint[5].x");
+show_debug_message("waypoint[5].y");
+show_debug_message(waypoint[5].x);
+show_debug_message(waypoint[5].y);
+}
+if(waypoint[6] != noone)
+{
+show_debug_message("waypoint[6].x");
+show_debug_message("waypoint[6].y");
+show_debug_message(waypoint[6].x);
+show_debug_message(waypoint[6].y);
+}
+if(waypoint[7] != noone)
+{
+show_debug_message("waypoint[7].x");
+show_debug_message("waypoint[7].y");
+show_debug_message(waypoint[7].x);
+show_debug_message(waypoint[7].y);
+}
+if(waypoint[8] != noone)
+{
+show_debug_message("waypoint[8].x");
+show_debug_message("waypoint[8].y");
+show_debug_message(waypoint[8].x);
+show_debug_message(waypoint[8].y);
+}
+if(waypoint[9] != noone)
+{
+show_debug_message("waypoint[9].x");
+show_debug_message("waypoint[9].y");
+show_debug_message(waypoint[9].x);
+show_debug_message(waypoint[9].y);
+}
+if(waypoint[10] != noone)
+{
+show_debug_message("waypoint[10].x");
+show_debug_message("waypoint[10].y");
+show_debug_message(waypoint[10].x);
+show_debug_message(waypoint[10].y);
+}
+if(waypoint[11] != noone)
+{
+show_debug_message("waypoint[11].x");
+show_debug_message("waypoint[11].y");
+show_debug_message(waypoint[11].x);
+show_debug_message(waypoint[11].y);
+}
+*/
+
+    /*
+    if(curNode == 0)
+    {
+        move_towards_point(waypoint[1].x, waypoint[1].y, unitSpeed)
+        if((curNode == 0) && (x == waypoint[1].x) && (y == waypoint[1].y))
+        {
+            if((waypoint[1].x == obj_pathingNodeBlackEnd.x) && (waypoint[1].y == obj_pathingNodeBlackEnd.y))
+            {
+                scr_unitEnemyGhost_end();
+            }
+            curNode = 1;
+        }
+    }
+    else if(curNode == 1)
+    {
+        move_towards_point(waypoint[2].x, waypoint[2].y, unitSpeed)
+        if((curNode == 1) && (x == waypoint[2].x) && (y == waypoint[2].y))
+        {
+            if((waypoint[2].x == obj_pathingNodeBlackEnd.x) && (waypoint[2].y == obj_pathingNodeBlackEnd.y))
+            {
+                scr_unitEnemyGhost_end();
+            }
+            curNode = 1;
+        }
+    }
+    */
+    
+    /*
+    //While we haven't reached the end node
+    while(curNode < nodeCount)
+    {
+        //If we are currently at a node
+        if(atNode)
+        {
+            //Move towards the next node
+            move_towards_point(waypoint[curNode + 1].x, waypoint[curNode + 1].y, unitSpeed);
+            atNode = false;
+        }
+        //If we reached the next node
+        if(x == waypoint[curNode + 1].x && y == waypoint[curNode + 1].y)
+        {
+            curNode += 1;
+            atNode = true;
+        
+            //If this is the end node
+            if(x == waypoint[nodeCount].x && y == waypoint[nodeCount].y)
+            {
+                scr_unitEnemyGhost_end();
+            }
+        }
+    }
+    //Just in case the end node check failed (usually due to the unwanted penetration collision detection effect (aka magic bullet), destroy me here if the I am NOT already dead
+    scr_unitEnemyGhost_end();
+    */
+
+    /*
+    //While we haven't reached the end
+    //while(x != waypoint[nodeCount - 1].x && y != waypoint[nodeCount - 1].y)
+    //{
+    while(curNode < nodeCount)
+    {
+        if(enroute)
+        {
+            //If we have reached a node
+            if(x == waypoint[curNode].x && y == waypoint[curNode].y)
+            {
+                //Update what node we think we are at
+                curNode += 1;
+                speed = 0;
+                enroute = false;
+            }
+        }
+        else
+        {
+            //Move towards the next node
+            move_towards_point(waypoint[curNode].x, waypoint[curNode].y, unitSpeed);
+            enroute = true;
+        }
+    }
+    
+    for(i = 0; i < nodeCount - 1; i += 1)
+    {
+        //If unit is NOT enroute
+        if(!enroute)
+        {
+            move_towards_point(waypoint[i + 1].x, waypoint[i + 1].y, unitSpeed);
+            enroute = true;
+        }
+        //Else if unit is enroute and has reached a waypoint
+        else if(x == waypoint[i].x && y == waypoint[i].y)
+        {
+            speed = 0;
+            enroute = false;
+        }
+        //Else unit is enroute and is NOT at a waypoint
+        else
+        {
+            //Prevent node counter from moving forward
+            i -= 1;   
+        }
+    }
+    
+    //If we have reached the end node
+    //if(x == waypoint[nodeCount - 1].x && y == waypoint[nodeCount - 1].y)
+    if(curNode == nodeCount)
+    {
+        scr_unitEnemyGhost_end();
+    }
+    */
+}
+
+//show_debug_message("SCRIPT - END: scr_unitEnemyGhost_step");
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/*
+//show_debug_message("SCRIPT - START: scr_unitEnemyGhost_step");
+
+//Run once - Creation step
+if(paramFlag = true)
+{
+    //Any creation events that involve the following must be done here
+    //path
+    
+    //!!!START!!! Taken from barebones game (indenting messed up still)
+    
+    //Start
+    if(instance_exists(obj_pathingNodeBlackStart))
+    {
+        //Set start location
+        x = obj_pathingNodeBlackStart.x;
+        y = obj_pathingNodeBlackStart.y;
+
+        waypoint[0] = obj_pathingNodeBlackStart;
+        waypointCount += 1;
+    //0
+    if(instance_exists(obj_pathingNodeBlack0))
+    {
+        waypoint[1] = obj_pathingNodeBlack0;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[1] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //1
+    if(instance_exists(obj_pathingNodeBlack1))
+    {
+        waypoint[2] = obj_pathingNodeBlack1;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[2] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //2
+    if(instance_exists(obj_pathingNodeBlack2))
+    {
+        waypoint[3] = obj_pathingNodeBlack2;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[3] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //3
+    if(instance_exists(obj_pathingNodeBlack3))
+    {
+        waypoint[4] = obj_pathingNodeBlack3;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[4] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //4
+    if(instance_exists(obj_pathingNodeBlack4))
+    {
+        waypoint[5] = obj_pathingNodeBlack4;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[5] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //5
+    if(instance_exists(obj_pathingNodeBlack5))
+    {
+        waypoint[6] = obj_pathingNodeBlack5;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[6] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //6
+    if(instance_exists(obj_pathingNodeBlack6))
+    {
+        waypoint[7] = obj_pathingNodeBlack6;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[7] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //7
+    if(instance_exists(obj_pathingNodeBlack7))
+    {
+        waypoint[8] = obj_pathingNodeBlack7;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[8] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //8
+    if(instance_exists(obj_pathingNodeBlack8))
+    {
+        waypoint[9] = obj_pathingNodeBlack8;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[9] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //9
+    if(instance_exists(obj_pathingNodeBlack9))
+    {
+        waypoint[10] = obj_pathingNodeBlack9;
+        waypointCount += 1;
+    }
+    else
+    {
+        waypoint[10] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+        earlyEnd = true;
+    }
+    //End
+    if(!earlyEnd && instance_exists(obj_pathingNodeBlackEnd))
+    {
+        waypoint[11] = obj_pathingNodeBlackEnd;
+        waypointCount += 1;
+    }
+        }
+        //else if for other colours
+        
+        paramFlag = false;
+        initialized = true;
+}
+    
+    //!!!END!!! Taken from barebones game
+
+//Run every step - Normal step loop
+if(initialized)
+{
+    //!!!START!!! Taken from barebones game
+
+    for(i = 0; i < waypointCount; i += 1)
+    {
+        if(!enroute)
+        {
+            move_towards_point(waypoint[i].x, waypoint[i].y, unitSpeed);
+            enroute = true;
+        }
+        if(x == waypoint[i].x && y == waypoint[i].y)
+        {
+            enroute = false;
+        }
+    }
+    
+    if(x == waypoint[nodeCount - 1].x && y == waypoint[nodeCount - 1].y)
+    {
+        scr_unitEnemyGhost_end();
+    }
+    
+    //!!!END!!! Taken from barebones game
+}
+*/

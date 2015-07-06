@@ -1,0 +1,24 @@
+I was trying to think up a way that I could create a bullet hell game, but have my game stand out!
+I started thinking about a concept where the player could play in a vertical scrolling world and shoot
+using the mouse, but multiply the score of every succesful attack by the degrees away from parallel to
+ships' direction! But even then, that didn't seem like enough. So I decided to add the idea I wrote down
+not too long ago for a speed run platformer type game, where the faster the player travels in the positive
+direction, more higher tier collectibles appear!
+In the end, I decided that I should keep the angle multiplier, but also incorporate a mechanic where every
+bullet that connects with an enemy, spawns a x number of point collectibles where the attack hits, based on
+x amount of damage given. But in order to prevent the player from using a weak weapon repeatedly to get
+more points without progressing as quickly through the level, I decided that every point collected, increases
+an enemy spawn rate multiplier! This way, if the player wants a higher score, they're putting themselves in
+greater risk, but simply killing enemies will not increase their score as much, due to the fact that the
+points must be collected, thereby allowing not so experienced users to simply survive, while still having
+knowledge of what must be done to achieve a higher score!
+
+
+NEW VERSION:
+After talking to Marc Aubanel, we realized that there isn't enough of a penalty for not shooting at all, other
+than simply haing a lower score. To get around this, the score and collectible mechanics change to the following:
+The greater the angle of the shot further away from the parallel of the ships angle, the greater the score earned
+for every connecting shot, meaning that the player no longer needs to fly up to the spawned orbs for points.
+The reason for this is because, since every connecting shot increases the enemy spawn rate, choosing to not shoot
+means I just won't die at all, so now collecting the orbs that appear around the enemies from collecting shots
+net you rewards such as shields, power attack chargers, power ups, etc.

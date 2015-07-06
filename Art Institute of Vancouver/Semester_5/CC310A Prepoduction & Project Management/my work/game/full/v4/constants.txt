@@ -1,0 +1,2 @@
+kTileSideLength=32
+kNodeNumCount=10

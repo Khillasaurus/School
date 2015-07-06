@@ -1,0 +1,36 @@
+======July 31, 2012======
+
+Corey
+-------------------------------------------------------------------------------------
+Scripts - Tower - Corey - File - scr_file_getTowerStats
+Line 31, line 32 - added these two lines
+
+Scripts - Tower - Corey - Tower - scr_towerParent_create
+Line 9 - "Added mTowerNumber = 0.0;"
+
+Objects - Tower - Corey - Tower - obj_towerParent - Begin Step - Execute a piece of code
+Line 31 to 42 - Added this code to change the projectiles being fired by the correct tower type
+Line 47 - Changed "projectile = instance_create(x + (sprite_height / 2), y + (sprite_height / 2), obj_projectile);" to "projectile = instance_create(x + (sprite_height / 2), y + (sprite_height / 2), projectileType);"
+
+Objects - Tower - Corey - Projectile
+New Object - obj_projectile2
+	     obj_projectile3
+
+Text File(tower_type)
+Added a new variable: "mTowerNumber"
+
+
+Chris
+-------------------------------------------------------------------------------------
+
+Objects - Tower - Corey - Tower
+New Object - obj_towerSplash
+	     obj_towerSupport
+
+Scripts - Tower - Corey - Management - Game State - stage_Defend_SpawnTower
+Line 10 - commented out
+Line 21 to line 32 - Vk_num is changed to ord
+Line 51, line 57 - changed obj_towerStandard to proper new tower name.
+
+Text File(tower_type)
+Added two new towers with stats

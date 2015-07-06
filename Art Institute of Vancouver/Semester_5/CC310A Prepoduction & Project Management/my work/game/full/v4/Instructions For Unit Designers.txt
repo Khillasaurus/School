@@ -1,0 +1,2 @@
+If you would like to make a unit that is NOT 32x32 pixels, simply set the origin for the sprite to: ( ((sprite_width/2) - 16), ((sprite_height/2) - 16) )
+Or if the sprite's center is not actually the unit's center, then replace sprite_width/2 with the center: ( (unitCenter - 16), (unitCenter - 16) )

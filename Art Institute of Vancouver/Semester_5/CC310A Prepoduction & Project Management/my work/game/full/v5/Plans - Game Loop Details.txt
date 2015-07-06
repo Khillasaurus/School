@@ -1,0 +1,19 @@
+===========
+   ORDER
+===========
+I. Room Created
+	1. Run room initialization script
+		a. Instantiate all managers
+			i. pathing
+			ii. spawner
+
+===========
+EXPLANATION
+===========
+When a room is created, in it's "creation code" it calls the script with the same name as the room name
+The room initialization script instantiates all managers, and passes in whatever parameters neccessary
+	This is the closest to a constructor arguments in c++, as the variables for the managers are set
+	immediately after creation
+	A check needs to be done in the manager step scripts however,
+	to ensure that they do not start until the values they use are different from the default
+	variable's data in each manager's creation script

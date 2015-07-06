@@ -1,0 +1,38 @@
+#include "stdafx.h"
+
+int add(int a, int b)
+{
+	return a + b;
+}
+
+int float(float a, float b)
+{
+	return a + b;
+}
+
+template<typename T>
+T add(T a, T b)
+{
+	return a + b;
+}
+
+
+class cThing
+{
+	cThing operator +(const cThing &rhs)
+	{
+		cThing tmp;
+		tmp.x = x + rhs.x;
+		return tmp;
+	}
+};
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int result = add<int>(1, 1);
+
+	cThing thingResult = add<cThing>(cThing(), cThing());
+
+	return 0;
+}

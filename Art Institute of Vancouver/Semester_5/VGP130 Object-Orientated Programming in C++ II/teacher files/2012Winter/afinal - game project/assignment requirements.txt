@@ -1,0 +1,55 @@
+
+Summary
+	One term-long game project using the SGE library
+	Game must not have any fatal bugs (NO crashes, hangs, sudden exits)
+	The project is graded on the code quality ONLY.  
+	The fun factor of the game is only for the student's own practice and amusment.
+
+
+
+Part I		-	due Feb 3rd (aka wk 5)
+
+creative brief.  (aka CB)
+	a short document describing what it is you will be making. 
+	how it works. 
+	why it should be made at all.
+	the scope. eg: dungeon crawl.. will include 10 levels.
+	the design's goals
+
+technical design doc. (aka TD)
+	a larger doc describing HOW, by way of what tools, tech, methods, you will acheive the design goals.
+	it should break down the user experience into the required systems.
+	the high level details of each system should be described thereby implying you know how to build them
+	and technical risks should be identified. BE HONEST. 
+		(work with Ken to insure the risks dont prevent your project from being complete)
+
+proof of tech concepts exe
+	feedback from Ken due wk 6
+
+Part II		- 	due Feb 24th  (aka wk 8)
+	a demonstratable prototype to show to the group
+	no fatal bugs
+	limited functionality is obviously expected.
+	unfinished features should be inaccessible (to avoid fatal bugs)
+
+Part III	- 	due Mar 9 (aka wk 10)
+	alpha
+	normal definition: no new features - aka feature complete. 
+	only bug fixing would occur hereafter
+
+	//kgk: 2012/02/29 : code to be handed in for Ken to review and grade
+	// please accompany project with updated CB/TD noting scope reduction, tech changes/directions taken
+
+
+Part IV		-	Mar 16 (aka wk 11)
+	final game presentation to group
+	includes a tech design walk through of how it was made 
+		- what systems did you require/design
+		- what tech problems momentarily stumped you and how you overcame them
+		- what you would do differently if given more time
+		- how you would change the 'product' if it were to be released
+
+		** the above tech design walk through should be written down and handed in.
+
+	//kgk: 2012/02/29 : completness of the project in terms of it being demoed, is part of the project's grade.
+	// (ie: doesn't crash. all intended to be demoed features work as designed/expected)

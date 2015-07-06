@@ -1,0 +1,124 @@
+# Unit Database
+#
+# When adding a new entry, please use the following format:
+#
+# 	<Name>
+# 	<Health>
+# 	<Attack Power>
+# 	<Attack Speed>
+# 	<Attack Range>
+#	<Projectile Speed>
+# 	<Movement Speed>
+# 	<Cost>
+#	<Blind>		*Debuff stat, always start at 0*
+#	<Flying>	*If the unit is an air unit*
+#
+# For example:
+#
+# 	obj_unitDroid
+# 	3
+# 	2
+# 	1
+# 	2
+#	3
+# 	2
+#	1
+#
+# The <Name> of the unit here must be the *exact* same as
+# the name of the unit object in Game Maker.
+#
+# Integers ranging from 1 (low) to 6 (high) may be entered.
+#
+# Please place at least one line of space between unit templates.
+
+# Air units
+obj_unitAirFast
+2
+1
+3
+3
+6
+5
+3
+0
+1
+
+obj_unitAirHeavy
+5
+5
+3
+1
+6
+1
+5
+0
+1
+
+obj_unitAirNormal
+3
+2
+3
+2
+6
+3
+3
+0
+1
+
+
+
+# Melee Units
+obj_unitMeleeFast
+4
+3
+2
+3
+6
+3
+2
+
+obj_unitMeleeHeavy
+5
+6
+6
+2
+6
+1
+2
+
+obj_unitMeleeNormal
+4
+4
+3
+2
+6
+2
+2
+
+# Range Units
+obj_unitRangeFast
+2
+1
+3
+5
+6
+5
+2
+
+obj_unitRangeHeavy
+4
+4
+3
+2
+6
+2
+5
+
+obj_unitRangeNormal
+3
+2
+3
+3
+6
+2
+3

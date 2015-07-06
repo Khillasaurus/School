@@ -1,0 +1,22 @@
+Just the compile
+
+[scr_GameManager]
+ - Added New Unit Element/Variable (line 54) to (line 64)
+
+
+
+[state_UnitCreationQueue]
+Changes:
+
+ - Added New Spawning element (Line 13) to (Line 31)
+
+
+Line 13: Changed the 9 to 10
+Line 27 Changed the <= 9 to 10
+
+[state_UnitSpawner]
+
+ - Changed case elements to match with new Unit Variables
+
+Changes:
+Line: 76, 81 88, 97, 101, 108, 118, 141, 146, 162, 183, 194 Swaped the mAirUnit with the mRangedunits 

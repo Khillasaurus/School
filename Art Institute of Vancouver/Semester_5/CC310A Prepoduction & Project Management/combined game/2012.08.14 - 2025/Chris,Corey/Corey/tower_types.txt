@@ -1,0 +1,62 @@
+# Tower Database
+#
+# When adding a new entry, please use the following format:
+#
+# 	<Name>
+# 	<Health>
+# 	<Attack Power>
+# 	<Attack Rate>
+# 	<Range>
+# 	<Projectile Speed>
+# 	<Cost>
+#	<TowerNumber>
+#	<Battery held>
+#
+# For example:
+#
+# 	obj_towerDeathStar
+# 	1
+# 	2
+# 	3
+# 	2
+# 	1
+# 	2
+#	1
+#	0
+#
+# The <Name> of the tower here must be the *exact* same as
+# the name of the tower object in Game Maker.
+#
+# Integers ranging from 1 (low) to 6 (high) may be entered.
+#
+# Please place at least one line of space between tower templates.
+
+obj_towerStandard
+0
+2
+6
+4
+6
+3
+1
+0
+
+obj_towerSplash
+0
+4
+6
+3
+6
+3
+2
+0
+
+obj_towerSupport
+0
+0
+6
+4
+4
+3
+3
+0

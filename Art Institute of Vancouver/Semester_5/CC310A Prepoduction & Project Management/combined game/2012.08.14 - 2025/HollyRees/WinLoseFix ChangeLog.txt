@@ -1,0 +1,18 @@
+[scr_GameManager]
+ - Added 2 Variables "mSurvivedUnits", "mLosingNumber", "mKilledUnit"
+
+[scr_GamePlay]
+ - Added Alarm Statements in mDefendGame under "gameWinState" and "gameLoseState"
+
+[scr_UpdateState]
+ - Added New End Game Condition (Line54) to (Line61)
+  - (line54) changed "mSpawnedSoldiers <= 0" to "mKilledUnit >= mMaxSoldiers"
+
+[scr_unitParent_step]
+ - Added "mSurvivedUnit" to increment before destruction
+
+[scr_unitParent_end]
+ - Added variable mKilledUnit to increment on death
+
+- Added [scr_WinState]
+- Added [scr_LoseState]

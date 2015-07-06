@@ -1,0 +1,14 @@
+Since Tuesday morning and evening classes' assignments both use GameMaker, make a Tower Defence game for both.
+Since Wednesday and Thursday classes' both require me to make a game by myself, make a slider game for both.
+The slider game will have 2 parts to it. This was if I can't finish both parts, I'll still have a complete game!
+The first part is the slider picture scramble puzzle.
+This is one of those games where a square grid of tiles with
+one missing are slid around to scramble a picture and the users goal is to unscramble the picture back to it's
+original state with a single tile missing in the bottom right corner (as a tile needs to be missing in order to
+slide tiles around)
+If time permits I can utilize my holiday programming bmp tool to allow the user to upload a bmp picture of their
+choice to be the background for the scrambled image instead of a preset choice!
+The second part is the car escape slider puzzle.
+This is like the car escape or safari escape puzzle games I used to play as a kid.
+The reason this part is second is because it requires me to manually make each level, while the picture scrambler
+can be scrambled randomly.

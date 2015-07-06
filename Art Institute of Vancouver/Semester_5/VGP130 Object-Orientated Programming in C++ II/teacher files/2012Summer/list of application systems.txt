@@ -1,0 +1,56 @@
+animation 						
+physics							11
+input							11111
+	joystick, touch screen, kinect, cameras, 
+rendering
+	lighting
+	data
+		textures
+		models
+		shaders
+simulation 
+	accounting
+	data
+	level
+ai/gameplay						11111
+	pathfinding
+	target selection
+	state machines
+	game rule enforcement
+sound
+networking						111111
+	protocols
+math
+	wavelet
+	fft
+	signal processing
+user interface						111111
+	frontend
+main loop
+	application architecture
+timers, clocks
+memory							1
+	management
+	stats
+database
+	game save
+	underlying db
+asset management					1
+	file streaming
+	files
+	archives
+	compressed data
+debugging tools (printf, logging, assert)
+events							1
+	message pumps
+	function callbacks
+encryption						1
+	pgp
+	certificates
+	etc  (crypolib)
+	hashes (SHA1, MD5, CRC)
+multithreading						11
+	mutex/semaphores/locks/atomics
+	threads
+	cpu loading (2 threads ==> 1 core)
+build engineering/pipelines

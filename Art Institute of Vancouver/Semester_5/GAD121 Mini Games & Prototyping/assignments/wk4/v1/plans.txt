@@ -1,0 +1,19 @@
+========
+control
+--------
+Check direction: left up right down
+check state: onGround
+If onGround, player can use directional controls
+Else check if players' vertical velocity
+If the player is falling, allow them to only control horizontal movement
+And when the distance between the player and the ground is less than the movement speed, use move_contact_solid()
+to get the players' feet to touch the ground
+Else if the players' is either moving up or is stationary in the y axis, check the jump counter
+If the jump counter is < 2, the player can jump once more if desired
+Else the player is falling
+========
+animation
+--------
+Determine horizontal state
+Determine vertical state
+Draw appropriately

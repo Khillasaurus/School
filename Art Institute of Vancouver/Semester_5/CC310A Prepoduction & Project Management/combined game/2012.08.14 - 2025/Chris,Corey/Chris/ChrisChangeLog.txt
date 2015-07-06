@@ -1,0 +1,34 @@
+obj_unitParent/Begin Step
+
+lines 1 to 5 added: //check if blind
+	     	    if(mBlind > 0)
+	     	    {
+  	    	      mBlind -= .2;
+	     	    }
+
+line 31 changed to "if ((mAttackingCounter >= mAttackRate) && (mBlind <= 0))"
+
+obj_projectile3/End Step
+
+Line 6 changed to "mCurrentTarget.mBlind = 6;"
+
+obj_unitParent
+
+colision event added
+executable script added: mHealth -= obj_towerSplash.mAttackPower;
+			 with(obj_projectile2)instance_destroy();
+
+obj_projectile2/End Step
+
+lines 6 and 9 comented out
+line 7 added "instance_create(mCurrentTarget.x,mCurrentTarget.y,obj_blastRadius);"
+
+spr_blastRadius created
+obj_blastRadius created
+
+create event added "alarm[0] = 5;
+alarm0 event added "instance_destroy();"
+
+
+
+

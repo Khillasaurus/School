@@ -1,0 +1,39 @@
+Issues:
+Units will target first tower they see and will change targets to the tower next to it.
+
+Tower will keep firing after to a tower already selected a minion when you
+selected a towerbattery.
+
+
+scr_GameManager
+Added Battery instanciate
+
+Scripts - Tower - Corey - File - scr_file_getTowerStats
+Line 33, line 34 - added these two lines
+
+Scripts - Tower - Corey - Tower - scr_towerParent_create
+Line 10 - "Added mBattery = 0.0;"
+
+Objects - Tower - Corey - Battery
+New Object - obj_battery
+
+obj_towerParent
+BeginStep - Line 45 - (mhealth > 0)
+
+obj_battery
+Create - Execute Code
+
+Objects - Manager -  obj_managerInterface
+Glob Left Pressed:
+Execute Code:
+Added line 13 ~ ...
+
+Glob Right Pressed:
+Added Line 7 ~ ...
+
+Draw:
+Changed Line 39 "if(mHealth > 0)" to "if(mBattery == 1)"
+Changed Line 41 "draw_healthbar(x - 4, y - 16, x + 36, y - 12, mHealth / (mMaxHealth / 100), c_red, c_green, c_green, 0, 1, 1);" to "draw_healthbar(x - 4, y - 16, x + 36, y - 12, mHealth / 6/ 100), c_red, c_green, c_green, 0, 1, 1);"
+
+Scripts - Tower - Corey - Game State - state_Defend_SpawnTower
+Added boolean at line 3

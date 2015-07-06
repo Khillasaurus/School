@@ -1,0 +1,31 @@
+EXPLANATION OF MY OBJECTS
+=========================
+
+obj_managerPathing
+------------
+Contains all "global variables".
+I understand that all variables are global in Game Maker,
+but this makes it more intuitive for my attept to OOP-ify Delphi
+
+	kEast = 0;
+	kNorth = 90;
+	kWest = 180;
+	kSouth = 270;
+
+obj_nodeStart
+------------
+
+obj_nodeEnd
+------------
+
+obj_nodeThrough
+------------
+
+obj_nodeTurn
+------------
+
+obj_nodeJoin
+------------
+
+obj_nodeDeadEnd
+------------

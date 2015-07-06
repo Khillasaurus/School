@@ -1,0 +1,34 @@
+To change a flat tire:
+Once you have determined that you have a flat tire:
+1. Stop the car in a nearby safe location such as a parking lot, or side of a road while driving slowly (aprox 30km/h max).
+2. Turn off the engine.
+3. Pull the handbrake if one exists.
+4. Undo seatbelt.
+5. Turn on your emergency lights (also known as blinkers, or hazard lights)
+6. Check to see if the tire has a puncture. If so, proceed to step 7, otherwise skip to step A.
+7. Use a jack to prop up the car so that the wheel that needs to be changed is the only wheel off the ground.
+8. Remove the hub cap (also known as rim)
+9. Using a Cross-Wrench, loosen each bolt starting with any bolt, followed by a bolt that is approximitely across from the initial bolt, until all bolts have been loosened.
+10. Remove the bolts and keep in a safe place for later.
+11. Remove the tire from the car by pulling away from the side of the car. Remember to use your legs more than your back to lift in order to prevent injury.
+12. Check the sides of the back-up tire to see what the maximum suggested driving speed is, and record this for later.
+13. Place the back-up tire back onto the axel of where the flat tire used to be.
+14. Screw the bolts back in place using the Cross-Wrench in the same pattern used to remove bolts in step 9.
+15. Place all parts that are remaining in the trunk of the car (such as the flat tire, tools used such as jack, cross-wrench)
+16. Get back in the car
+17. Refer to the recorded maximum suggested speed that was recorded in step 12, and remember this while driving to be your new maximum safe speed until a proper tire is used later on.
+18. Turn off the blinkers
+19. Wear seatbelt.
+20. Start the engine
+21. Drive no faster than the newly suggested maximum speed.
+
+A. Check the suggested pressure which is found on the sides of the tire and record this.
+B. Use a pressure gauge to check what the current tire pressure is.
+C. If the suggested pressure is higher than the current tire pressure, use an air pump to fill the tire up to the suggested amount recorded in step A, checking the pressure periodically to ensure that you do not overfill the tires. Skip to step E.
+D. If the suggested pressure is lower or the same as the current tire pressure, skip to step 7.
+E. Place all parts that are remaining in the trunk of the car (such as the pressure guage, air pump)
+F. Get back in the car
+G. Turn off the blinkers
+H. Wear seatbelt.
+I. Start the engine
+J. Drive safely.

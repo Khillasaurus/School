@@ -1,0 +1,35 @@
+#Script changes#
+
+======July 31, 2012=======
+----------------------------------------------------------------------
+
+#01
+Scripts > File > scr_file_getUnitStats
+
+Added:  line 33, line 34
+	"mBlind = file_text_read_real(textFile);"
+	"mFlying = file_text_read_real(textFile);"
+
+Purpose: Calling variables for the tower group and for air units
+
+
+#02
+Scripts > Unit> scr_unitParent_create
+
+Added:  line 19, line 20
+	"mBlind = 0.0;"
+	"mFlying = 0.0;"
+
+Purpose: Adding & initializing variables for the tower group and for air units
+
+#03
+Sprites > Unit 
+
+Created 3 new sprites
+	"spr_unitAirStandard"
+	"spr_unitAirFast"
+	"spr_unitAirHeavy"
+
+
+
+
