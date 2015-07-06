@@ -1,0 +1,8 @@
+The goal of my bmp utility is to be able to generate a height map based on user settings.
+An example of how this can be used to create traversable terrain:
+	1) User creates a heightmap that has no two tiles more than a certain height difference, thus allowing for a smooth transition from tile to tile, call this pathway.bmp for example
+	2) The user can then upload the previously made heightmap (pathway.bmp), and use that as a tile in the new heightmap. This allows for mountains/cliffs to be created with traversable walkways beside or on the mountains/cliffs
+
+The utility is not done, and is no where near clean code, but it's a work in progress, that I plan to use for my Unity class's project.
+
+The weird math that is done in the code is explained on my pieces of paper at home, so I'll add comments explaining later as I have to hand the homework in now.

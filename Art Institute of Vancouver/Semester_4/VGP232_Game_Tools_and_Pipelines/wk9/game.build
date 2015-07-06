@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<project name="wk9" default="build">
+	
+	<!--
+	this is a comment
+	
+	/alex/aigame/aigame.sln
+	/alex/aigame/aigame/aigame/aigame.vcproj
+	/alex/aigame/aigame/aigame/h
+	/alex/aigame/aigame/aigame/src
+	/alex/aigame/aigame/ailib.vcproj
+	/alex/aigame/aigame/h
+	/alex/aigame/aigame/src
+	/alex/aigame/libs/ailib/ailib.vcproj
+	/alex/aigame/libs/ailib/lib/ailib.lib
+	/alex/aigame/libs/ailib/h/ailib
+	/alex/aigame/runtime
+	/alex/aigame/build
+	/alex/aigame/build/deploy/release/win/bundled
+	/alex/aigame/build/release
+	/alex/aigame/build/release/win
+	/alex/aigame/build/release/win/unbundled
+	/alex/aigame/build/release/win/bundled
+	/alex/aigame/build/release/win/installer
+	/alex/aigame/build/release/release/osx
+	/alex/aigame/build/debug
+	/alex/aigame/pipeline					- nant .build
+	/alex/aigame/installer					- installer config + assets
+	/alex/aigame/out/release/aigame/aigame.exe
+	/alex/aigame/out/debug/aigame/aigame.exe
+	/alex/aigame/out/debug/aigame/aigame.obj
+	/alex/aigame/out/debug/ailib/aigame.obj
+	/alex/aigame/out/debug/levelgen/levelgen.exe
+	/alex/aigame/lib/debug/ailib/ailib.lib
+	/alex/aigame/levelgen/levelgen.vcproj
+	/alex/aigame/levelgen/h
+	/alex/aigame/levelgen/src
+	/alex/aigame/archive
+	/alex/aigame/bin
+	/alex/aigame/bin/levelgen.exe
+	/alex/aigame/tools
+	/alex/aigame/tools/dxsdk_setup.exe
+	/alex/aigame/tools/perforce_setup.exe
+	/alex/aigame/docs
+	
+	clean	- erase all output
+	init	- set porperties, sync files from repository
+	build	- build everything
+	
+	deploy	- move binaries/data to "public location (could be local machine only, or otherwise)
+	install	- build the installer
+	publish	- move finished installer to public location
+	
+	-->
+	
+	<target name="LevelSet">
+		<fileset basedir="runtime" id="levels">
+			<include name="**/level.txt"/>			<!-- **/ means include everything from here onwards -->
+			<!--
+			<exclude name="**/noincl/**/*"/>
+			<exclude name="**/lvl9/level.txt"/>
+			-->
+		</fileset>
+	</target>
+	
+	<property name="basename" value="wk9"/>
+	<!--
+	<property name="debug" value="true"/>
+	-->
+	
+	<property name="proj.rootdir" value="${project::get-base-directory ()}"/>		<!-- proj.rootdir is not refring to a struct member variable as this is actually a string, but is written this way to emulate structs -->
+	<property name="proj.runtime" value="${project.rootdir}\runtime"/>
+	<property name="proj.outdir" value="${project.rootdir}\build\runtime/raw"/>
+	<property name="proj.installdir" value="${project.rootdir}\build\runtime\installer"/>
+	
+	
+	<target name="clean">
+		<delete>
+			<filesest>
+				<include name="build/runtime/map.txt"/>
+				<!--
+				<include name="bin/${basename}-??.exe"/>
+				-->
+			</filesest>
+		</delete>
+	</target>
+	
+	<target name="run" depends="build">
+		<exec program="notepad.exe" basedir="."/>
+	</target>
+	
+	<target name="build">
+		<echo message="	~~~ buil target ~~~ ">
+		<mkdir dir="$(proj.outdir)" />
+		
+			<nant target="${target::get-current-target()}">
+				<buildfiles>
+					<include name="**/*.build"/>
+					
+					<!-- avoid recursive execution of current build file -->
+					<exclude name="${project::get-buildfile-path()}">
+				</buildfiles>
+			</nant>
+	</target>
+	
+</project>

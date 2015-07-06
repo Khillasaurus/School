@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Sorting">
+</Property><Property Name="Solution File" Value="H:\Semester 4\VGP 120 Procedural Programming in c 2\wk9\Assignment\Sorting\Sorting.sln">
+</Property><Property Name="Date" Value="Thursday, May 31, 2012">
+</Property><Property Name="Time" Value="0:10 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Sorting" Source="Sorting.vcproj" Description="Converting project file 'H:\Semester 4\VGP 120 Procedural Programming in c 2\wk9\Assignment\Sorting\Sorting.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Sorting" Source="Sorting.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="Sorting" Source="Sorting.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP 120 Procedural Programming in c 2\wk9\Assignment\Sorting\Sorting.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Sorting" Source="Sorting.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Sorting.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Sorting.sln" Description="Converted">
+</Event></UpgradeLog>

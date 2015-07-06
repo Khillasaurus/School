@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<project name="wk9" default="build">
+   
+    <!--  
+    this is a comment
+    
+    /alex/aigame/aigame.sln
+    /alex/aigame/aigame/aigame.vcproj
+    /alex/aigame/aigame/h
+    /alex/aigame/aigame/src
+    /alex/aigame/libs/ailib/ailib.vcproj
+    /alex/aigame/libs/ailib/lib/ailib.lib
+    /alex/aigame/libs/ailib/h/ailib
+    /alex/aigame/runtime
+    /alex/aigame/build
+    /alex/aigame/build/deployed/release/win/unbundled
+    /alex/aigame/build/release
+    /alex/aigame/build/release/win
+    /alex/aigame/build/release/win/unbundled
+    /alex/aigame/build/release/win/bundled
+    /alex/aigame/build/release/win/installer
+    /alex/aigame/build/release/osx
+    /alex/aigame/build/debug
+    /alex/aigame/pipeline				    - nant .build files
+    /alex/aigame/installer					- installer config + assets
+    /alex/aigame/out/release/aigame/aigame.exe
+    /alex/aigame/out/debug/aigame/aigame.exe
+    /alex/aigame/out/debug/aigame/aigame.obj
+    /alex/aigame/out/debug/ailib/ailib.obj
+    /alex/aigame/out/debug/levelgen/levelgen.exe
+    /alex/aigame/levelgen/levelgen.vcproj
+    /alex/aigame/levelgen/h
+    /alex/aigame/levelgen/src
+    /alex/aigame/archive
+    /alex/aigame/bin
+    /alex/aigame/bin/levelgen.exe
+    /alex/aigame/tools
+    /alex/aigame/tools/dxsdk_setup.exe
+    /alex/aigame/tools/perforce_setup.exe
+    /alex/aigame/docs
+    
+
+	clean    - errase all output
+	init     - set properties, sync file from repository
+	build	 - build everything
+	
+	deploy   - move binaries/data to "public" location (could be local machine only, or otherwise)
+	install  - build the installer
+	publish  - move finished installer to public location
+	    
+    -->
+    
+    <property name="basename" value="wk9"/>
+    
+    <property name="proj.rootdir"     value="${project::get-base-directory ()}"/>
+    <property name="proj.runtime"     value="${proj.rootdir}\runtime"/>
+    <property name="proj.outdir"      value="${proj.rootdir}\build\runtime\raw"/>
+    <property name="proj.installdir"  value="${proj.rootdir}\build\runtime\installer"/>
+    
+
+    <target name="clean">
+        <delete>
+            <fileset>
+                <include name="${proj.outdir}/map.txt"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="run" depends="build">
+        <exec program="notepad.exe" basedir="."/>
+    </target>
+
+  
+  <target name="build">
+    <echo message=" ~~~ build target ~~~ "/>
+    <mkdir dir="${proj.outdir}" />
+    
+      <nant target="${target::get-current-target()}">
+        <buildfiles>
+          <include name="**/*.build" />
+
+          <!-- avoid recursive execution of current build file -->
+          <exclude name="${project::get-buildfile-path()}" />
+        </buildfiles>
+      </nant>    
+  </target>
+
+
+  <target name="install" depends="build">
+    <echo message=" ~~~ test target ~~~ "/>
+    <mkdir dir="${proj.installdir}" />
+
+
+    <echo message=" ~~~ copy all game files to temp installer folder ~~~ "/>
+    <echo message=" ~~~ copy all installer files to temp installer folder ~~~ "/>
+    <echo message=" ~~~ .wxs, bmp, rtf, readme ~~~ "/>
+
+    <exec program="${proj.rootdir}\bin\candle.exe" workingdir="${proj.installdir}" verbose="true">
+      <arg value="-in ${infile.test}" />
+      <arg value="-out ${outfile.test}" />
+    </exec>
+
+    <exec program="${proj.rootdir}\bin\light.exe" workingdir="${proj.installdir}" verbose="true">
+      <arg value="-in ${infile.test}" />
+      <arg value="-out ${outfile.test}" />
+    </exec>
+  </target>
+
+</project>

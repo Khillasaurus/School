@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filetest", "filetest.vcproj", "{3D74E061-C7D0-4764-9596-640D39D32B6A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fileaccessusingtextbook", "..\fileaccessusingtextbook\fileaccessusingtextbook.vcproj", "{44CDBEC0-824B-4701-BD61-495326EF409B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "musicdatabasev1", "..\musicdatabasev1\musicdatabasev1.vcproj", "{80F0AD39-4E82-45AA-AB73-F205E448A32F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D74E061-C7D0-4764-9596-640D39D32B6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D74E061-C7D0-4764-9596-640D39D32B6A}.Debug|Win32.Build.0 = Debug|Win32
+		{3D74E061-C7D0-4764-9596-640D39D32B6A}.Release|Win32.ActiveCfg = Release|Win32
+		{3D74E061-C7D0-4764-9596-640D39D32B6A}.Release|Win32.Build.0 = Release|Win32
+		{44CDBEC0-824B-4701-BD61-495326EF409B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44CDBEC0-824B-4701-BD61-495326EF409B}.Debug|Win32.Build.0 = Debug|Win32
+		{44CDBEC0-824B-4701-BD61-495326EF409B}.Release|Win32.ActiveCfg = Release|Win32
+		{44CDBEC0-824B-4701-BD61-495326EF409B}.Release|Win32.Build.0 = Release|Win32
+		{80F0AD39-4E82-45AA-AB73-F205E448A32F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80F0AD39-4E82-45AA-AB73-F205E448A32F}.Debug|Win32.Build.0 = Debug|Win32
+		{80F0AD39-4E82-45AA-AB73-F205E448A32F}.Release|Win32.ActiveCfg = Release|Win32
+		{80F0AD39-4E82-45AA-AB73-F205E448A32F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

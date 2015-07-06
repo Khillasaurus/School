@@ -1,0 +1,15 @@
+Create a bmp heightmap
+	import txt file
+	random
+		settings
+
+also add a function that saves the bmp as a txt file, as fwrite is simply writing from numbers anyways
+
+CreateSmartBMP() both versions need to be completed
+Convert a text file needs to be completed!
+
+User the timer we made last semester in class to display time it took to create the bmp file
+
+07:30 is the absolute latest I can go to bed
+
+INCEPTION moment!!! i can use my algorithm to generate a tile to use inside another algorithm! this way i can have smooth terrain with cliffs! and i can do this recursively!!!

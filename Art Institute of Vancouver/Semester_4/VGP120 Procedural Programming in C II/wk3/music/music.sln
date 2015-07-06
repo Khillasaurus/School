@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "music", "music\music.vcproj", "{66CA2A13-543B-421A-8B45-63AD2B0874EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66CA2A13-543B-421A-8B45-63AD2B0874EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66CA2A13-543B-421A-8B45-63AD2B0874EB}.Debug|Win32.Build.0 = Debug|Win32
+		{66CA2A13-543B-421A-8B45-63AD2B0874EB}.Release|Win32.ActiveCfg = Release|Win32
+		{66CA2A13-543B-421A-8B45-63AD2B0874EB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

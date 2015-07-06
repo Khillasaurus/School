@@ -1,0 +1,4 @@
+set WIXDIR="F:\Semester 4\VGP232 Game Tools & Pipelines\WIX\bin"	//this is where WIX is on the machine
+del clicktoy.wixobj
+%WIXDIR%\candle.exe -out clicktoy.wixobj -ext %WIXDIR%\WixUIExtension.dll clicktoy.wxs
+%WIXDIR%\Light.exe -cultures:en-US -ext %WIXDIR%\WixUIExtension.dll -out clicktoy.msi clicktoy.wixobj

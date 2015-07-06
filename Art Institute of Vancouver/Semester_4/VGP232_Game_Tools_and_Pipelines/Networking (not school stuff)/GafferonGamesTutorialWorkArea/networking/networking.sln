@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "networkingp1", "networkingp1\networking.vcproj", "{6BBEEA30-442E-467D-BAD4-44C863A7BCD5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "networkingp2", "networkingp2\networkingp2.vcproj", "{177C9FEB-A6BC-4801-961C-0E1477E26F7C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "networkingp3", "networkingp3\networkingp3.vcproj", "{68C4A4E9-516A-41DD-B3B8-4F39DA6E0FB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BBEEA30-442E-467D-BAD4-44C863A7BCD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6BBEEA30-442E-467D-BAD4-44C863A7BCD5}.Debug|Win32.Build.0 = Debug|Win32
+		{6BBEEA30-442E-467D-BAD4-44C863A7BCD5}.Release|Win32.ActiveCfg = Release|Win32
+		{6BBEEA30-442E-467D-BAD4-44C863A7BCD5}.Release|Win32.Build.0 = Release|Win32
+		{177C9FEB-A6BC-4801-961C-0E1477E26F7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{177C9FEB-A6BC-4801-961C-0E1477E26F7C}.Debug|Win32.Build.0 = Debug|Win32
+		{177C9FEB-A6BC-4801-961C-0E1477E26F7C}.Release|Win32.ActiveCfg = Release|Win32
+		{177C9FEB-A6BC-4801-961C-0E1477E26F7C}.Release|Win32.Build.0 = Release|Win32
+		{68C4A4E9-516A-41DD-B3B8-4F39DA6E0FB0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{68C4A4E9-516A-41DD-B3B8-4F39DA6E0FB0}.Debug|Win32.Build.0 = Debug|Win32
+		{68C4A4E9-516A-41DD-B3B8-4F39DA6E0FB0}.Release|Win32.ActiveCfg = Release|Win32
+		{68C4A4E9-516A-41DD-B3B8-4F39DA6E0FB0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

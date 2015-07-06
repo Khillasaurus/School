@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="logtest">
+</Property><Property Name="Solution File" Value="H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest.sln">
+</Property><Property Name="User Options File" Value="H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest.suo">
+</Property><Property Name="Date" Value="Monday, June 04, 2012">
+</Property><Property Name="Time" Value="2:31 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="logtest.sln" Description="File successfully backed up as H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="logtest.suo" Description="File successfully backed up as H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest.suo.old">
+</Event><Event ErrorLevel="0" Project="logtest" Source="logtest\logtest.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest\logtest.vcproj'.">
+</Event><Event ErrorLevel="1" Project="logtest" Source="logtest\logtest.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="logtest" Source="logtest\logtest.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\logtest\logtest.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="logtest" Source="logtest\logtest.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="corelib" Source="corelib\corelib.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\corelib\corelib.vcproj'.">
+</Event><Event ErrorLevel="1" Project="corelib" Source="corelib\corelib.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="corelib" Source="corelib\corelib.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\corelib\corelib.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="corelib" Source="corelib\corelib.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk3" Source="wk3\wk3.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3\wk3.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk3" Source="wk3\wk3.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="wk3" Source="wk3\wk3.vcproj" Description="Attribute 'CopyLocalDependencies' of 'ProjectReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="wk3" Source="wk3\wk3.vcproj" Description="Attribute 'UseDependenciesInBuild' of 'ProjectReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="wk3" Source="wk3\wk3.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3\wk3.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk3" Source="wk3\wk3.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="vgplib" Source="vgplib\vgplib.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\vgplib\vgplib.vcproj'.">
+</Event><Event ErrorLevel="1" Project="vgplib" Source="vgplib\vgplib.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="vgplib" Source="vgplib\vgplib.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\vgplib\vgplib.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="vgplib" Source="vgplib\vgplib.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk3_homework_attempt_v1" Source="wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk3_homework_attempt_v1" Source="wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wk3_homework_attempt_v1" Source="wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk3_homework_attempt_v1" Source="wk3_homework_attempt_v1\wk3_homework_attempt_v1.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk3_homework_attempt_v2" Source="wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk3_homework_attempt_v2" Source="wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wk3_homework_attempt_v2" Source="wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk3_homework_attempt_v2" Source="wk3_homework_attempt_v2\wk3_homework_attempt_v2.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk4" Source="wk4\wk4.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk4\wk4.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk4" Source="wk4\wk4.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="wk4" Source="wk4\wk4.vcproj" Description="Attribute 'CopyLocalDependencies' of 'ProjectReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="wk4" Source="wk4\wk4.vcproj" Description="Attribute 'UseDependenciesInBuild' of 'ProjectReference' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="wk4" Source="wk4\wk4.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk4\wk4.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk4" Source="wk4\wk4.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk6" Source="wk6\wk6.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk6\wk6.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk6" Source="wk6\wk6.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wk6" Source="wk6\wk6.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk6\wk6.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk6" Source="wk6\wk6.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="netlib" Source="netlib\netlib.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\netlib\netlib.vcproj'.">
+</Event><Event ErrorLevel="1" Project="netlib" Source="netlib\netlib.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="netlib" Source="netlib\netlib.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\netlib\netlib.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="netlib" Source="netlib\netlib.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk7" Source="wk7\wk7.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk7\wk7.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk7" Source="wk7\wk7.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wk7" Source="wk7\wk7.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk7\wk7.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk7" Source="wk7\wk7.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="wk8" Source="wk8\wk8.vcproj" Description="Converting project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk8\wk8.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wk8" Source="wk8\wk8.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wk8" Source="wk8\wk8.vcproj" Description="Done converting to new project file 'H:\Semester 4\VGP232 Game Tools &amp; Pipelines\wk8\wk8.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wk8" Source="wk8\wk8.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="logtest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="logtest.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,19 @@
+Terrain Generator
+=---------------=
+
+End Goal:
+ Have a user interface to control the creation of terrain which shows all changes in real time
+
+First Step:
+ Create a bmp file that is generated from random values from 0 to 255 (greyscale) using my fill alogorithm
+
+Second Step:
+ Create 3 bmp files (red, green, blue) that correspond to height in different scales (100m, 10m, m, for example)
+ and combine them by reading the 3 individual bmps and outputting a single 256^3 (16,777,216) colour bmp file
+
+Third Step://this may not make sense anymore after changing steps 1 and 2 to the way they are now
+ Create a bmp file which creates terrain which is generated based off of initial conditions such as:
+  - average height
+  - maximum height
+  - minimum height
+  - maximum height differencial between two squares orthogonally

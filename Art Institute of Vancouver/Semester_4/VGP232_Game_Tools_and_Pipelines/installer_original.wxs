@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="BCE359B4-A8A0-43A6-BD4C-DD328CD9206D" Name="Clicktoy - The Meadow" Language="1033" Version="1.40.0.1" Manufacturer="Clicktoy Interactive Inc."
+		UpgradeCode="3BE19BA6-8F42-421F-BAAC-8A0A2B38876B">
+    <Package InstallerVersion="200" Compressed="yes" />
+
+    <Condition Message="You need to be an administrator to install this product.">
+      Privileged
+    </Condition>
+
+    <Condition Message='This application is not supported on this version of windows.'>
+      NOT Version9X
+    </Condition>
+
+    <Media Id="1" Cabinet="Product.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyLocation" Name ="Clicktoy">
+          <Directory Id="INSTALLLOCATION" Name="Clicktoy">
+            <Component Id="ProductComponent" Guid="6A923B28-945E-4A33-AA90-22EE64368CF6">
+              <File Id='clicktoyEXE' Name='app_clicktoy.exe' DiskId='1' Source='./app_clicktoy.exe' Vital='yes'>
+                <Shortcut Advertise="yes" Id="startmenuClicktoy" Directory="ProgramMenuDir" Name="Clicktoy" WorkingDirectory='INSTALLLOCATION' Icon="app_clicktoy.exe" />
+                <Shortcut Advertise="yes" Id="desktopClicktoy" Directory="DesktopFolder" Name="Clicktoy" WorkingDirectory='INSTALLLOCATION' Icon="app_clicktoy.exe">
+					<Icon Id="app_clicktoy.exe" SourceFile="./logo.ico" />
+                </Shortcut>
+              </File>
+              <File Id='cgDLL' Name='cg.dll' DiskId='1' Source='./cg.dll' Vital='yes' />
+              <File Id='cgGLDLL' Name='cgGL.dll' DiskId='1' Source='./cgGL.dll' Vital='yes' />
+              <File Id='openAL32DLL' Name='OpenAL32.dll' DiskId='1' Source='./OpenAL32.dll' Vital='yes' />
+              <File Id='splashBMP' Name='splash.bmp' DiskId='1' Source='./splash.bmp' Vital='yes' />
+              <File Id='dxwebsetup' Name='dxwebsetup.exe' DiskId='1' Source='dxwebsetup.exe' Vital='yes'/>
+
+              <RemoveFolder Id='RemoveProgramMenuDir' Directory='ProgramMenuDir' On='uninstall' />
+
+              <!-- Remove the files and directories that Clicktoy creates after the install on an uninstall -->
+              <RemoveFile Id='RemoveClicktoyFiles' Directory='ClicktoyDir' Name='*' On='uninstall' />
+              <RemoveFile Id='RemoveClicktoyCatFiles' Directory='ClicktoyCatDir' Name='*' On='uninstall' />
+              <RemoveFolder Id='RemoveClicktoyDir' Directory='ClicktoyDir' On='uninstall' />
+              <RemoveFolder Id='RemoveClicktoyCatDir' Directory='ClicktoyCatDir' On='uninstall' />
+
+              <RegistryKey Action="createAndRemoveOnUninstall" Id="ClicktoyReg" Root="HKLM" Key="SOFTWARE\Clicktoy">
+                <RegistryValue Action="write" Id="ClickKey" Key="Profile" Name="ClickSafe" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="HelpKey" Key="Profile" Name="HelpfulHints" Value="1" Type="integer"/>
+                <RegistryValue Action="write" Id="LangKey" Key="Profile" Name="Language" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="ModKey" Key="Profile" Name="ModuleCRC" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="BPPKey" Key="Profile" Name="ScreenBPP" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="ScrHKey" Key="Profile" Name="ScreenHeight" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="ScrWKey" Key="Profile" Name="ScreenWidth" Value="0" Type="integer"/>
+                <RegistryValue Action="write" Id="VolKey" Key="Profile" Name="Volume" Value="10" Type="integer"/>
+                <RegistryValue Action="write" Id="ClicktoyInstallLocation" Key="Profile" Name="InstallerLocation" Value='[INSTALLLOCATION]' Type="string"/>
+              </RegistryKey>
+            </Component>
+
+            <Component Id="ReadmeComponent" Guid="6C923B2A-045E-4A43-AB90-22EF64863CF6">
+              <File Id='readmeRTF' Name='readme.rtf' DiskId='1' Source='./readme.rtf' Vital='yes' />
+              <Shortcut Advertise="yes" Id="startmenuReadme" Directory="ProgramMenuDir" Name="Readme" WorkingDirectory='INSTALLLOCATION' />
+            </Component>
+
+            <Component Id="WebLinkComponent" Guid="6C923B2B-045E-68C3-1890-22EF64266AC6">
+              <File Id='WebsiteLink' Name='Visit The Clicktoy Website.url' DiskId='1' Source='./Visit The Clicktoy Website.url' Vital='yes' />
+              <Shortcut Advertise="yes" Id="startmenuVisitSite" Directory="ProgramMenuDir" Name="Visit The Clicktoy Website" WorkingDirectory='INSTALLLOCATION' />
+            </Component>
+
+            <Directory Id="FEDIR" Name="fe">
+              <Component Id="FeToyDirectory" Guid="B28F4B0D-92FE-4A43-BAA7-C0716AD9E7CE">
+                <File Id='feTOY' Name='fe.toy' DiskId='1' Source='./fe/fe.toy' Vital='yes' />
+              </Component>
+              <Directory Id="FEDIRSFX" Name="sfx">
+                <Directory Id="FEDIRFE" Name="fe">
+                  <Component Id="FeSfxDirectory" Guid="66C2460C-6384-4759-BFB9-330DF693E232">
+                    <File Id='feSFX1' Name='fe.xsb' DiskId='1' Source='./fe/sfx/fe/fe.xsb' Vital='yes' />
+                    <File Id='feSFX2' Name='fe.xwb' DiskId='1' Source='./fe/sfx/fe/fe.xwb' Vital='yes' />
+                    <File Id='feSFX3' Name='fesfx.xgs' DiskId='1' Source='./fe/sfx/fe/fesfx.xgs' Vital='yes' />
+                  </Component>
+                </Directory>
+              </Directory>
+            </Directory>
+
+            <Directory Id="PSALM104DIR" Name="psalm104">
+              <Component Id="PsalmDirectory" Guid="77635BFB-C7CA-4BD4-87EF-D69F678C87D9">
+                <File Id='PSALMTOY' Name='psalm104.toy' DiskId='1' Source='./psalm104/psalm104.toy' Vital='yes' />
+              </Component>
+              <Directory Id="PSALMSFXDIR" Name="sfx">
+                <Directory Id="PSALMSFXMEADOWDIR" Name="meadow">
+                  <Component Id="PsalmSfxMeadowDirectory" Guid="8D4FA500-A9AA-409A-B00F-719E186839E5">
+                    <File Id='PSALMSFX1' Name='meadow.xsb' DiskId='1' Source='./psalm104/sfx/meadow/meadow.xsb' Vital='yes' />
+                    <File Id='PSALMSFX2' Name='meadow.xwb' DiskId='1' Source='./psalm104/sfx/meadow/meadow.xwb' Vital='yes' />
+                    <File Id='PSALMSFX3' Name='meadow.xgs' DiskId='1' Source='./psalm104/sfx/meadow/meadow.xgs' Vital='yes' />
+                  </Component>
+                </Directory>
+              </Directory>
+            </Directory>
+
+            <Directory Id="SHADERDIR" Name="shaders">
+              <Component Id="ShaderDirectory" Guid="7A0F44FF-ABCC-4E45-A8C3-C619544586CA">
+                <File Id="file0" Name="shaders.toy" Source="./shaders/shaders.toy" />
+              </Component>
+            </Directory>
+
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      <Directory Id="ProgramMenuFolder" Name="PMenu">
+        <Directory Id="ProgramMenuDir" Name='Clicktoy' />
+      </Directory>
+
+      <Directory Id="PersonalFolder" Name="MyDoc">
+        <Directory Id="ClicktoyDir" Name='Clicktoy' >
+          <Directory Id="ClicktoyCatDir" Name='catalogue' />
+        </Directory>
+      </Directory>
+
+      <Directory Id='SystemFolder' Name="system32">
+        <Component Id="ScreenSaverComponent" Guid="0ea4d0c2-4fea-4102-bf29-14cbc8bcf258">
+          <File Id='screensaver' Name='clicktoyscreensaver.scr' DiskId='1' Source='./clicktoyscreensaver.scr' Vital='yes'/>
+        </Component>
+      </Directory>
+    </Directory>
+
+    <Feature Id="Complete" Title="Clicktoy" Description="The Meadow" Display="expand" Level="1" ConfigurableDirectory='INSTALLLOCATION'>
+      <ComponentRef Id="ProductComponent" />
+      <ComponentRef Id="ReadmeComponent" />
+      <ComponentRef Id="WebLinkComponent" />
+      <ComponentRef Id="FeToyDirectory" />
+      <ComponentRef Id="FeSfxDirectory" />
+      <ComponentRef Id="PsalmDirectory" />
+      <ComponentRef Id="PsalmSfxMeadowDirectory" />
+      <ComponentRef Id="ShaderDirectory" />
+      <ComponentRef Id="ScreenSaverComponent" />
+    </Feature>
+
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="bannrbmp.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="dlgbmp.bmp" />
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+
+    <UIRef Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <CustomAction Id='installdx' FileKey='dxwebsetup' ExeCommand='' Return='ignore' />
+    <CustomAction Id='installss'
+                Directory='SystemFolder'
+                ExeCommand='rundll32.exe desk.cpl,InstallScreenSaver clicktoyscreensaver.scr'
+                Return='asyncNoWait' />
+
+    <InstallExecuteSequence>
+      <Custom Action ='installdx' After='InstallFinalize' ></Custom>
+      <Custom Action ='installss' After='installdx' ></Custom>
+    </InstallExecuteSequence>
+  </Product>
+
+</Wix>

@@ -1,0 +1,214 @@
+//------------------------------
+// File:		main.cpp
+// Created:		2012/05/03
+// Copyright:	Daniel Schenker
+//------------------------------
+Go Fish Midterm//
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+
+struct Card
+{
+	int value;
+	char suit;
+	struct Card* next;
+};
+
+typedef struct Card _p;
+typedef struct Card* ptr;
+
+//Globals
+const int kDeckSize = 52;
+
+//Function Prototypes
+//Note: Functions that take in a const ptr and create a temp ptr often do so to ensure that the head of the list is never lost
+ptr CreateDeck();
+void InitializeDeck(const ptr);
+ptr Deal(ptr, const int);
+int ListSize(const ptr);
+ptr Search(const ptr, const int);
+void PrintCard(const ptr);
+void PrintList(const ptr, const int);
+
+
+int main()
+{
+	//Initialize random seed
+	srand((unsigned)time(NULL));
+
+	//Set-up Deck
+	ptr pDeck = CreateDeck();
+	InitializeDeck(pDeck);
+
+	//Set-up Hands
+	ptr pP1Hand = Deal(pDeck, (kDeckSize / 4));
+
+	//PrintList(pDeck, ListSize(pDeck));//print all of list
+	//PrintList(Search(pDeck, 26), (52 - 26));//print part of list
+
+	//Clean-Up
+	free(pDeck);
+	pDeck = NULL;
+
+	return 0;
+}
+
+ptr CreateDeck()
+{
+	ptr pDeck = (ptr)malloc(sizeof _p);
+	ptr pTail = pDeck;
+	pTail->next = NULL;
+
+	for(int i = 1; i < kDeckSize; ++i)
+	{
+		pTail->next = (ptr)malloc(sizeof _p);
+		pTail = pTail->next;
+		pTail->next = NULL;
+	}
+
+	return pDeck;
+}
+
+void InitializeDeck(const ptr listHead)
+{
+	ptr temp = listHead;
+	int suit = -1;
+
+	for(int i = 0; i < kDeckSize; ++i)
+	{
+		//Determine value of card
+		temp->value = i % 13;
+		//Determine suit of card
+		suit = i / 13;
+		if(suit == 0)
+		{
+			temp->suit = 'c';
+		}
+		else if(suit == 1)
+		{
+			temp->suit = 'd';
+		}
+		else if(suit == 2)
+		{
+			temp->suit = 'h';
+		}
+		else if(suit == 3)
+		{
+			temp->suit = 's';
+		}
+		temp = temp->next;
+	}
+}
+
+ptr Deal(ptr pFrom, const int kNumOfCards)
+{
+	ptr pTarget;
+	ptr pHold;
+	int fromCards = ListSize(pFrom);
+	int randCard = -1;
+
+	for(int i = 0; i < kNumOfCards; ++i)
+	{
+		randCard = rand() % fromCards;
+		//pHold = Search
+		//Search to card - 1
+		//set pHold to value of next
+		//set the pointer to next next to remove from pFrom
+		//add pHold to pTarget
+	}
+
+
+	return NULL;
+}
+
+int ListSize(const ptr listHead)
+{
+	int listSize = 1;
+	ptr temp = listHead;
+	while(temp->next != NULL)
+	{
+		++listSize;
+		if(temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+	}
+
+	return listSize;
+}
+
+//Note: Set nodePost to -1 to set pointer to end of list
+ptr Search(const ptr pListHead, const int nodePos)
+{
+	ptr pTemp = pListHead;
+	int safetyCounter = 1;//boundary checking for list search
+	if(nodePos < -1)
+	{
+		printf("ERROR: Invalid posisition passed in to 2nd parameter of Search function. Terminating program.\n");
+		std::terminate();
+	}
+	else if(nodePos == -1)
+	{
+		while(pTemp->next != NULL)
+		{
+			pTemp = pTemp->next;
+		}
+	}
+	else
+	{
+		for(int i = 0; i < nodePos; ++i)
+		{
+			if(pTemp->next != NULL)
+			{
+				pTemp = pTemp->next;
+				++safetyCounter;
+			}
+			else
+			{
+				printf("ERROR: Attempting to access memory outside boundary of list. Returning last element of list instead which is at position %d\n", safetyCounter);
+				pTemp = pListHead;
+				for(int j = 0; j < safetyCounter; ++j)
+				{
+					pTemp = pTemp->next;
+				}
+			}
+		}
+	}
+    return pTemp;
+}
+
+void PrintCard(const ptr Card)
+{
+	printf("%d%c", Card->value, Card->suit);
+}
+
+void PrintList(const ptr listHead, const int kListSize)
+{
+	ptr temp = listHead;
+	PrintCard(temp);
+	printf("\n");
+
+	for(int i = 1; i < kListSize; ++i)
+	{
+		if(!temp)
+		{
+			printf("ERROR: Attempting to access a nonexistant value in the PrintList function. Attempting to proceed anyways.\n");
+		}
+		temp = temp->next;
+		PrintCard(temp);
+		printf("\n");
+	}
+}
+
+
+//linked lists:
+//---
+//Deck
+//p0hand
+//p1hand
+//p2hand
+//p3hand
+//---

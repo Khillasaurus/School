@@ -1,0 +1,7 @@
+1) In aierror.cpp, lines 30+31, I don't understand the reasoning between why the magic numbers chosen are 260 and 250, as well as why there's a difference of 10 inbetween them.
+I understand that the second number must be less than the first, but then why isn't it 259, as the 260th would be the null terminator?
+
+2) Is there a reason why non dynamically allocated memory was used instead of buffers, in order to prevent wasted memory or run the risk of out of bounds errors?
+And does sprintf and vsprintf take care of out of bound writing to the array?
+
+3) Why not just use true and false, instead of creating a bool called isFalse in main, and then setting that to false, to cause more confusion, and waste space in the stack, and increase the run time of the program as well?

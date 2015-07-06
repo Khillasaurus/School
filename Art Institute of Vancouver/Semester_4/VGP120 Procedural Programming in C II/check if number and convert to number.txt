@@ -1,0 +1,8 @@
+char a = '0';
+char b = '1
+
+if(a >= '0' && a <= '9')
+{
+	//convert to number
+	int number = a - '0';
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="wk9">
+
+	<target name="LevelSet">
+		<fileset basedir="runtime" id="levels">
+			<include name="**/level.txt"/><!-- **/ means include everything from here onwards -->
+			<!--
+			<exclude name="**/noincl/**/*"/>
+			<exclude name="**/lvl9/level.txt"/>
+			-->
+		</fileset>
+	</target>
+
+	<target name="build">
+		<echo message=""" ~~~ generate level ~~~ "/>
+
+		<property name="infile.test" value ="${proj.runtime}\level.txt"/>
+		<property name="outfile.test" value ="${proj.outdir}\map.txt"/>
+		<property name="outfile.outdate" value ="false"/>
+
+		<if test="${file::exists(outfile.test)}">
+			<if test="${file::up-to-date(outfile.test, infile.test)}">
+				<property name="outfile.outodate" value="true"/>
+			</if>
+		</if>
+		<if test="${not file::exists(outfile.test)}">
+			<!-- echo message="no outfile... build it" / -->
+			<property name="outfile.outofdate" value="true"/>
+			<echo message=" ~~~ no outfile... build it ~~~ "/>
+		</if>
+
+		<!-- //build out of date file -->
+		<if test="${outfile.outofdate=='true'}">
+			<echo message=" ~~~ level generated ~~~ "/>
+			<exec program="${proj.rootdir}\bin\levelgen.exe" workingdir="${module.basedir}" verbose="true">
+				<!--
+				<arg value="-q"/>
+				<arg value="-ctscene"/>
+				<arg value="-in ${infile.test}"/>
+				<arg value="-out ${outfile.test}"/>
+				<arg value="-product ${module.current}"/>
+				-->
+
+			</exec>
+		</if>
+	</target>
+
+</project>

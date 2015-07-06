@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="528648B6-4C79-42f7-86E3-89CCCE8E87FF" Name="VGP 232 Installer" Language="1033" Version="1.40.0.1" Manufacturer="ME" UpgradeCode="ED370A8F-1470-4b59-B5F9-E2A8EDF31613">
+    <Package InstallerVersion="200" Compressed="yes" />
+    
+    <Condition Message="You need to be an administrator to install this product.">
+      Privileged
+    </Condition>
+    
+    <Condition Message='This application is not supported on this version of windows.'>
+      NOT Version9X
+    </Condition>
+    
+    <Media Id="1" Cabinet="Product.cab" EmbedCab="yes" />
+    
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyLocation" Name ="FakeAdobe">
+          <Directory Id="INSTALLLOCATION" Name="Acrobad">
+            <Component Id="ProductComponent" Guid="B7AD1223-37E3-4ffc-B141-C4AEDAF8C9C0">
+              <File Id='wk8EXE' Name='wk8.exe' DiskId='1' Source='./wk8.exe' Vital='yes'>
+                <Shortcut Advertise="yes" Id="startmenuwk8" Directory="ProgramMenuDir" Name="wk8" WorkingDirectory='INSTALLLOCATION' Icon="wk8.exe" />
+                <Shortcut Advertise="yes" Id="desktopwk8" Directory="DesktopFolder" Name="wk8" WorkingDirectory='INSTALLLOCATION' Icon="wk8.exe">
+                  <Icon Id="wk8.exe" SourceFile="./logo.ico" />
+                </Shortcut>
+              </File>
+              
+              <RemoveFolder Id='RemoveProgramMenuDir' Directory='ProgramMenuDir' On='uninstall' />
+              
+              <RegistryKey Action="createAndRemoveOnUninstall" Id="ClicktoyReg" Root="HKLM" Key="SOFTWARE\VGP">
+                <RegistryValue Action="write" Id="HelpKey" Key="Profile" Name="HelpfulHints" Value="1" Type="integer"/>
+                <RegistryValue Action="write" Id="wk8InstallLocation" Key="Profile" Name="InstallerLocation" Value='[INSTALLLOCATION]' Type="string"/>
+              </RegistryKey>
+            </Component>
+            
+            <Component Id="WebLinkComponent" Guid="6C923B2B-045E-68C3-1890-22EF64266AC6">
+              <File Id='WebsiteLink' Name='Visit Google.url' DiskId='1' Source='./google.url' Vital='yes' />
+              <Shortcut Advertise="yes" Id="startmenuVisitSite" Directory="ProgramMenuDir" Name="Visit The Google Website" WorkingDirectory='INSTALLLOCATION' />
+            </Component>
+            
+          </Directory>
+        </Directory>
+      </Directory>
+      
+      <Directory Id="DesktopFolder" Name="Desktop" />
+      <Directory Id="ProgramMenuFolder" Name="PMenu">
+        <Directory Id="ProgramMenuDir" Name='Clicktoy' />
+      </Directory>
+    </Directory>
+    
+    <Feature Id="Complete" Title="wk8" Description="wk8" Display="expand" Level="1" ConfigurableDirectory='INSTALLLOCATION'>
+      <ComponentRef Id="ProductComponent" />
+      <ComponentRef Id="WebLinkComponent" />
+    </Feature>
+    
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="bannrbmp.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+    
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+    
+    <UIRef Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    
+  </Product>
+  
+</Wix>

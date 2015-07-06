@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project name="finalassignment" default="build">
+	
+	<property name="basename" value="finalassignment"/>
+	
+	<property name="proj.rootdir" value="${project::get-base-directory ()}"/>		<!-- proj.rootdir is not refering to a struct member variable as this is actually a string, but is written this way to emulate structs -->
+	<property name="proj.runtime" value="${proj.rootdir}\runtime"/>
+	<property name="proj.outdir" value="${proj.rootdir}\output"/>
+	<property name="proj.installdir" value="${proj.rootdir}\build\runtime\installer"/>
+	
+	<target name="clean">
+    <echo message="	~~~ clean target ~~~ "/>
+		<delete>
+			<filesest>
+        <!--
+				<include name="build/runtime/map.txt"/>
+        -->
+				<!--
+				<include name="bin/${basename}-??.exe"/>
+				-->
+			</filesest>
+		</delete>
+	</target>
+	
+	<target name="run" depends="build">
+    <echo message="	~~~ run target ~~~ "/>
+		<exec program="wixbuild.bat" basedir="."/>
+	</target>
+	
+	<target name="build">
+		<echo message="	~~~ build target ~~~ "/>
+		<mkdir dir="$(proj.outdir)" />
+		
+			<nant target="${target::get-current-target()}">
+				<buildfiles>
+					<include name="*.build"/>
+					<!-- avoid recursive execution of current build file -->
+					<exclude name="${project::get-buildfile-path()}"/>
+				</buildfiles>
+			</nant>
+	</target>
+
+  <target name="install">
+    <echo message="	~~~ build installer ~~~ "/>
+  </target>
+	
+</project>
