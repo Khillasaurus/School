@@ -1,0 +1,60 @@
+//=================================================================================================
+// Tiles have the following purposes:
+// 1. To act as spatial partitions that hold a list of all game entities within their boundaries. This is useful for a variety of things, most notably collision detection.
+// 2. To allow tile art to not only be a graphical implementation, but a physical implementation as well, which creates uniforimity between multiple data.
+// 3. To facilitate pathfinding node functionality based off of already standard data.
+// This is done through:
+// 1. Spatial partitions - Linked lists (specific type yet to be determined).
+// 2. Graphical - External files are used to store tile types as they would appear in the game. These types can be used not only to determine which texture to draw, but the properties of a tile as well.
+// 3. Artifical Intelligence - Node data passed into an artificial intelligence library.
+// How tiles are used and why:
+// 1. A tile's origin is the top left of the tile. Everything about the tile is in relation to the top left, includig art. This means that the nodes used in pathfinding are the origins of tiles.
+// 2. Normally I would use nodes instead of tiles, but since I am using square space partioning and tile based graphics, it makes sense to make everything using squares.
+//=================================================================================================
+
+namespace TileType
+{
+	enum Type
+	{
+		kEmpty,
+		kPavement,
+		kDirt,
+		kWater,
+		kBridge,
+		kMountain,
+		kTree,
+		//etc...
+	};
+};
+
+Tile
+{
+	Tile()
+	: mDimension(SVector2(0.0f, 0.0f))
+	, mPosition(SVector2(0.0f, 0.0f))
+	, mTileType(NodeType::kEmpty)
+	{
+	}
+	~Tile();
+
+	//Helper Functions
+	//TODO
+
+	// Accessors
+	const SVector2& GetPosition() const		{ return mPosition; }
+	const SVector2& GetDimension() const		{ return mDimension; }
+	const NodeType GetTileType() const		{ return mTileType; }
+	_______ GetListOfStuffInThisTile...
+
+	// Mutators
+	//TODO
+
+	// Data
+	 // Pathing
+	SGE_Sprite mSprite;
+	SVector2 mPosition;//Top left corner of tile
+	SVector2 mDimension;
+	NodeType mTileType;
+	 //List of entities within tile
+	stl list of GameEntity*;	//it might be better to hold id's instead, because if a GameEntity is destroyed somewhere else, a dangling pointer will occur here
+}
