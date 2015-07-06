@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.menu,
+.sidebar,
+.buttons,
+.nav,
+.no_print,
+#help,
+#altlinks,
+#tabbed_pane,
+#propertyform,
+#content.ticket input[type=submit],
+td.checkbox,
+th.checkbox { display: none; }
+
+.charts,
+.flotchart,
+canvas { display: block; }
+
+#backlog { font-size: 10px; }
+select { -webkit-appearance: textfield; border: none; }
+#dashboard #charts .flotchart { border: 1px solid red; }
+#ticket { background: none; position: relative; overflow: auto; }
+

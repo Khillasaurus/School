@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0100)https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- get vcs info from config file, and set up i18n --><!-- custom variables. --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <link rel="stylesheet" href="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/trac_print.css" media="print" type="text/css" charset="utf-8">
+    <!--[if lte IE 6]>
+      <link rel="stylesheet" href="/stylesheets/trac_ie.css" type="text/css" charset="utf-8" />
+    <![endif]-->
+    <title>
+      GDD2012Q2Team05/TODO – VGP333-Game Engine Programming
+    </title>
+    
+    <!--[if IE]><script type="text/javascript">window.location.hash = window.location.hash;</script><![endif]-->
+        <link rel="search" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/search">
+        <link rel="help" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/TracGuide">
+        <link rel="alternate" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO?format=txt" type="text/x-trac-wiki" title="Plain Text">
+        <link rel="up" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05" title="View parent page">
+        <link rel="start" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki">
+        <link rel="stylesheet" href="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/trac.css" type="text/css"><link rel="stylesheet" href="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/wiki.css" type="text/css">
+        <link rel="shortcut icon" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/chrome/common/trac.ico" type="image/x-icon">
+        <link rel="icon" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/chrome/common/trac.ico" type="image/x-icon">
+      <link type="application/opensearchdescription+xml" rel="search" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/search/opensearch" title="Search VGP333-Game Engine Programming">
+    <script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/jquery.js"></script><script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/babel.js"></script><script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/en_US.js"></script><script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/trac.js"></script><script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/search.js"></script><script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/trac_htdocs/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="alternate" type="application/x-wiki" title="Edit this page" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO?action=edit">
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/trac(1).css">
+	    <script type="text/javascript" src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/application.js"></script>
+      <script type="text/javascript">delayLoadGA("UA-7224444-1");</script>
+	<script src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/ga.js" type="text/javascript"></script></head>
+  <body>
+    <div id="whole_page">
+      <div id="banner">
+        <div id="header">
+          <a id="tree_href" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271" title="To Dashboard">&nbsp;<span></span><img src="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/logo" id="account_logo_image" alt="VGP333-Game Engine Programming"></a>
+          <h1><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271">VGP333-Game Engine Programming</a></h1>
+        </div>
+        <div id="metanav" class="nav">
+    <ul>
+      <li>Daniel Schenker (dschenker)</li><li><a href="https://gamesatvancouver.repositoryhosting.com/users/my_profile"><span class="inner_link">My Profile</span></a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/prefs"><span class="inner_link">My Trac Preferences</span></a></li><li class="last"><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/logout" onclick="clearAuthenticationCache(&#39;/trac/gamesatvancouver_vg271/logout&#39;);"><span class="inner_link">Log Out</span></a></li>
+    </ul>
+  </div>
+        <div id="menu">
+          <ul>
+            <li><div class="left_m"></div><div class="center_m"><a href="https://gamesatvancouver.repositoryhosting.com/projects/13/edit"><span class="inner_link">Project Settings</span></a></div></li>
+            <li><div class="left_m"></div><div class="center_m"><a href="https://gamesatvancouver.repositoryhosting.com/"><span class="inner_link">Dashboard</span></a></div></li>
+          </ul>
+        </div>
+        <div id="banner_bottom">
+          <form id="search" action="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/search" method="get">
+            <div>
+              <label for="proj-search">Search:</label>
+              <input type="search" id="proj-search" name="q" size="18" value="Search" onfocus="this.style.color = &#39;#000&#39;; if (this.value == &#39;Search&#39;) this.value = &#39;&#39;;" style="color: rgb(119, 119, 119); ">
+              <script type="text/javascript">
+              //<![CDATA[
+                var s = document.getElementById('proj-search'); s.style.color = '#777'; if (s.value != 'Search') s.value = 'Search';
+              //]]>
+              </script>
+            </div>
+          </form>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+      <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a accesskey="1" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki">Wiki</a></li><li><a accesskey="2" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/timeline">Timeline</a></li><li><a accesskey="3" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/roadmap">Roadmap</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/browser">Browse Source</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/report">View Tickets</a></li><li><a accesskey="7" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/newticket">New Ticket</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/Billing">Time Reports</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/worklog">Work Log</a></li><li><a accesskey="4" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/search">Search</a></li><li class="last"><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/admin" title="Administration">Admin</a></li>
+    </ul>
+  </div>
+      <div id="main">
+        <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki">wiki:</a><a class="pathentry" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05" title="View GDD2012Q2Team05">GDD2012Q2Team05</a><span class="pathentry sep">/</span><a class="pathentry" href="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log.htm" title="View GDD2012Q2Team05/TODO">TODO</a>
+</div>
+    <div class="nav" id="ctxtnav">
+      <ul>
+        <li class="first"><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05">Up</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/WikiStart">Start Page</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/TitleIndex">Index</a></li><li><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO?action=history">History</a></li><li class="last"><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/watch/wiki/GDD2012Q2Team05/TODO">Watch This</a></li>
+      </ul>
+    </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby">
+            <span><a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO?action=diff&version=4" title="Version 4 by dcoburn">Last modified</a> <a class="timeline" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/timeline?from=2012-06-15T05%3A08%3A49Z&precision=second" title="2012-06-15T05:08:49Z in Timeline">2 months</a> ago</span>
+            <span class="trac-print">Last modified on 2012-06-15 05:08:49</span>
+          </div>
+          <div id="wikipage"><h1 id="DanielSchenker">Daniel Schenker<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#DanielSchenker" title="Link to this section"> ¶</a></h1>
+<h3 id="a-------------------------------------------------------------------">-------------------------------------------------------------------<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#a-------------------------------------------------------------------" title="Link to this section"> ¶</a></h3>
+<h2 id="WorkHistory:">Work History:<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#WorkHistory:" title="Link to this section"> ¶</a></h2>
+<h3 id="a-------------------------------------------------------------------1">-------------------------------------------------------------------<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#a-------------------------------------------------------------------1" title="Link to this section"> ¶</a></h3>
+<p>
+=------=Prior to 04/19/2012=------=<br>
+-I created the top level of the world (the part with the mountains, grass, trees, water, etc)<br>
+</p>
+<blockquote>
+<p>
+-blueprint for world<br>
+-grass blowing in the wind<br>
+-painting all textures<br>
+-creating varying tree specifications<br>
+-smoothed all terrain as just enough to allow for fluid movement, without taking away from intentional jaggedness in the terrain<br>
+-chose appropriate art, skybox, water color, and fog colour/thickness in order to create a better illusion of a continous world, in order to escape "end of the Earth" visible effects<br>
+</p>
+</blockquote>
+<p>
+<br>
+Edited first person controller<br>
+</p>
+<blockquote>
+<p>
+-tweaked movement values to allow for:<br>
+</p>
+<blockquote>
+<p>
+-controlled skidding<br>
+-sideways only wall jumping<br>
+</p>
+</blockquote>
+<p>
+-added a temporary rectangular prism to represent a gun, so that all that needs to be changed is the art, and none of the physics<br>
+</p>
+</blockquote>
+<p>
+<br>
+Created multiple bullets<br>
+</p>
+<blockquote>
+<p>
+-BeamGunBullet: Shoots a blue energy orb that isn't affected by gravity<br>
+-BouncyBall: Shoots a white ball that is affected by gravity and is bouncy<br>
+</p>
+</blockquote>
+<p>
+<br>
+Added debugging information<br>
+</p>
+<blockquote>
+<p>
+-Draw a red line from the contact point to the normal each time a collision occurs<br>
+-Draw a white wire frame sphere at collision points<br>
+-Draw a white line from the initial launch position of the bullet to the latest collision point<br>
+-Draw a blue line from the initial launch position of the bullet to the current position<br>
+</p>
+</blockquote>
+<p>
+<br>
+Started framework for entire project using pseudocode<br>
+</p>
+<blockquote>
+<p>
+Started creating a HUD<br>
+</p>
+<blockquote>
+<p>
+Has a toggle function which allows the mouse to unlock from the center of the screen and show the cursor while holding down a button<br>
+The HUD is currently invisible<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+<br>
+=------=04/19-20/2012=------=<br>
+Made a group with Craig Lacey<br>
+</p>
+<blockquote>
+<p>
+Discussed goals, learned from each other how each other's code works<br>
+</p>
+</blockquote>
+<p>
+<br>
+Started using SVN for the first time<br>
+</p>
+<blockquote>
+<p>
+Have 3 locations set up for SVN: school, Geek Squad USB memory stick, home computer<br>
+</p>
+</blockquote>
+<p>
+<br>
+Edited scr_nav c# script<br>
+</p>
+<blockquote>
+<p>
+Added additional scenario checking in order to prevent accidental bad set up on bots<br>
+</p>
+<blockquote>
+<p>
+If a bad set up occurs, the bots will default to chasing after the player<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+<br>
+Added debugging information<br>
+</p>
+<blockquote>
+<p>
+-Draw a cyan line from the previous collision point to the latest collision point<br>
+</p>
+</blockquote>
+<p>
+<br>
+Changed Gun - Bullet Relationship<br>
+</p>
+<blockquote>
+<p>
+Previously:<br>
+</p>
+<blockquote>
+<p>
+The gun told the bullet everything it should do<br>
+</p>
+</blockquote>
+<p>
+Now:<br>
+</p>
+<blockquote>
+<p>
+The gun now only controls the fireRate and bulletSpeedModifier<br>
+The Bullet now controls it's own bulletSpeed, killDistance and timeOut<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+Gun:<br>
+</p>
+<blockquote>
+<p>
+Fixed variables and functions to proper access (public, private)<br>
+</p>
+</blockquote>
+<p>
+Bullets:<br>
+</p>
+<blockquote>
+<p>
+Fixed variables and functions to proper access (public, private)<br>
+Renamed <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/BeamGunBullet" rel="nofollow">BeamGunBullet?</a> to bullet_BeamOrb<br>
+Renamed <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/BouncyBall" rel="nofollow">BouncyBall?</a> to bullet_BouncyBall<br>
+</p>
+</blockquote>
+<p>
+Game Manager:<br>
+</p>
+<blockquote>
+<p>
+Attempted to create a Game Manager starting with a gizmo section, but it didn't turn out well. Going to retry again later.<br>
+</p>
+</blockquote>
+<p>
+<br>
+=------=04/21/2012=------=<br>
+Gizmos:<br>
+</p>
+<blockquote>
+<p>
+Figured out gizmo issue with needing multiple gizmo calls to get them to work<br>
+</p>
+<blockquote>
+<p>
+Fixing this also explained that the reason code beneath the gizmos wasn't working since after the first gizmo call, it would jump to the corresponding gizmo call in the <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/OnDrawGizmos" rel="nofollow">OnDrawGizmos?</a>() function<br>
+</p>
+</blockquote>
+<p>
+I fixed this by redoing the entire tag and layer system.<br>
+</p>
+<blockquote>
+<p>
+The tags and layer system needs to be organized still, but now everything works as intended, meaning only rearranging needs to be done<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+Debugging:<br>
+</p>
+<blockquote>
+<p>
+Resolved issue with %s statements inside Debug.Log(). Apparently Debug.Log() is more like std::cout in c++ so I just needed to switch it to + instead.<br>
+</p>
+</blockquote>
+<p>
+<br>
+=------=04/26/2012=------=<br>
+SVN:<br>
+</p>
+<blockquote>
+<p>
+Craig and I stayed an hour after class to figure out SVN issues.<br>
+</p>
+<blockquote>
+<p>
+-We determined that the terrain data kept saying that it was deleted, when rather the pointer to the terrain data was simply not being updated whenever we moved files around, even inside Unity.<br>
+</p>
+<blockquote>
+<p>
+To work around this we created a backup of the terrain data itself, so that every time the issue occurs, we can simply add the terrain data into the project by naming it to whatever the supposed missing file is called, to trick Unity into thinking that nothing ever happened.<br>
+</p>
+</blockquote>
+<p>
+-We also determined the cause for my innability to update using SVN is because I updated the library and cache files at some point, therefore making updating impossible.<br>
+</p>
+<blockquote>
+<p>
+To work around this, I copied all my changes down (which were thankfully all in scripts), and created a new SVN checkout space, and then re-implemented the scripts back as they were prior to when I updated the wrong files. Now Craig, SVN and I all have the same version of the project.<br>
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+Gun:<br>
+</p>
+<blockquote>
+<p>
+I worked with Craig in figuring out how to change the value of a prefab when a new object was instantiated so that guns can have multiple types of bullets, just like in real life.<br>
+</p>
+</blockquote>
+<p>
+=------=04/27/2012=------=<br>
+Peer Revision:<br>
+</p>
+<blockquote>
+<p>
+Went over most of Craig's code, learned how it worked, fixed minor issues, cleaned it up, etc.<br>
+</p>
+</blockquote>
+<p>
+Gun:<br>
+</p>
+<blockquote>
+<p>
+Implemented bullet changing mechanic<br>
+Implemented bullet switching timer (which also allows for easy gun switching as well, but hasn't been implemented as there is only one gun currently)<br>
+</p>
+</blockquote>
+<p>
+Statistics:<br>
+</p>
+<blockquote>
+<p>
+Implement stat tracking<br>
+</p>
+<blockquote>
+<p>
+-Created a statTrackingOn boolean which should be moved to the <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/GameManager" rel="nofollow">GameManager?</a> later, for easy toggling of all stat tracking, which I later plan to allow the user to toggle in an options menu.<br>
+</p>
+<blockquote>
+<p>
+This is especially useful for if the user's computer can not handle the extra calculations that need to be done by stat tracking.<br>
+</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>
+=------=04/28/2012=------=<br>
+Statistics:<br>
+</p>
+<blockquote>
+<p>
+Implemented Additional Stat trackers in PlayerGUI.cs<br>
+</p>
+</blockquote>
+<p>
+GUI:<br>
+</p>
+<blockquote>
+<p>
+Revamped PlayerGUI.cs completely<br>
+</p>
+<blockquote>
+<p>
+-Instead of using a button to toggle "lockCursor" and "showCursor", these are now controlled by "hudVersion".<br>
+-Toggling hudVersion is now a button press instead of hold, and is now mapped to 'h' instead of 'ctrl'<br>
+-Layed out framework for going forward with the player GUI, all that needs to be done now is to simply add the features, as all of the ordering and logic should be good now.<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+<br>
+=------=04/28/2012=------=<br>
+GUI:<br>
+</p>
+<blockquote>
+<p>
+Made mouse toggle have it's own seperate hotkey 'm' and HUD is now has its' own control using 'h'<br>
+</p>
+</blockquote>
+<p>
+HUD:<br>
+</p>
+<blockquote>
+<p>
+Added an actual visible HUD while playing that actively changes values whenever neccesary. (Using mock values for now, need to implement Getters and Setters)<br>
+</p>
+</blockquote>
+<p>
+<br>
+<br>
+</p>
+<h3 id="a-------------------------------------------------------------------2">-------------------------------------------------------------------<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#a-------------------------------------------------------------------2" title="Link to this section"> ¶</a></h3>
+<h2 id="WorkPlans:">Work Plans:<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#WorkPlans:" title="Link to this section"> ¶</a></h2>
+<h3 id="a-------------------------------------------------------------------3">-------------------------------------------------------------------<a class="anchor" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO#a-------------------------------------------------------------------3" title="Link to this section"> ¶</a></h3>
+<p>
+HUD:<br>
+</p>
+<blockquote>
+<p>
+Add two layers to the HUD<br>
+</p>
+<blockquote>
+<p>
+-First Layer(Bottom): Statistical data<br>
+-Second Layer(Top): Aesthetics layer<br>
+</p>
+</blockquote>
+<p>
+Add HUD toggle control so that the user can customize the HUD<br>
+</p>
+<blockquote>
+<p>
+-No HUD<br>
+-Bottom layer only<br>
+-Bottom and top layers<br>
+-Top layer only<br>
+</p>
+</blockquote>
+<p>
+Different HUD Types:<br>
+</p>
+<blockquote>
+<p>
+1 - key stuff only<br>
+</p>
+<blockquote>
+<p>
+score<br>
+bomb ammo<br>
+text mesh on gun for current clip<br>
+lives<br>
+hp<br>
+</p>
+</blockquote>
+<p>
+2 - everything<br>
+</p>
+<blockquote>
+<p>
+hud 1 plus:<br>
+stat tracking<br>
+</p>
+</blockquote>
+<p>
+3 - nothing<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+Gun:<br>
+</p>
+<blockquote>
+<p>
+Add amount of bullets left in clip display on top of gun(s)<br>
+Add a gun swapping effect done through rotating a gun out of view and back into view<br>
+Add zoom function<br>
+</p>
+</blockquote>
+<p>
+Platforming:<br>
+</p>
+<blockquote>
+<p>
+Add a mario style rotating fireball roller but horizontally spinning rather than vertically (like in Super Mario Galaxy)<br>
+</p>
+</blockquote>
+<p>
+Terrain:<br>
+</p>
+<blockquote>
+<p>
+Create a cavern passageway<br>
+</p>
+<blockquote>
+<p>
+-Entry point started<br>
+-I'm not sure how to go about doing this as there are many different ways to do so. More research needed.<br>
+</p>
+</blockquote>
+<p>
+Add pathway to spikey mountains<br>
+</p>
+<blockquote>
+<p>
+-Donkey Kong style "pallet walkways" (kind of like the old Star Wars games Kashyyk area)<br>
+</p>
+</blockquote>
+<p>
+Add drop down location in spikey mountains<br>
+</p>
+<blockquote>
+<p>
+-Tie this into Craig's loading interface which transitions to his scene(s)<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+Gameplay:<br>
+</p>
+<blockquote>
+<p>
+Create a section where tons of self-destructing robots chase the player on a narrow cliff, forcing the player to shoot the robots to the edge of the cliff where an electric fence will destroy the robots<br>
+</p>
+</blockquote>
+<p>
+Bullets:<br>
+</p>
+<blockquote>
+<p>
+Try to immitate Tribes: Ascend guns+bullets (can add more tweaks later)<br>
+</p>
+<blockquote>
+<p>
+-Spinfusor: Create a copy of <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/BeamGunBullet" rel="nofollow">BeamGunBullet?</a> and add explosion + self-destruct upon collision (when white wire frame sphere is drawn), and make each shot require to be clicked, rather than constant fire<br>
+-Bolt Launcher / Grenade Launcher: Same as Spinfusor but with gravity and different particle effects<br>
+-Sniper Rifle:        When zoomed in act as hit-scan or extremely fast projectile<br>
+</p>
+<blockquote>
+<p>
+When not zoomed in show red laser pointer<br>
+Should this be affected by gravity?<br>
+</p>
+</blockquote>
+<p>
+-Assault Rifle: Rapid Fire<br>
+-Sub Machine Gun: Burst Shot<br>
+</p>
+</blockquote>
+</blockquote>
+<p>
+Text Boxes:<br>
+</p>
+<blockquote>
+<p>
+Create 3D rectangular prisms with a few cuts in the sides to represent a cartoony text box that floats in the air in 3D space<br>
+</p>
+</blockquote>
+<p>
+Heli Buddy:<br>
+</p>
+<blockquote>
+<p>
+Create a helicopter type robot kind of like Tales from the Sonic series, but acts like fairy from Legend of Zelda series<br>
+</p>
+</blockquote>
+<p>
+Puzzle Door Lock:<br>
+</p>
+<blockquote>
+<p>
+Artwork: DoorToBigTreasureLockConceptPartA.jpg<br>
+Leads to cavern which comes out in the middle of a cliff, which leads to an invisible treasure chest like in Legend of Zelda, but surrounded by a circular orb shield<br>
+</p>
+<blockquote>
+<p>
+The orb shield (See Orb Shield) is taken down by lighting two torches on fire by shooting them (like Twilight Princess)<br>
+</p>
+</blockquote>
+<p>
+part A (red) is colour panels jumping+shooting (like Tales of Graces f mid-game dungeon intro puzzle)<br>
+part B (yellow) looks like it comes earlier, but actually dives down along side of cliff to underwater and resurfaces on beach, where shooting rotators powers this part (like kids spinny toys in playgrounds at Ikea)<br>
+</p>
+</blockquote>
+<p>
+<br>
+coding for doors:<br>
+</p>
+<blockquote>
+<p>
+Door<br>
+----<br>
+bool isOpen = false;<br>
+bool isLocked = true;<br>
+bool isPowered = false;<br>
+bool somethingInTheWay = false;<br>
+bool redPower = false;<br>
+bool yellowPower = false;<br>
+----<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/OpenDoor" rel="nofollow">OpenDoor?</a>();<em>returns whether door could be opened or not based on other conditions<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/CloseDoor" rel="nofollow">CloseDoor?</a>();</em>returns whether door could be closed or not based on other conditions<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/DisengageLock" rel="nofollow">DisengageLock?</a>();<em>returns whether lock could be opened or not based on other conditions<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/EngageLock" rel="nofollow">EngageLock?</a>();</em>returns whether lock could be closed or not based on other conditions<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/PowerUp" rel="nofollow">PowerUp?</a>();<em>returns whether power could be turned on or not based on other conditions<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/PowerDown" rel="nofollow">PowerDown?</a>();</em>returns whether power could be turned off or not based on other conditions<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/DoorClear" rel="nofollow">DoorClear?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/DoorBlock" rel="nofollow">DoorBlock?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/RedPowerOn" rel="nofollow">RedPowerOn?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/RedPowerOff" rel="nofollow">RedPowerOff?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/YellowPowerOn" rel="nofollow">YellowPowerOn?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/YellowPowerOff" rel="nofollow">YellowPowerOff?</a>();<br>
+</p>
+</blockquote>
+<p>
+Powerlines:<br>
+</p>
+<blockquote>
+<p>
+Use Color.Lerp to have power lines pulsate between to different colours such as Crimson Red to Bright Red every 3.4seconds for example<br>
+</p>
+</blockquote>
+<p>
+Coding for powerlines:<br>
+</p>
+<blockquote>
+<p>
+Powerline<br>
+----<br>
+bool isPowered = false;<br>
+string offColour =  (0.5, 0.5, 0.5, 0.75);<em>grey is (0.5, 0.5, 0.5, 1) which is calculated through R, G, B, greyscale and transparency can be obtained with 0 greyscale (I think)<br>
+string powerColour = black;<br>
+----<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/CheckIfOn" rel="nofollow">CheckIfOn?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/PowerOn" rel="nofollow">PowerOn?</a>();<br>
+void <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/PowerOff" rel="nofollow">PowerOff?</a>();<br>
+bool <a class="missing wiki" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/SendPowerTo" rel="nofollow">SendPowerTo?</a>();</em>returns whether power sent was received or not. if not, continue game regardless, but choose to either log in debug console, or display on screen to user that the power couldn't be sent anywhere but the line will remain on<br>
+</p>
+</blockquote>
+<p>
+Part A of Puzzle:<br>
+</p>
+<blockquote>
+<p>
+Artwork: DoorToBigTreasureLockConceptPartA.jpg<br>
+A numbered sequence is written on a plack (black tile in artwork) such as 14387256 where each number corresponds to the colours of the rainbow<br>
+The player must enter this command in the correct order by jumping on the 4 ground tiles and shooting the upper 4 wall tiles<br>
+If the user makes a mistake the input is reset back to the beginning<br>
+If the user enters the password correctly the corresponding (red) powerline turns on
+</p>
+</blockquote>
+<p>
+Part B of Puzzle:<br>
+</p>
+<blockquote>
+<p>
+The user must shoot waterwheel type wheels in the correct order<br>
+Each time the user shoots a spinner it spins and a sound is played<br>
+If the user hits a spinner in the correct sequence a good sound is played<br>
+Else a bad sound is played and the player must input the sequence all over again<br>
+Once the user inputs the complete correct sequence a better good sound is played and the spinners start auto rotating by themselves while the corresponding (yellow) powerline turns on<br>
+</p>
+</blockquote>
+<p>
+Game Manager:<br>
+</p>
+<blockquote>
+<p>
+Add a game manager that can be used as hidden interface<br>
+</p>
+</blockquote>
+</div>
+        
+        
+      </div>
+      
+    <div id="attachments">
+    </div>
+
+          <div class="buttons">
+              <form method="get" action="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log.htm" id="modifypage">
+                <div>
+                  <input type="hidden" name="action" value="edit">
+                      <input type="submit" value="Edit this page">
+                </div>
+              </form>
+                <form method="get" action="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/attachment/wiki/GDD2012Q2Team05/TODO/" id="attachfile">
+  <div>
+    <input type="hidden" name="action" value="new">
+    <input type="submit" name="attachfilebutton" value="Attach file">
+  </div>
+</form>
+            <form method="get" action="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log.htm" id="rename">
+              <div>
+                <input type="hidden" name="action" value="rename">
+                <input type="submit" value="Rename page">
+              </div>
+            </form>
+              <form method="get" action="./GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log_files/GDD2012Q2Team05 TODO – VGP333-Game Engine Programming_DS_Work_Log.htm">
+                <div id="delete">
+                  <input type="hidden" name="action" value="delete">
+                  <input type="hidden" name="version" value="4">
+                    <input type="submit" name="delete_version" value="Delete this version">
+                  <input type="submit" value="Delete page">
+                </div>
+              </form>
+          </div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/wiki/GDD2012Q2Team05/TODO?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+        <div style="clear:both; margin:0; padding:0; font-size:0"></div>
+      </div>
+      <div id="footer" lang="en" xml:lang="en">
+        <p class="left">Project hosting provided by <a href="http://repositoryhosting.com/"><span class="inner_link">RepositoryHosting.com</span></a>. Powered by <a href="https://gamesatvancouver.repositoryhosting.com/trac/gamesatvancouver_vg271/about"><span class="inner_link"><strong>Trac 0.12.3</strong></span></a> and <strong>Subversion 1.7.5</strong>.</p>
+        <p class="right"><a href="https://gamesatvancouver.repositoryhosting.com/en/pages/terms_of_service" target="_blank"><span class="inner_link">Terms of Service</span></a> <a href="https://gamesatvancouver.repositoryhosting.com/en/support" target="_blank"><span class="inner_link">Contact Support</span></a></p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // support true basic authentication logout in IE and Firefox
+      // in IE use ClearAuthenticationCache; in Firefox send a request with invalid credentials
+      function clearAuthenticationCache(page) {
+        try {
+          if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+            document.execCommand("ClearAuthenticationCache");
+          else
+          {
+            var xmlhttp = null;
+            if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+            else if (window.ActiveXObject) xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            if (xmlhttp) {
+              xmlhttp.open("GET", page || '.fake_page', true, "fake_user", "fake_pass");
+              xmlhttp.send("");
+              xmlhttp.abort();
+            }
+          }
+        } catch(e) { return; }
+      }
+    </script>
+  
+</body></html>
