@@ -1,0 +1,10 @@
+use int to store board as it's 32 bits
+use each bit to set state
+
+( 1 << 7 )	//put 1 in 8th bit
+
+set
+board |= 1000 0000
+
+read
+board &= 1000 0000
