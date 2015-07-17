@@ -1,0 +1,4 @@
+drawpixel 10 10
+drawpixel 20 20
+drawpixel 30 30
+drawpixel 30 40

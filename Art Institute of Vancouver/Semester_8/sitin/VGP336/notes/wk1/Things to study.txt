@@ -1,0 +1,5 @@
+THINGS TO STUDY
+- Design Patterns
+- Find a tutorial on TinyXML and learn how to use it
+- Study meta systems for C++, since they aren't inheritly in C++
+- Practice reading an XML file and printing it out to the console

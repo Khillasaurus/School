@@ -1,0 +1,42 @@
+true = if(LineTraceForObjects = Hit Actor){if(Actor Tag = "AISight")}
+
+
+
+Minimum radius to guard
+---------
+In the AI02Guard_BT [Behavior Tree],
+
+if(DistanceToGT >= 2000)
+{
+	move to GuardTarget
+	Reset Heard
+}
+Why is this greater than 2000? Is this the minimum radius in which the guard must be to be considered guarding a specific point?
+
+
+Initial GuardTarget lacking
+---------
+In the AI02Guard_BT [Behavior Tree],
+the guard does not have an initial GT (GuardTarget) until the player starts moving around.
+The guard should be doing his own personal duties without the player having to trigger anything.
+
+
+LOS boolean logic failure
+---------
+In the AI02Guard_Character [Blueprint Class] > EventGraph section,
+once the guard has seen the player, the guard performs a LineTrace to check if LOS (Line of Sight) exists with ANY actor.
+If yes (which it should be for at least the first loop), a check is performed to see if the actor hit has the tag "AIsight".
+If yes, normal logic should continue, but this was not working earlier, as in spite of this if statement returning true, logic afterwords would not work.
+The temporary workaround was to put the logic under the false return, in which the logic was operational.
+
+
+AI Ignoring Audible Cues
+---------
+During runtime,
+once the guard has heard the player - as seen by a print call to the screen - the guard has the correct new target goal (player's coordinates), but continues to run towards the next planned guard target.
+I suspect that this issue may be solved when correcting the LineTrace issue, but I do not know this for sure.
+
+
+Return from chase to original task logic failure
+---------
+TOFILL

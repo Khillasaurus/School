@@ -1,0 +1,21 @@
+Notes from "Unreal Engine AI Tutorial #1 - AI Guard Part One" found at: https://www.youtube.com/watch?v=A_rnZ_2PgpM
+
+The guy in the tutorial is very slow and unsure of himself. Nonetheless, this is the method that has been chosen by "Team Blank Feed" for their game.
+
+The layout is as following:
+AIGuardBlackBoard [Blackboard]
+AIGuardBT [Behaviour Tree]
+AIGuardCharacter [Blueprint] The AiGuardCharacter is an Actor
+AIGuardController [Blueprint]
+
+The guard guards a "Target Point" titled "GuardTarget".
+In order to give the AIGuardCharacter information about the "GuardTarget", use the "AIGuardBlackBoard" (a blackboard is a list of values via the key method).
+The AIGuardBlackBoard has a Key with Entry Name "GuardTarget", and the Key Type is "Object".
+
+The AIGuardBT is using "Blackboard Asset" "AIGuardBlackBoard". It has one value in it from the Keys ("GuardTarget").
+
+The AIGuardCharacter needs to be able to use the GuardTarget, but before we do that, we need to make sure the AIGuardCharacter is using the "AIController Class" "AIGuardController".
+The controller is empty, so now we need to fill it up. The controller is the head of the operation. What it needs to do is say what brain to use.
+Right Click > Add Event > Event Begin Play -> Executable Actions > Run Behaviour Tree. Set the BTAsset to AIGuardBT (the one we just created).
+
+Next, set up the values, so that they can be input into the blackboard from the character.

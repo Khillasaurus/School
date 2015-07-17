@@ -1,0 +1,20 @@
+2015.07.09
+
+Whose bug is that?
+
+1. Report bug
+- Priorities:
+	- minor, major, critical, blockers
+2. Descriptive name
+- Steps (MOST IMPORTANT STEP!)
+- Description
+3. Try to Recreate
+4. Producer / QA Manager
+- Reassessment
+- Delegation
+5. Assignee (Programmer / Artist / Audio)
+- fix
+- no-fix
+6. Producer verifies -> list
+7. QA -> test
+8. Producer Verifies fix
