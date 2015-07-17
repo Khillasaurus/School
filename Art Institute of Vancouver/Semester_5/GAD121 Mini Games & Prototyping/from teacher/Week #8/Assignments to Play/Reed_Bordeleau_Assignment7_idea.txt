@@ -1,0 +1,8 @@
+Since it is BBQ theme'd. Collect the BBQ sauce through out the world. Then go back and share it with the guests by talking to them.
+This happens once you have collected 5 BBQ sauce which will trigger and event turning you into able to help the guests.
+
+After you talk to 6 guests when you have 5 BBQ sauce which you will have "helped" you will get a you win pop up.
+
+Known Bugs
+-when you win the game it goes into a inifinte you win loop.
+-changing areas resets the BBQ sauce collection items

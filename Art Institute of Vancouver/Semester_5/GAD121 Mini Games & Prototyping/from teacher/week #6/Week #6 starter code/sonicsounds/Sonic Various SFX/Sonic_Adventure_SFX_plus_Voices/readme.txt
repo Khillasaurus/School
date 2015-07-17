@@ -1,0 +1,1 @@
+Sonic Adventure - sound effects and voices ripped by dark team from Sonic Fan Games HQ. If used give credit to dark team.
