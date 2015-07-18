@@ -1,109 +1,310 @@
-############################
+#####################
+# Specific Files
+#####################
+
+#####################
+# Multiple Locations
+#####################
+Thumbs.db
+
+#####################
+# File Types
+#####################
+
+#====================
+#	C
+#====================
+
+#--------------------
+#		Debug files
+#--------------------
+*.dSYM/
+
+#--------------------
+#		Executables
+#--------------------
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+#--------------------
+#		Libraries
+#--------------------
+*.lib
+*.a
+*.la
+*.lo
+
+#--------------------
+#		Object files
+#--------------------
+*.o
+*.ko
+*.obj
+*.elf
+
+#--------------------
+#		Precompiled Headers
+#--------------------
+*.gch
+*.pch
+
+#--------------------
+#		Shared objects (inc. Windows DLLs)
+#--------------------
+*.dll
+*.so
+*.so.*
+*.dylib
+
+#====================
+#	C++
+#====================
+
+#--------------------
+#		Compiled Libraries - Dynamic
+#--------------------
+*.so
+*.dylib
+*.dll
+
+#--------------------
+#		Compiled Libraries - Static
+#--------------------
+*.lai
+*.la
+*.a
+*.lib
+
+#--------------------
+#		Database Files
+#--------------------
+*.ncb
+
+#--------------------
+#		Compiled Object Files
+#--------------------
+*.slo
+*.lo
+*.o
+*.obj
+
+#--------------------
+#		Executables
+#--------------------
+*.exe
+*.out
+*.app
+
+#--------------------
+#		Fortran Module Files
+#--------------------
+*.mod
+
+#--------------------
+#		Precompiled Headers
+#--------------------
+*.gch
+*.pch
+
+#--------------------
+#		User Specifics
+#--------------------
+*.suo
+
+
+#####################
 # Art Institute of Vancouver
+#####################
 
-##################
+#====================
+#	Non-Semester Specific
+#====================
+
+#--------------------
+#		Batteries Not Included
+#--------------------
+# Note: Batteries Not Included should be committed into its own major repository in the future
+Art Institute of Vancouver/Non-Semester Specific/Batteries Not Included/
+
+#--------------------
+#		SGE
+#--------------------
+Art Institute of Vancouver/Non-Semester Specific/SGE/
+
+#--------------------
+#		Team Mariachi
+#--------------------
+# Note: Los Muertos should is stored on the assembla server through svn, and should be moved to the svn folder once it is made.
+Art Institute of Vancouver/Non-Semester Specific/Team Mariachi/Los Muertos/
+
+#====================
 #	Semester_1
+#====================
 
+#--------------------
 #		GAD100 History of Games
+#--------------------
 Art Institute of Vancouver/Semester_1/GAD100 History of Games/teacher/
 
+#--------------------
 #		VGP110 Programming in C I
+#--------------------
 Art Institute of Vancouver/Semester_1/VGP110 Programming in C I/Muntaseer/
 
+#--------------------
 #		VGP126 Applied Mathematics
+#--------------------
 Art Institute of Vancouver/Semester_1/VGP126 Applied Mathematics/teacher
 
-##################
+#====================
 #	Semester_2
+#====================
 
+#--------------------
 #		VGP104 Software Development and Testing
+#--------------------
 Art Institute of Vancouver/Semester_2/VGP104 Software Development and Testing/teacher/
 
+#--------------------
 #		VGP120 Procedural Programming in C II
+#--------------------
 Art Institute of Vancouver/Semester_2/VGP120 Procedural Programming in C II/teacher/
 
+#--------------------
 #		VGP128 Geometry and Linear Algebra
+#--------------------
 Art Institute of Vancouver/Semester_2/VGP128 Geometry and Linear Algebra/James McGovern/
 
-##################
+#====================
 #	Semester_3
+#====================
 
+#--------------------
 #		GDD301 Interface Design
+#--------------------
 Art Institute of Vancouver/Semester_3/GDD301 Interface Design/friends/
 Art Institute of Vancouver/Semester_3/GDD301 Interface Design/teacher/
 
+#--------------------
 #		VGP120 Procedural Programming in C II
+#--------------------
 Art Institute of Vancouver/Semester_3/VGP120 Procedural Programming in C II/teacher/
 
-##################
+#====================
 #	Semester_4
+#====================
 
+#--------------------
 #		VGP112 UML & Technical Documentation
+#--------------------
 Art Institute of Vancouver/Semester_4/VGP112 UML & Technical Documentation/teacher/
 
+#--------------------
 #		VGP 248 Physics of Motion Light & Sound
+#--------------------
 Art Institute of Vancouver/Semester_4/VGP 248 Physics of Motion Light & Sound/teacher/
 
-##################
+#====================
 #	Semester_5
+#====================
 
+#--------------------
 #		CC310A Prepoduction & Project Management
+#--------------------
 Art Institute of Vancouver/Semester_5/CC310A Prepoduction & Project Management/teacher/
 
+#--------------------
 #		GAD121 Mini Games & Prototyping
+#--------------------
 Art Institute of Vancouver/Semester_5/GAD121 Mini Games & Prototyping/teacher/
 
+#--------------------
 #		Self-Teaching
+#--------------------
 Art Institute of Vancouver/Semester_5/Self-Teaching/
 
+#--------------------
 #		VGP130 Object-Orientated Programming in C++ II
+#--------------------
 Art Institute of Vancouver/Semester_5/VGP130 Object-Orientated Programming in C++ II/teacher/2012Summer/for Tony/
 Art Institute of Vancouver/Semester_5/VGP130 Object-Orientated Programming in C++ II/teacher/2012Summer/ken/
 
+#--------------------
 #		VGP220 Algorithms and Data Patterns I
+#--------------------
 Art Institute of Vancouver/Semester_5/VGP220 Algorithms and Data Patterns I/teacher/
 
+#--------------------
 #		VGP400 Portfolio I
+#--------------------
 Art Institute of Vancouver/Semester_5/VGP400 Portfolio I/teacher/
 
-##################
+#====================
 #	Semester_6
+#====================
 
+#--------------------
 #		CC450 Production Team I
+#--------------------
 Art Institute of Vancouver/Semester_6/CC450 Production Team I/teacher/
 
+#--------------------
 #		Portfolio 1 from Malcolm
+#--------------------
 Art Institute of Vancouver/Semester_6/Portfolio 1 from Malcolm/
 
+#--------------------
 #		Portfolio 2 from Malcolm
+#--------------------
 Art Institute of Vancouver/Semester_6/Portfolio 2 from Malcolm/
 
+#--------------------
 #		VGP 246 Calculus for Physics & Animation
+#--------------------
 Art Institute of Vancouver/Semester_6/VGP 246 Calculus for Physics & Animation/teacher/
 
+#--------------------
 #		VGP 256 Math & Physics for Games
+#--------------------
 Art Institute of Vancouver/Semester_6/VGP 256 Math & Physics for Games/teacher/
 
+#--------------------
 #		VGP230 2D Games Programming - OLD
+#--------------------
 Art Institute of Vancouver/Semester_6/VGP230 2D Games Programming - OLD/teacher/
 
+#--------------------
 #		VGP240 3D Graphics & Applications
+#--------------------
 Art Institute of Vancouver/Semester_6/VGP240 3D Graphics & Applications/teacher/
 
+#--------------------
 #		VGP332 Artificial Intelligence - OLD
+#--------------------
 Art Institute of Vancouver/Semester_6/VGP332 Artificial Intelligence - OLD/friends/
 Art Institute of Vancouver/Semester_6/VGP332 Artificial Intelligence - OLD/teacher/
 
-##################
+#====================
 #	Semester_8
+#====================
 
+#--------------------
 #		CC451 Production Team II
+#--------------------
 Art Institute of Vancouver/Semester_8/CC451 Production Team II/teacher/
 
+#--------------------
 #		sitin
+#--------------------
 Art Institute of Vancouver/Semester_8/sitin/VGP230/teacher/
 Art Institute of Vancouver/Semester_8/sitin/VGP336/teacher/
 Art Institute of Vancouver/Semester_8/sitin/VGP430/teacher/
 
+#--------------------
 #		VGP240 3D Graphics & Applications
+#--------------------
 Art Institute of Vancouver/Semester_8/VGP240 3D Graphics & Applications/teacher/
