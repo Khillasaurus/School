@@ -43,3 +43,11 @@ void CRasterizer::DrawPoint( const float x, const float y, const float r, const 
 	DrawPoint( x, y );
 }
 
+void CRasterizer::DrawLine(const float x1, const float y1, const float x2, const float y2)
+{
+	glBegin(GL_LINES);
+		glVertex2f(x1, y1);
+		glVertex2f(x2, y2);
+	glEnd();
+}
+

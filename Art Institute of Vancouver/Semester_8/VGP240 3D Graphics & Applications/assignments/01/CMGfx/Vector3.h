@@ -48,9 +48,9 @@ public:
 
 	// manipulators
 	inline void Set(float _x, float _y, float _z);
-	void Clean();       // sets near-zero elements to 0
-	inline void Zero(); // sets all elements to 0
-	void Normalize();   // sets to unit vector
+	void Clean();		// sets near-zero elements to 0
+	inline void Zero();	// sets all elements to 0
+	void Normalize();	// sets to unit vector
 
 	// operators
 

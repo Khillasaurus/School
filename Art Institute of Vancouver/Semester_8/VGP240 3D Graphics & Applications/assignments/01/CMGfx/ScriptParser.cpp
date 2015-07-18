@@ -2,25 +2,32 @@
 #include "ScriptParser.h"
 
 #include "CmdColor.h"
+#include "CmdDrawLine.h"
 #include "CmdDrawPixel.h"
+#include "CmdVertex2.h"
 
 CScriptParser::CScriptParser(void)
 {
 	// Initialize dictionary
 
 	// basic commands
-	m_CommandDictionary.insert(std::make_pair( CString("drawpixel"), new CCmdDrawPixel));
-	m_CommandDictionary.insert(std::make_pair( CString("color"), new CCmdColor));
+	m_CommandDictionary.insert(std::make_pair(CString("color"), new CCmdColor));
+	//m_CommandDictionary.insert(std::make_pair(CString("drawbegin"), new TODO));
+	//m_CommandDictionary.insert(std::make_pair(CString("drawend"), new TODO));
+	m_CommandDictionary.insert(std::make_pair(CString("drawline"), new CCmdDrawLine));
+	m_CommandDictionary.insert(std::make_pair(CString("drawpixel"), new CCmdDrawPixel));
+	//m_CommandDictionary.insert(std::make_pair(CString("line"), new TODO));
+	m_CommandDictionary.insert(std::make_pair(CString("vertex2"), new CCmdVertex2));//TOMIMPLEMENT
 }
 
 CScriptParser::~CScriptParser(void)
 {
 	// Delete dictionary memory
-	while( m_CommandDictionary.begin() != m_CommandDictionary.end() )
-    {
+	while(m_CommandDictionary.begin() != m_CommandDictionary.end())
+	{
 		delete m_CommandDictionary.begin()->second;
-        m_CommandDictionary.erase( m_CommandDictionary.begin() );
-    }
+		m_CommandDictionary.erase(m_CommandDictionary.begin());
+	}
 }
 
 // Split given input string into a string list, using given "splitString" as the separators

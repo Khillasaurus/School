@@ -64,6 +64,12 @@
     <ClCompile Include="CmdColor.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
+    <ClCompile Include="CmdVertex2.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdDrawLine.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rasterizer.h">
@@ -130,6 +136,12 @@
       <Filter>Framework</Filter>
     </ClInclude>
     <ClInclude Include="CmdColor.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdVertex2.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdDrawLine.h">
       <Filter>Commands</Filter>
     </ClInclude>
   </ItemGroup>

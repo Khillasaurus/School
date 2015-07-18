@@ -1,11 +1,11 @@
 #pragma once
 #include "CmdCommand.h"
 
-class CCmdDrawPixel : public CCmdCommand
+class CCmdDrawLine : public CCmdCommand
 {
 public:
-	CCmdDrawPixel(void){}
-	~CCmdDrawPixel(void){}
+	CCmdDrawLine(void){}
+	~CCmdDrawLine(void){}
 
 public:
 	BOOL execute(CString &params);

@@ -83,7 +83,6 @@ float DistanceSquared(const CVector3& p0, const CVector3& p1)
 
 float CVector3::Length() const
 {
-	//return IvSqrt(x*x + y*y + z*z);
 	return IvSqrt(LengthSquared());
 }
 
@@ -287,7 +286,7 @@ CVector3& CVector3::operator/=(float scalar)
 // Dot product by self
 float CVector3::Dot(const CVector3& vector) const
 {
-	return (x*vector.x + y*vector.y + z*vector.z);
+	return ((x * vector.x) + (y * vector.y) + (z * vector.z));
 }
 
 // ----------------------------------------------------------------------------
@@ -295,7 +294,7 @@ float CVector3::Dot(const CVector3& vector) const
 // Dot product friend operator
 float Dot(const CVector3& vector1, const CVector3& vector2)
 {
-	return (vector1.x*vector2.x + vector1.y*vector2.y + vector1.z*vector2.z);
+	return ((vector1.x * vector2.x) + (vector1.y * vector2.y) + (vector1.z * vector2.z));
 }
 
 //-------------------------------------------------------------------------------
