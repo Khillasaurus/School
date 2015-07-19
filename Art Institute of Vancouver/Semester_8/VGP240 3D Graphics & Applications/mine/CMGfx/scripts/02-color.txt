@@ -1,0 +1,8 @@
+color 1 0 0
+drawpixel 10 10
+color 0 1 0
+drawpixel 20 20
+color 0 0 1
+drawpixel 30 30
+color 1 1 1
+drawpixel 30 40
