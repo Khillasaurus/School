@@ -1,7 +1,7 @@
 //=============================================================================
 // @ CVector3.h
 // 3D vector class
-// ----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // Copyright (C) 2004 by Elsevier, Inc. All rights reserved.
 //=============================================================================
 
@@ -34,8 +34,8 @@ public:
 	//Overridden Operators
 	// Logic
 	//  Comparison
-	bool operator==(const CVector3& other) const;
-	bool operator!=(const CVector3& other) const;
+	bool operator== (const CVector3& other) const;
+	bool operator!= (const CVector3& other) const;
 	// Mathematical
 	//  Addition and Subtraction
 			CVector3	operator+	(const CVector3& other) const;
@@ -74,7 +74,7 @@ public:
 	inline void Zero();	// sets all elements to 0
 	void Normalize();	// sets to unit vector
 
-	//Member variables
+	//Member Variables
 	// General
 	float x;
 	float y;
