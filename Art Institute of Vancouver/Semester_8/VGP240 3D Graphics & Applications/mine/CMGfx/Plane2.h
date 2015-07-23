@@ -1,6 +1,10 @@
 #ifndef __PLANE2_H__
 #define __PLANE2_H__
 
+//=============================================================================
+//Dependencies
+//=============================================================================
+
 #include "Vector2.h"
 
 struct CPlane2
@@ -9,4 +13,4 @@ struct CPlane2
 	CVector2 normal;
 };
 
-#endif // __PLANE_H__
+#endif //#ifndef __PLANE2_H__

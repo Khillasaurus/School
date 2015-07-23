@@ -9,4 +9,4 @@ const float MAX_COLOR = 1.0f;
 
 #define CLAMP(x, low, high)  (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
 
-#endif // __COMMON_H__
+#endif //#ifndef __COMMON_H__
