@@ -1,12 +1,23 @@
+//=============================================================================
+//Dependencies
+//=============================================================================
+
 #pragma once
 #include "CmdCommand.h"
+
+//=============================================================================
+//Class Declarations
+//=============================================================================
 
 class CCmdColor : public CCmdCommand
 {
 public:
+	//Default Methods
+	// Constructors
 	CCmdColor(void) {}
+	// Destructor
 	~CCmdColor(void) {}
 
-public:
-	BOOL execute( CString &params );
+	//General Methods
+	virtual BOOL execute(CString& params);
 };

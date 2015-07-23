@@ -1,12 +1,18 @@
 #pragma once
 
+//=============================================================================
+//Class Declarations
+//=============================================================================
+
 class CCmdCommand
 {
 public:
+	//Default Methods
+	// Constructors
 	CCmdCommand(void) {}
+	// Destructor
 	virtual ~CCmdCommand(void) {}
 
-public:
-	// Function signature
-    virtual BOOL execute(CString &) = 0;
+	//Function signature
+	virtual BOOL execute(CString& params) = 0;
 };

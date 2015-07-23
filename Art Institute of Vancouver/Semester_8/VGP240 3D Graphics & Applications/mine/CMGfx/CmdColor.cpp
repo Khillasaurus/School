@@ -1,15 +1,23 @@
+//=============================================================================
+//Dependencies
+//=============================================================================
+
 #include "StdAfx.h"
 #include "CmdColor.h"
 #include "ScriptParser.h"
 #include "Rasterizer.h"
 
-BOOL CCmdColor::execute(CString &params)
+//=============================================================================
+//Class Definitions
+//=============================================================================
+
+BOOL CCmdColor::execute(CString& params)
 {
-	// Decode parameters
+	//Decode parameters
 	CStringList paramStrList;
 	CScriptParser::StringSplit(paramStrList, params, CString( ' ' ));
 
-	// Need at least 3 params for r, g, b
+	//Need at least 3 params for r, g, b
 	const int numParams = 3;
 	if(paramStrList.GetCount() < numParams)
 	{

@@ -1,15 +1,23 @@
+//=============================================================================
+//Dependencies
+//=============================================================================
+
 #include "StdAfx.h"
 #include "CmdDrawPixel.h"
 #include "ScriptParser.h"
 #include "Rasterizer.h"
 
-BOOL CCmdDrawPixel::execute(CString &params)
-{
-	// Decode parameters
-	CStringList paramStrList;
-	CScriptParser::StringSplit(paramStrList, params, CString( ' ' ));
+//=============================================================================
+//Class Definitions
+//=============================================================================
 
-	// Need at least 2 params for x, y
+BOOL CCmdDrawPixel::execute(CString& params)
+{
+	//Decode parameters
+	CStringList paramStrList;
+	CScriptParser::StringSplit(paramStrList, params, CString(' '));
+
+	//Need at least 2 params for x, y
 	const int numParams = 2;
 	if(paramStrList.GetCount() < numParams)
 	{

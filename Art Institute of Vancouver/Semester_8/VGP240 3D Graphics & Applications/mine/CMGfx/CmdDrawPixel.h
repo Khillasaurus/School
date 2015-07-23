@@ -1,12 +1,23 @@
+//=============================================================================
+//Dependencies
+//=============================================================================
+
 #pragma once
 #include "CmdCommand.h"
+
+//=============================================================================
+//Class Declarations
+//=============================================================================
 
 class CCmdDrawPixel : public CCmdCommand
 {
 public:
+	//Default Methods
+	// Constructors
 	CCmdDrawPixel(void){}
+	// Destructor
 	~CCmdDrawPixel(void){}
 
-public:
-	BOOL execute(CString &params);
+	//General Methods
+	virtual BOOL execute(CString& params);
 };
