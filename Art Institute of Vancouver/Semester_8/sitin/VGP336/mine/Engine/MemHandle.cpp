@@ -15,18 +15,6 @@
 // Meta Definitions
 //====================================================================================================
 
-#define META_FIELD_BEGIN MetaType* types = {
-#define META_FIELD_END };
-
-META_CLASS_BEGIN
-META_FIELD_BEGIN
-	META_FIELD(mInstance, "mInstance")
-	META_FIELD(mInstance, "mInstance")
-	META_FIELD(mInstance, "mInstance")
-	META_FIELD(mInstance, "mInstance")
-META_FIELD_END
-META_CLASS_END
-
 //====================================================================================================
 // Class Definitions
 //====================================================================================================

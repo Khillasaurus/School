@@ -11,16 +11,9 @@
 // Class Declarations
 //====================================================================================================
 
-template <
 class MemHandle
 {
 public:
-
-	META_DECLARE(MemHandle);
-
-	static MetaClass* GetMetaClass();
-	MetaClass* GetMetaClass();
-
 	MemHandle();
 	MemHandle(u16 instance, u16 index);
 
@@ -40,21 +33,3 @@ private:
 };
 
 #endif // #ifndef INCLUDED_ENGINE_MEMHANDLE_H
-
-class MetaClass
-{
-public:
-
-private:
-	static MetaType* mFields;
-};
-
-
-MemHandle::GetMetaClass()->
-
-
-template <typename T>
-MetaClass* GetTypeInfo()
-{
-	T::GetMetaClass();
-}
