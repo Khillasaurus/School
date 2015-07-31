@@ -2,12 +2,15 @@
 //Dependencies
 //=============================================================================
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "ScriptParser.h"
-#include "CmdColor.h"
-#include "CmdDrawLine.h"
+
 #include "CmdDrawPixel.h"
+#include "CmdColor.h"
+#include "CmdDrawBegin.h"
+#include "CmdDrawEnd.h"
 #include "CmdVertex2.h"
+//#include "CmdFillMode.h"
 
 //=============================================================================
 //Class Definitions
@@ -24,13 +27,12 @@ CScriptParser::CScriptParser(void)
 {
 	//Initialize dictionary
 	// basic commands
-	m_CommandDictionary.insert(std::make_pair(CString("color"), new CCmdColor));
-	//m_CommandDictionary.insert(std::make_pair(CString("drawbegin"), new TODO))
-	//m_CommandDictionary.insert(std::make_pair(CString("drawend"), new TODO));
-	//m_CommandDictionary.insert(std::make_pair(CString("drawline"), new CCmdDrawLine));
 	m_CommandDictionary.insert(std::make_pair(CString("drawpixel"), new CCmdDrawPixel));
-	//m_CommandDictionary.insert(std::make_pair(CString("line"), new TODO));
-	m_CommandDictionary.insert(std::make_pair(CString("vertex2"), new CCmdVertex2));//TOMIMPLEMENT
+	m_CommandDictionary.insert(std::make_pair(CString("color"), new CCmdColor));
+	m_CommandDictionary.insert(std::make_pair(CString("drawbegin"), new CCmdDrawBegin));
+	m_CommandDictionary.insert(std::make_pair(CString("drawend"), new CCmdDrawEnd));
+	m_CommandDictionary.insert(std::make_pair(CString("vertex2"), new CCmdVertex2));
+	//m_CommandDictionary.insert(std::make_pair(CString("fillmode"), new CCmdFillMode));
 }
 
 //-----------------------------------------------------------------------------

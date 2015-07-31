@@ -9,12 +9,15 @@
 //Class Declarations
 //=============================================================================
 
-class CCmdVertex2 : public CCmdCommand
+class CCmdDrawEnd : public CCmdCommand
 {
 public:
-	CCmdVertex2(void){}
-	~CCmdVertex2(void){}
+	//Default Methods
+	// Constructors
+	CCmdDrawEnd(void){}
+	// Destructor
+	~CCmdDrawEnd(void){}
 
-public:
-	BOOL execute(CString &params);
+	//General Methods
+	virtual BOOL execute(CString& params);
 };

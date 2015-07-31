@@ -52,9 +52,6 @@
     <ClCompile Include="Commands\CmdDrawBegin.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
-    <ClCompile Include="Commands\CmdDrawLine.cpp">
-      <Filter>Commands</Filter>
-    </ClCompile>
     <ClCompile Include="Commands\CmdDrawPixel.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
@@ -78,6 +75,9 @@
     </ClCompile>
     <ClCompile Include="Display\PrimManager.cpp">
       <Filter>Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdDrawEnd.cpp">
+      <Filter>Commands</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +120,6 @@
     <ClInclude Include="Commands\CmdDrawBegin.h">
       <Filter>Commands</Filter>
     </ClInclude>
-    <ClInclude Include="Commands\CmdDrawLine.h">
-      <Filter>Commands</Filter>
-    </ClInclude>
     <ClInclude Include="Commands\CmdDrawPixel.h">
       <Filter>Commands</Filter>
     </ClInclude>
@@ -161,6 +158,9 @@
     </ClInclude>
     <ClInclude Include="Display\PrimManager.h">
       <Filter>Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdDrawEnd.h">
+      <Filter>Commands</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

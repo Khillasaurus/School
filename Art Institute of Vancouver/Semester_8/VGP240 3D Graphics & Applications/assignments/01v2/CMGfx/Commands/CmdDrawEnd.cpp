@@ -2,19 +2,18 @@
 //Dependencies
 //=============================================================================
 
-#pragma once
-#include "CmdCommand.h"
+#include "stdafx.h"
+#include "CmdDrawEnd.h"
+#include "ScriptParser.h"
+#include "../Display/PrimManager.h"
 
 //=============================================================================
-//Class Declarations
+//Class Definitions
 //=============================================================================
 
-class CCmdVertex2 : public CCmdCommand
+BOOL CCmdDrawEnd::execute(CString& params)
 {
-public:
-	CCmdVertex2(void){}
-	~CCmdVertex2(void){}
+	CPrimManager::GetInstance()->EndDraw();
 
-public:
-	BOOL execute(CString &params);
-};
+	return TRUE;
+}

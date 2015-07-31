@@ -115,7 +115,7 @@
   <ItemGroup>
     <ClCompile Include="Commands\CmdColor.cpp" />
     <ClCompile Include="Commands\CmdDrawBegin.cpp" />
-    <ClCompile Include="Commands\CmdDrawLine.cpp" />
+    <ClCompile Include="Commands\CmdDrawEnd.cpp" />
     <ClCompile Include="Commands\CmdDrawPixel.cpp" />
     <ClCompile Include="Commands\CmdVertex2.cpp" />
     <ClCompile Include="Commands\ScriptParser.cpp" />
@@ -141,7 +141,7 @@
     <ClInclude Include="Commands\CmdColor.h" />
     <ClInclude Include="Commands\CmdCommand.h" />
     <ClInclude Include="Commands\CmdDrawBegin.h" />
-    <ClInclude Include="Commands\CmdDrawLine.h" />
+    <ClInclude Include="Commands\CmdDrawEnd.h" />
     <ClInclude Include="Commands\CmdDrawPixel.h" />
     <ClInclude Include="Commands\CmdVertex2.h" />
     <ClInclude Include="Commands\ScriptParser.h" />

@@ -1,31 +1,36 @@
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "CmdVertex2.h"
 #include "../Commands/ScriptParser.h"
-#include "../Display/Rasterizer.h"
+#include "../Display/PrimManager.h"
+#include "../Display/StateManager.h"
 
 BOOL CCmdVertex2::execute(CString &params)
 {
 	// Decode parameters
 	CStringList paramStrList;
-	CScriptParser::StringSplit(paramStrList, params, CString( ' ' ));
+	CScriptParser::StringSplit(paramStrList, params, CString(' '));
 
 	// Need at least 2 params for x, y
-	const int numParams = 2;
-	if(paramStrList.GetCount() < numParams)
+	const int kNumParams = 2;
+	if(paramStrList.GetCount() < kNumParams)
 	{
 		return FALSE;
 	}
 
-	int coords[numParams];
+	float coords[kNumParams];
 	POSITION pos = paramStrList.GetHeadPosition();
-	for(int i = 0; i < numParams; i++)
+	for(int i = 0; i < kNumParams; ++i)
 	{
 		CString paramStr = paramStrList.GetNext(pos);
-		coords[i] = (int)(wcstod(paramStr, NULL) + 0.5f);
+		coords[i] = (float)(wcstod(paramStr, NULL));
 	}
 
-	//TODO: Change this the following to store a vertex2
-	//CRasterizer::Instance()->DrawPoint(coords[0], coords[1]);
+	CVertex2 vertexCur;
+	vertexCur.point.x = coords[0];
+	vertexCur.point.y = coords[1];
+	vertexCur.color = CStateManager::GetInstance()->GetColor();
+
+	CPrimManager::GetInstance()->AddVertex(vertexCur);
 
 	return TRUE;
 }
