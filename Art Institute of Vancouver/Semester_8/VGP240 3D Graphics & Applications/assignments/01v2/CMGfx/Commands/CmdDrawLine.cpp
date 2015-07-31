@@ -1,16 +1,16 @@
 #include "StdAfx.h"
-#include "CmdVertex2.h"
+#include "CmdDrawLine.h"
 #include "ScriptParser.h"
-#include "Rasterizer.h"
+#include "../Display/Rasterizer.h"
 
-BOOL CCmdVertex2::execute(CString &params)
+BOOL CCmdDrawLine::execute(CString &params)
 {
 	// Decode parameters
 	CStringList paramStrList;
 	CScriptParser::StringSplit(paramStrList, params, CString( ' ' ));
 
-	// Need at least 2 params for x, y
-	const int numParams = 2;
+	// Need at least 4 params for x1, y1, x2, y2
+	const int numParams = 4;
 	if(paramStrList.GetCount() < numParams)
 	{
 		return FALSE;
@@ -24,8 +24,7 @@ BOOL CCmdVertex2::execute(CString &params)
 		coords[i] = (int)(wcstod(paramStr, NULL) + 0.5f);
 	}
 
-	//TODO: Change this the following to store a vertex2
-	//CRasterizer::Instance()->DrawPoint(coords[0], coords[1]);
+	CRasterizer::Instance()->DrawLine(coords[0], coords[1], coords[2], coords[3]);
 
 	return TRUE;
 }

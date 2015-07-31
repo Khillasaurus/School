@@ -5,7 +5,7 @@
 #include "StdAfx.h"
 #include "CmdColor.h"
 #include "ScriptParser.h"
-#include "Rasterizer.h"
+#include "../Display/Rasterizer.h"
 
 //=============================================================================
 //Class Definitions

@@ -19,21 +19,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Rasterizer.cpp">
-      <Filter>Display</Filter>
-    </ClCompile>
-    <ClCompile Include="CmdDrawPixel.cpp">
-      <Filter>Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="ScriptParser.cpp">
-      <Filter>Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="ChildFrm.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
@@ -61,53 +46,41 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
-    <ClCompile Include="CmdColor.cpp">
+    <ClCompile Include="Commands\CmdColor.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CmdVertex2.cpp">
+    <ClCompile Include="Commands\CmdDrawBegin.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CmdDrawLine.cpp">
+    <ClCompile Include="Commands\CmdDrawLine.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
-    <ClCompile Include="CmdDrawBegin.cpp">
+    <ClCompile Include="Commands\CmdDrawPixel.cpp">
       <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\CmdVertex2.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\ScriptParser.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Vector2.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Vector3.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Display\Rasterizer.cpp">
+      <Filter>Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Display\StateManager.cpp">
+      <Filter>Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Display\PrimManager.cpp">
+      <Filter>Display</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Rasterizer.h">
-      <Filter>Display</Filter>
-    </ClInclude>
-    <ClInclude Include="CmdCommand.h">
-      <Filter>Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="CmdDrawPixel.h">
-      <Filter>Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="ScriptParser.h">
-      <Filter>Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="MiniMath.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Plane2.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Vertex2.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="ChildFrm.h">
       <Filter>Framework</Filter>
     </ClInclude>
@@ -138,17 +111,56 @@
     <ClInclude Include="stdafx.h">
       <Filter>Framework</Filter>
     </ClInclude>
-    <ClInclude Include="CmdColor.h">
+    <ClInclude Include="Commands\CmdColor.h">
       <Filter>Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CmdVertex2.h">
+    <ClInclude Include="Commands\CmdCommand.h">
       <Filter>Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CmdDrawLine.h">
+    <ClInclude Include="Commands\CmdDrawBegin.h">
       <Filter>Commands</Filter>
     </ClInclude>
-    <ClInclude Include="CmdDrawBegin.h">
+    <ClInclude Include="Commands\CmdDrawLine.h">
       <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdDrawPixel.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdVertex2.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\ScriptParser.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Color.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MiniMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Plane2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Vector2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Vector3.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Vertex2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\Rasterizer.h">
+      <Filter>Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\StateManager.h">
+      <Filter>Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\PrimManager.h">
+      <Filter>Display</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
