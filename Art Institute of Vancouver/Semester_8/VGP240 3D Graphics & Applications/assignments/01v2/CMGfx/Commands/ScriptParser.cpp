@@ -10,7 +10,7 @@
 #include "CmdDrawBegin.h"
 #include "CmdDrawEnd.h"
 #include "CmdVertex2.h"
-//#include "CmdFillMode.h"
+#include "CmdFillMode.h"
 
 //=============================================================================
 //Class Definitions
@@ -32,7 +32,7 @@ CScriptParser::CScriptParser(void)
 	m_CommandDictionary.insert(std::make_pair(CString("drawbegin"), new CCmdDrawBegin));
 	m_CommandDictionary.insert(std::make_pair(CString("drawend"), new CCmdDrawEnd));
 	m_CommandDictionary.insert(std::make_pair(CString("vertex2"), new CCmdVertex2));
-	//m_CommandDictionary.insert(std::make_pair(CString("fillmode"), new CCmdFillMode));
+	m_CommandDictionary.insert(std::make_pair(CString("fillmode"), new CCmdFillMode));
 }
 
 //-----------------------------------------------------------------------------

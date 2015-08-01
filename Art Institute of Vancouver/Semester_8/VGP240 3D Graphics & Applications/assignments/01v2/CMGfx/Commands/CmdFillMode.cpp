@@ -3,21 +3,21 @@
 //=============================================================================
 
 #include "stdafx.h"
-#include "CmdDrawBegin.h"
+#include "CmdFillMode.h"
 #include "ScriptParser.h"
-#include "../Display/PrimManager.h"
+#include "../Display/StateManager.h"
 
 //=============================================================================
 //Class Definitions
 //=============================================================================
 
-BOOL CCmdDrawBegin::execute(CString& params)
+BOOL CCmdFillMode::execute(CString& params)
 {
 	//Decode parameters
 	CStringList paramStrList;
 	CScriptParser::StringSplit(paramStrList, params, CString(' '));
 
-	//Should be just 1 paramater (namely the word for what we are going to draw)
+	//Should be just 1 parameter
 	const int kNumParams = 1;
 	if(paramStrList.GetCount() < kNumParams)
 	{
@@ -29,31 +29,33 @@ BOOL CCmdDrawBegin::execute(CString& params)
 		CString paramStr = paramStrList.GetNext(pos);
 
 		//Check to see which param was specified
-		Primitive primitiveCur = Primitive::kPrimitiveNone;
-		CString validParams[Primitive::kPrimitiveLast + 1];
-		validParams[Primitive::kPrimitivePoint] = "point";
-		validParams[Primitive::kPrimitiveLine] = "line";
-		validParams[Primitive::kPrimitiveTriangle] = "triangle";
+		FillMode modeCur = FillMode::kFillModeNone;
+		CString validParams[FillMode::kFillModeLast + 1];
+		validParams[FillMode::kFillModePoint] = "point";
+		validParams[FillMode::kFillModeLine] = "line";
+		validParams[FillMode::kFillModeFill] = "fill";
 
-		//Compare parameter against valid primitive types
-		for(int i = 0; i < Primitive::kPrimitiveLast + 1; ++i)
+		//Compare parameter against valid fill modes
+		for(int i = 0; i < FillMode::kFillModeLast + 1; ++i)
 		{
 			if(paramStr.CompareNoCase(validParams[i]) == 0)
 			{
-				primitiveCur = (Primitive)i;
+				modeCur = (FillMode)i;
 				break;
 			}
 		}
 
 		//Verify correct param and pass to state manager
-		if(Primitive::kPrimitiveNone != primitiveCur)
+		if(FillMode::kFillModeNone != modeCur)
 		{
-			CPrimManager::GetInstance()->BeginDraw(primitiveCur);
+			CStateManager::GetInstance()->SetFillMode(modeCur);
 			return TRUE;
 		}
 		else
 		{
 			return FALSE;
 		}
+
+		return TRUE;
 	}
 }

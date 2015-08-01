@@ -79,6 +79,9 @@
     <ClCompile Include="Commands\CmdDrawEnd.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Commands\CmdFillMode.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h">
@@ -160,6 +163,9 @@
       <Filter>Display</Filter>
     </ClInclude>
     <ClInclude Include="Commands\CmdDrawEnd.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\CmdFillMode.h">
       <Filter>Commands</Filter>
     </ClInclude>
   </ItemGroup>
