@@ -27,7 +27,6 @@
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="EngineMath.cpp" />
     <ClCompile Include="Keyframe.cpp" />
-    <ClCompile Include="MemHandle.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MeshBuilder.cpp" />
     <ClCompile Include="MeshRenderer.cpp" />
@@ -114,6 +113,7 @@
   <ItemGroup>
     <None Include="EngineMath.inl" />
     <None Include="Matrix.inl" />
+    <None Include="MemHandle.inl" />
     <None Include="MemoryPool.inl" />
     <None Include="Quaternion.inl" />
     <None Include="ResourceManager.inl" />

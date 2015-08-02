@@ -145,9 +145,6 @@
     <ClCompile Include="Constraints.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="MemHandle.cpp">
-      <Filter>Memory</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
@@ -333,6 +330,9 @@
       <Filter>Math</Filter>
     </None>
     <None Include="MemoryPool.inl">
+      <Filter>Memory</Filter>
+    </None>
+    <None Include="MemHandle.inl">
       <Filter>Memory</Filter>
     </None>
   </ItemGroup>

@@ -1,0 +1,116 @@
+5
+What is an advantage of using templates?
+5
+What is the purpose of a virtual function?
+5
+When would a pure virtual function be used?
+5
+What advantages would there be to use an array?
+5
+What advantages would there be to use a linked list?
+20
+How would you find the depth of a binary tree?
+3
+How to swap two numbers without using a temp variable?
+10
+How does virtual work? How does it affect performance (both CPU and memory wise)?
+5
+Why is virtual destructor important?
+5
+What is an interface? How do you define an interface in C++? why is it useful?
+5
+What is the dreaded diamond? How do you deal with it?
+5
+What is the difference between inheritance and composition?
+10
+What are the advantages and disadvantages of managing game objects using OOP vs a component-based approach?
+5
+What are some of the advantages with using typedefs?
+5
+What is the difference between shared_ptr and weak_ptr. When would you use either?
+5
+What is a small block allocator? What are the benefits of using one?
+5
+When is it unsafe to call virtual functions?
+5
+What is a union? Why would you want to use one?
+5
+What is placement new?
+10
+How does static work?
+20
+Implement the atoi function.
+5
+What is a dot product?
+5
+What is a cross product?
+5
+What is a quaternion? Why would you use it?
+5
+How do you find the inverse of a matrix?
+5
+What is the inverse of a matrix?
+10
+Implement a stack class.
+10
+Write a function to check if a linked-list is valid.
+5
+Write a function to check if a point is within a rectangule.
+5
+Write a function to check if two rectangules are intersecting.
+5
+Write a function to check if two circles are intersecting.
+10
+How do you check if a circle intersects a line.
+10
+How do you check if a rectangle intersects a line.
+10
+How do you check if a rectangle intersects a circle.
+10
+How do you check if a line intersects a triangle.
+10
+How do you check if two triangles intersect.
+10
+How do you check if a sphere intersects a plane.
+10
+How do you check if a ray intersects a plane.
+10
+How do you check if a ray intersects a circle.
+10
+How do you check if a ray intersects a triangle.
+10
+Implement bubble sort.
+10
+Implement the strlen function.
+5
+What is the difference between public, protected, and private?
+5
+What is a memory leak?
+5
+What is a memory stomp?
+5
+What are the different types of casting in C++?
+5
+In what order are constructors and destructors called?
+10
+Implement the strcmp function.
+5
+What is the mutable keyword for?
+5
+What are the different ways of passing parameters to a function?
+20
+Write a function to check if a string is a palindrome.
+20
+Write a function to reverse a string.
+20
+Write a function to remove duplicate characters in a string.
+20
+Write a function to reverse a singly linked list.
+20
+Implement the strstr function.
+20
+Write a function to return the number of unique characters in a string.
+5
+What is a nameless namespace and why would you use it?
+5
+What is template specialization?
