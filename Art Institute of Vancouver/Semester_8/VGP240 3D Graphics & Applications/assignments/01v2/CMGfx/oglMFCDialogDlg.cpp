@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "CMGfx.h"
 #include "oglMFCDialogDlg.h"
-#include "Common.h"
+#include "Common/Common.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

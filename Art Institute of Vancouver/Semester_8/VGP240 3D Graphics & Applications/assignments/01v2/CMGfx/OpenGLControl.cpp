@@ -2,7 +2,7 @@
 #include "OpenGLControl.h"
 #include ".\openglcontrol.h"
 
-#include "Rasterizer.h"
+#include "Display/Rasterizer.h"
 
 
 COpenGLControl::COpenGLControl(void)

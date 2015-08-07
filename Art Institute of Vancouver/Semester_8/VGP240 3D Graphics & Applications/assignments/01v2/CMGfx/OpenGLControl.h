@@ -4,7 +4,7 @@
 #include <gl/gl.h>
 #include <gl/glu.h>
 
-#include "ScriptParser.h"
+#include "Commands/ScriptParser.h"
 
 class COpenGLControl : public CWnd
 {

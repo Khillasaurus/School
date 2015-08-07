@@ -113,20 +113,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CmdColor.cpp" />
-    <ClCompile Include="CmdDrawBegin.cpp" />
-    <ClCompile Include="CmdDrawLine.cpp" />
-    <ClCompile Include="CmdVertex2.cpp" />
-    <ClCompile Include="Rasterizer.cpp" />
-    <ClCompile Include="CmdDrawPixel.cpp" />
-    <ClCompile Include="ScriptParser.cpp" />
-    <ClCompile Include="Vector2.cpp" />
-    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Commands\CmdColor.cpp" />
+    <ClCompile Include="Commands\CmdDrawBegin.cpp" />
+    <ClCompile Include="Commands\CmdDrawEnd.cpp" />
+    <ClCompile Include="Commands\CmdDrawPixel.cpp" />
+    <ClCompile Include="Commands\CmdFillMode.cpp" />
+    <ClCompile Include="Commands\CmdVertex2.cpp" />
+    <ClCompile Include="Commands\ScriptParser.cpp" />
+    <ClCompile Include="Common\Vector2.cpp" />
+    <ClCompile Include="Common\Vector3.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="CMGfx.cpp" />
     <ClCompile Include="CMGfxDoc.cpp" />
     <ClCompile Include="CMGfxView.cpp" />
     <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="Display\PrimManager.cpp" />
+    <ClCompile Include="Display\Rasterizer.cpp" />
+    <ClCompile Include="Display\StateManager.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="oglMFCDialogDlg.cpp" />
     <ClCompile Include="OpenGLControl.cpp" />
@@ -136,26 +139,29 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CmdColor.h" />
-    <ClInclude Include="CmdDrawBegin.h" />
-    <ClInclude Include="CmdDrawLine.h" />
-    <ClInclude Include="CmdVertex2.h" />
-    <ClInclude Include="Rasterizer.h" />
-    <ClInclude Include="CmdCommand.h" />
-    <ClInclude Include="CmdDrawPixel.h" />
-    <ClInclude Include="ScriptParser.h" />
-    <ClInclude Include="Color.h" />
-    <ClInclude Include="Common.h" />
-    <ClInclude Include="MiniMath.h" />
-    <ClInclude Include="Plane2.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="Vector3.h" />
-    <ClInclude Include="Vertex2.h" />
+    <ClInclude Include="Commands\CmdColor.h" />
+    <ClInclude Include="Commands\CmdCommand.h" />
+    <ClInclude Include="Commands\CmdDrawBegin.h" />
+    <ClInclude Include="Commands\CmdDrawEnd.h" />
+    <ClInclude Include="Commands\CmdDrawPixel.h" />
+    <ClInclude Include="Commands\CmdFillMode.h" />
+    <ClInclude Include="Commands\CmdVertex2.h" />
+    <ClInclude Include="Commands\ScriptParser.h" />
+    <ClInclude Include="Common\Color.h" />
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\MiniMath.h" />
+    <ClInclude Include="Common\Plane2.h" />
+    <ClInclude Include="Common\Vector2.h" />
+    <ClInclude Include="Common\Vector3.h" />
+    <ClInclude Include="Common\Vertex2.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="CMGfx.h" />
     <ClInclude Include="CMGfxDoc.h" />
     <ClInclude Include="CMGfxView.h" />
     <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="Display\PrimManager.h" />
+    <ClInclude Include="Display\Rasterizer.h" />
+    <ClInclude Include="Display\StateManager.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="oglMFCDialogDlg.h" />
     <ClInclude Include="OpenGLControl.h" />

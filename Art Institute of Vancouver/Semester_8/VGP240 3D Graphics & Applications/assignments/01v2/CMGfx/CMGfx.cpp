@@ -11,7 +11,7 @@
 
 #include "oglMFCDialogDlg.h"
 
-#include "Rasterizer.h"
+#include "Display/Rasterizer.h"
 
 
 #ifdef _DEBUG
