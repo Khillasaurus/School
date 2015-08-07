@@ -319,7 +319,12 @@ void CRasterizer::DrawTriangle(const CVertex2& v0, const CVertex2& v1, const CVe
 				}
 
 				//If there is no flat line along y
-				if(v0.point.y != v1.point.y && v0.point.y != v2.point.y && v1.point.y != v2.point.y)
+				if
+				(
+					v0.point.y != v1.point.y &&
+					v0.point.y != v2.point.y &&
+					v1.point.y != v2.point.y
+				)
 				{
 					//Find vertex to split triangle into two
 					float t = (yOrder[1].point.y - yOrder[0].point.y) / (yOrder[2].point.y - yOrder[0].point.y);
@@ -432,8 +437,11 @@ void CRasterizer::DrawTriangle(const CVertex2& v0, const CVertex2& v1, const CVe
 				}
 			}
 			break;
+
 			default:
+			{
 				break;
+			}
 		}
 	}
 }
