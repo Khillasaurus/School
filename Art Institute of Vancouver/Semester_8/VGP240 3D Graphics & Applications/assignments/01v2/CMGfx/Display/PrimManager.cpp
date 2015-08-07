@@ -101,6 +101,31 @@ void CPrimManager::EndDraw()
 				}
 			}
 		}
+
+		case Primitive::kPrimitiveTriangle:
+		{
+			//Check if there are enough points to form a triangle
+			if(kNumVertices < 3)
+			{
+				//TODO: Throw error instead of simply ignoring raster script request
+				break;
+			}
+			else
+			{
+				//Draw all triangles
+				//TOIMPROVE:	Make this more efficient. There is too much jumping around when querying the vertex buffer, so I feel like this could be made more efficiently.
+				//				Possible solution: Use a pointer to the vertex buffer, and instead of using the at() function, simply iterate the pointer forward.
+				for(unsigned i = 2; i < kNumVertices; i += 3)
+				{
+					CVertex2& v0 = mVertexBuffer.at(i - 2);
+					CVertex2& v1 = mVertexBuffer.at(i - 1);
+					CVertex2& v2 = mVertexBuffer.at(i);
+
+					//TODO: Clipping here
+					CRasterizer::Instance()->DrawTriangle(v0, v1, v2);
+				}
+			}
+		}
 	}
 }
 
