@@ -127,6 +127,7 @@
     <ClCompile Include="CMGfxDoc.cpp" />
     <ClCompile Include="CMGfxView.cpp" />
     <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="Display\Clipper.cpp" />
     <ClCompile Include="Display\PrimManager.cpp" />
     <ClCompile Include="Display\Rasterizer.cpp" />
     <ClCompile Include="Display\StateManager.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="CMGfxDoc.h" />
     <ClInclude Include="CMGfxView.h" />
     <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="Display\Clipper.h" />
     <ClInclude Include="Display\PrimManager.h" />
     <ClInclude Include="Display\Rasterizer.h" />
     <ClInclude Include="Display\StateManager.h" />

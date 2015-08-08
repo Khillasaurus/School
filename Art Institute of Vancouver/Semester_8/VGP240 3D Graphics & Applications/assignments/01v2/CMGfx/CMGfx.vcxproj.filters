@@ -82,6 +82,9 @@
     <ClCompile Include="Commands\CmdFillMode.cpp">
       <Filter>Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Display\Clipper.cpp">
+      <Filter>Display</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h">
@@ -167,6 +170,9 @@
     </ClInclude>
     <ClInclude Include="Commands\CmdFillMode.h">
       <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Display\Clipper.h">
+      <Filter>Display</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

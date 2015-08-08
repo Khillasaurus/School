@@ -9,6 +9,7 @@
 #include "PrimManager.h"
 #include "StateManager.h"
 #include "Rasterizer.h"
+#include "Clipper.h"
 
 //=============================================================================
 //Statics
@@ -72,8 +73,11 @@ void CPrimManager::EndDraw()
 			{
 				CVertex2& v = mVertexBuffer.at(i);
 
-				//TODO: Clipping here
-				CRasterizer::Instance()->DrawPoint(v.point.x, v.point.y, v.color.r, v.color.g, v.color.b);
+				//if within viewport, clip
+				if(CClipper::GetInstance()->ClipPoint(static_cast<int>(v.point.x + 0.5f), static_cast<int>(v.point.y + 0.5f)))
+				{
+					CRasterizer::Instance()->DrawPoint(v.point.x, v.point.y, v.color.r, v.color.g, v.color.b);
+				}
 			}
 		}
 		break;
@@ -96,8 +100,11 @@ void CPrimManager::EndDraw()
 					CVertex2& v0 = mVertexBuffer.at(i - 1);
 					CVertex2& v1 = mVertexBuffer.at(i);
 
-					//TODO: Clipping here
-					CRasterizer::Instance()->DrawLine(v0, v1);
+					//Clip to viewport
+					if(CClipper::GetInstance()->ClipLine(v0, v1))
+					{
+						CRasterizer::Instance()->DrawLine(v0, v1);
+					}
 				}
 			}
 		}
@@ -121,8 +128,65 @@ void CPrimManager::EndDraw()
 					CVertex2& v1 = mVertexBuffer.at(i - 1);
 					CVertex2& v2 = mVertexBuffer.at(i);
 
-					//TODO: Clipping here
-					CRasterizer::Instance()->DrawTriangle(v0, v1, v2);
+					//Check for all same y coord
+					if
+					(
+						v0.point.y == v1.point.y &&
+						v0.point.y == v2.point.y
+					)
+					{
+						continue;
+					}
+
+					//Clip only if in fill mode, will be deferred to other drawing modes otherwise
+					if(CStateManager::GetInstance()->GetFillMode() == FillMode::kFillModeFill)
+					{
+						CRasterizer::Instance()->DrawTriangle(v0, v1, v2);
+					}
+					else
+					{
+						//perform clipping, may return a new poly with more than 3 vertices
+						std::vector<CVertex2> vBuffer;
+						std::vector<CVertex2> newVerts;
+						vBuffer.push_back(v0);
+						vBuffer.push_back(v1);
+						vBuffer.push_back(v2);
+
+						CClipper::GetInstance()->ClipTriangle(vBuffer, newVerts, CP_LEFT);
+
+						if(0 == newVerts.size())
+						{
+							continue;
+						}
+						vBuffer.clear();
+						
+						CClipper::GetInstance()->ClipTriangle(newVerts, vBuffer, CP_BOTTOM);
+						if(0 == vBuffer.size())
+						{
+							continue;
+						}
+						newVerts.clear();
+
+						CClipper::GetInstance()->ClipTriangle(vBuffer, newVerts, CP_RIGHT);
+						if(0 == newVerts.size())
+						{
+							continue;
+						}
+						vBuffer.clear();
+
+						CClipper::GetInstance()->ClipTriangle(newVerts, vBuffer, CP_TOP);
+						if(0 == vBuffer.size())
+						{
+							continue;
+						}
+
+						//split new poly into triangles and draw
+						for(unsigned int i = 2; i < vBuffer.size(); ++i)
+						{
+							//rasterize the triangle given three vertices
+							CRasterizer::Instance()->DrawTriangle(vBuffer.at(0), vBuffer.at(i - 1), vBuffer.at(i));
+						}
+					}
 				}
 			}
 		}
